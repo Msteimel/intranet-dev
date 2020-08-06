@@ -1,0 +1,24 @@
+@mixin bp($breakpoint) {
+  @if $breakpoint == xs {
+    @media (max-width: $sm) {
+      @content;
+    }
+  }
+  @if else $breakpoint == sm {
+    @media (max-width: $md) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (max-width: $lg) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (max-width: $xl) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (min-width: $xl) {
+      @content;
+    }
+  }
+}

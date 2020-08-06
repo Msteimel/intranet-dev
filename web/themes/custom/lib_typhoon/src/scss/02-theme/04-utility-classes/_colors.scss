@@ -1,0 +1,95 @@
+/*================================================
+			color classes
+==================================================*/
+// creates classes like `.lib-bg_red-500`
+// creates classes like `.lib-red-500`
+
+// Primary Colors
+$colors: (
+  // primary
+    'red-50': $red-50,
+  'red-100': $red-100,
+  'red-200': $red-200,
+  'red-300': $red-300,
+  'red-400': $red-400,
+  'red-500': $red-500,
+  'red-600': $red-600,
+  'red-700': $red-700,
+  'red-800': $red-800,
+  'red-900': $red-900,
+  // secondary
+    'yellow-50': $yellow-50,
+  'yellow-100': $yellow-100,
+  'yellow-200': $yellow-200,
+  'yellow-300': $yellow-300,
+  'yellow-400': $yellow-400,
+  'yellow-500': $yellow-500,
+  'yellow-600': $yellow-600,
+  'yellow-700': $yellow-700,
+  'yellow-800': $yellow-800,
+  'yellow-900': $yellow-900,
+  // neutral
+    'warm-grey-50': $warm-grey-50,
+  'warm-grey-100': $warm-grey-100,
+  'warm-grey-200': $warm-grey-200,
+  'warm-grey-300': $warm-grey-300,
+  'warm-grey-400': $warm-grey-400,
+  'warm-grey-500': $warm-grey-500,
+  'warm-grey-600': $warm-grey-600,
+  'warm-grey-700': $warm-grey-700,
+  'warm-grey-800': $warm-grey-800,
+  'warm-grey-900': $warm-grey-900,
+  'grey-50': $grey-50,
+  'grey-100': $grey-100,
+  'grey-200': $grey-200,
+  'grey-300': $grey-300,
+  'grey-400': $grey-400,
+  'grey-500': $grey-500,
+  'grey-600': $grey-600,
+  'grey-700': $grey-700,
+  'grey-800': $grey-800,
+  'grey-900': $grey-900,
+  // accent
+    'blue-50': $blue-50,
+  'blue-100': $blue-100,
+  'blue-200': $blue-200,
+  'blue-300': $blue-300,
+  'blue-400': $blue-400,
+  'blue-500': $blue-500,
+  'blue-600': $blue-600,
+  'blue-700': $blue-700,
+  'blue-800': $blue-800,
+  'blue-900': $blue-900,
+  'green-50': $green-50,
+  'green-100': $green-100,
+  'green-200': $green-200,
+  'green-300': $green-300,
+  'green-400': $green-400,
+  'green-500': $green-500,
+  'green-600': $green-600,
+  'green-700': $green-700,
+  'green-800': $green-800,
+  'green-900': $green-900,
+  // defaults
+    'white': $white,
+  'black': $black,
+  'primary': $primary-color,
+  'secondary': $secondary-color,
+  'accent': $accent-color,
+  'link': $link-color,
+  'text': $text-color
+);
+
+@each $color, $colors in $colors {
+  .lib-bg-#{$color} {
+    background-color: $colors;
+  }
+
+  .lib-text-#{$color} {
+    color: $colors;
+  }
+
+  // .lib-bc-#{$color} {
+  //   border-color: $colors;
+  // }
+}

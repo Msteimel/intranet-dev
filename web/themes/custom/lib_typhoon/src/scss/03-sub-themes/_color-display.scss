@@ -1,0 +1,48 @@
+.lib-color-palette--list {
+  padding: 0;
+}
+
+.lib-color-palette--item {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: $vert-light-1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease-in;
+
+  &:not(:last-of-type) {
+    margin-bottom: $space-xs;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: $vert-light-3;
+    transform: scale(1.02);
+  }
+
+  p {
+    color: inherit;
+    line-height: 1;
+  }
+}
+
+.colors--wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.color--info {
+  text-align: center;
+
+  div {
+    width: $space-4xl;
+    height: $space-4xl;
+    box-shadow: $vert-light-1;
+    border-radius: 4px;
+    transition: 0.3s ease;
+
+    &:hover {
+      box-shadow: $vert-light-2;
+      transform: scale(1.12);
+    }
+  }
+}

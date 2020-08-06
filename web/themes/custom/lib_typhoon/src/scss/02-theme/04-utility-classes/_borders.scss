@@ -1,0 +1,45 @@
+/*================================================
+			Border width classes
+==================================================*/
+// bw == border width
+
+// creates classes like `.lib-bw4`
+
+$bw-list: (
+  'bw0': $bw0,
+  'bw1': $bw1,
+  'bw2': $bw2,
+  'bw4': $bw4,
+  'bw8': $bw8,
+  'bw10': $bw10,
+);
+
+@each $bw, $width in $bw-list {
+  .lib-#{$bw} {
+    border-width: $width;
+  }
+}
+
+/*================================================
+			Border Radius classes
+==================================================*/
+// br == border-radius
+
+// creates classes like `.lib-br4`
+
+$br-list: (
+  'br0': $br0,
+  'br2': $br2,
+  'br4': $br4,
+  'br6': $br6,
+  'br8': $br8,
+  'br10': $br10,
+  'br12': $br12,
+  'br14': $br14,
+);
+
+@each $br, $radius in $br-list {
+  .lib-#{$br} {
+    border-radius: $radius;
+  }
+}

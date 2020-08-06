@@ -1,0 +1,182 @@
+/*================================================
+			Clearfix
+==================================================*/
+@mixin clearfix {
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin screen-width {
+  @if ($debug == true) {
+    body::before {
+      color: red;
+      position: fixed;
+      left: 2rem;
+      bottom: 2rem;
+      z-index: 9999;
+    }
+
+    @media (min-width: $xs) {
+      body::before {
+        content: 'Extra Small';
+      }
+    }
+    @media (min-width: $sm) {
+      body::before {
+        content: 'Small';
+      }
+    }
+    @media (min-width: $md) {
+      body::before {
+        content: 'Medium';
+      }
+    }
+    @media (min-width: $lg) {
+      body::before {
+        content: 'Large';
+      }
+    }
+    @media (min-width: $xl) {
+      body::before {
+        content: 'Extra Large';
+      }
+    }
+  }
+}
+/*================================================
+			Responsive Typography
+==================================================*/
+// Responsive Text ---- sets the range limit for responsive font-size.
+// Body: Allows any em based font size to be responsive
+// element: allows precise control if you use px or rem
+// em units get blown up if responsive text mixin is set at body or root.
+@mixin responsive-text(
+  $min-font-size,
+  $max-font-size,
+  $min-vw: $sm,
+  $max-vw: $lg
+) {
+  $min-viewport: (strip-unit(px-calc($min-vw)) / 16) * 1rem;
+  $max-viewport: (strip-unit(px-calc($max-vw)) / 16) * 1rem;
+
+  $responsive-calc: calc(
+    #{px-calc($min-font-size)} + (
+        #{strip-unit(px-calc($max-font-size))} - #{strip-unit(
+            px-calc($min-font-size)
+          )}
+      ) * (100vw - #{px-calc($min-viewport)}) / (#{strip-unit(
+            px-calc($max-viewport)
+          )} - #{strip-unit(px-calc($min-viewport))})
+  );
+
+  font-size: $min-font-size;
+  // Min width
+  @media screen and (min-width: $min-viewport) {
+    font-size: $responsive-calc;
+  }
+
+  // Max width
+  @media screen and (min-width: $max-viewport) {
+    font-size: $max-font-size;
+  }
+}
+
+/*================================================
+			Misc
+==================================================*/
+@mixin appearance($none) {
+  -webkit-appearance: $none;
+  -moz-appearance: $none;
+  appearance: $none;
+}
+
+@mixin transform-transition($trans-ition) {
+  -moz-transition: -moz-transform ($trans-ition);
+  -ms-transition: -ms-transform ($trans-ition);
+  -webkit-transition: -webkit-transform ($trans-ition);
+  -o-transition: -o-transform ($trans-ition);
+  transition: transform ($trans-ition);
+}
+
+@mixin arrow($direction: down, $size: 5px, $color: #555) {
+  width: 0;
+  height: 0;
+  @if ($direction == left) {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+  } @else if ($direction == right) {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+  } @else if ($direction == down) {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+  } @else {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+  }
+}
+
+/*================================================
+Positioning helpers
+==================================================*/
+// mixin to streamline setting position: statements
+@mixin position($position, $args) {
+  @each $o in top right bottom left {
+    $i: index($args, $o);
+    @if $i and $i + 1 <= length($args) and type-of(nth($args, $i + 1)) == number
+    {
+      #{$o}: nth($args, $i + 1);
+    }
+  }
+  position: $position;
+}
+
+@mixin absolute($args: '') {
+  @include position(absolute, $args);
+}
+
+@mixin fixed($args: '') {
+  @include position(fixed, $args);
+}
+
+@mixin relative($args: '') {
+  @include position(relative, $args);
+}
+
+// Center Absolutely
+@mixin vert_center($top: 50%) {
+  position: absolute;
+  top: $top;
+  transform: translateY(-$top);
+}
+
+@mixin horz_center($left: 50%) {
+  position: absolute;
+  left: $left;
+  transform: translateX(-$left);
+}
+
+@mixin absolute-center($top: 50%, $left: 50%) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: translate(-$top, -$left);
+}
+
+// image ratio
+@mixin img-ratio($width: 16, $height: 9) {
+  padding-top: percentage($width / $height);
+}

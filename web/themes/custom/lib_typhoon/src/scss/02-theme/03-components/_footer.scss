@@ -1,0 +1,70 @@
+
+$footer-nav-main-links: 6; // # of top level nav links
+$footer-nav-main-height: 50; // nav-height in pixels
+$menu-columns: 2; //
+
+$footer-nav-links: $black;
+
+.footer-wrap {
+	padding-top: 2em;
+}
+
+.navigation-footer {
+	@include clearfix;
+	display: flex;
+	list-style: none;
+	justify-content: space-between;
+	margin: 0;
+	padding: 0;
+	
+	a {
+		color: $footer-nav-links;
+		display: block;
+		height: em($footer-nav-main-height);
+		line-height: em($footer-nav-main-height);
+		text-decoration: none;
+	}
+}
+	
+li[class*="nav-"]  {
+	position: relative;
+	text-align: center;
+	width: percentage(1/$footer-nav-main-links);
+	
+	&:hover {
+		.nav-menu {
+			display: block;
+			left: auto;
+			top: auto;
+		}
+	}
+}
+
+.nav-menu {
+	@include clearfix;
+	position: absolute;
+	left: -999em;
+	top: -999em;
+	width: em(350);
+	z-index: 100;
+}
+
+.nav-menu--col {
+	list-style: none;
+	padding: 0;
+	text-align: left;
+	font-size: 0.8em;
+	
+	@if $menu-columns{
+		float: left;
+		width: percentage(1/$menu-columns);
+	} @else {
+		width: 100%;
+	}
+}
+
+.nav-6 {
+	.nav-menu {
+		right: 0;
+	}
+}

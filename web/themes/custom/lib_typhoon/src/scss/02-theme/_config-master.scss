@@ -1,0 +1,76 @@
+/*================================================
+      Config Master
+      
+      This is the config for all the default styles of a new site.
+      If a new sub-site style is needed, copy this into the new site and change options there.
+
+      This should rarely be changed, if at all.
+==================================================*/
+$debug: true;
+
+$primary-color: $red-500;
+$secondary-color: $yellow-500;
+$accent-color: $blue-600;
+
+$font-size-base: $fs-md;
+$font-size-sm: $fs-xs;
+$font-weight-base: 400;
+$line-height-base: 1.5;
+
+$text-color: $black;
+$body-bg: $white;
+
+$font-weight-bolder: 600;
+$link-color: $primary-color;
+$link-hover-color: $red-700;
+
+$table-caption-color: $warm-grey-400;
+$label-margin-bottom: $space-lg;
+
+$enable-pointer-cursor-for-buttons: true;
+
+$heading-font: $merriweather_stack;
+$body-font: $nimbus-sans_stack;
+
+@if ($debug == true) {
+  @include screen-width;
+}
+// to override a variable, it needs to be stated and called in a css element
+html {
+  line-height: 1.5;
+  height: 100%;
+}
+
+body {
+  font-size: $font-size-base;
+  font-family: $body-font;
+  background-color: $white;
+  color: $text-color;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  // Creating options for Flex vs Grid
+  &.flex {
+    display: flex;
+    height: 100%;
+  }
+}
+
+.grid {
+  font-size: $font-size-base;
+}
+
+$shorcut-colors: (
+  'primary': $primary-color,
+  'secondary': $secondary-color,
+  'accent': $accent-color,
+);
+
+@each $color, $colors in $shorcut-colors {
+  .lib-#{$color} {
+    color: $colors;
+  }
+}

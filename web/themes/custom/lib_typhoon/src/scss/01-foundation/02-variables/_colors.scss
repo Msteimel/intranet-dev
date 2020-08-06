@@ -1,0 +1,77 @@
+/*================================================
+				// Color Variables
+==================================================*/
+
+// Primary Color
+$red-900: hsla(348, 90, 20, 1);
+$red-800: hsla(350, 85, 26, 1);
+$red-700: hsla(350, 79, 32, 1);
+$red-600: hsla(350, 82, 38, 1);
+$red-500: hsla(350, 85, 42, 1);
+$red-400: hsla(357, 74, 56, 1);
+$red-300: hsla(358, 82, 67, 1);
+$red-200: hsla(358, 86, 82, 1);
+$red-100: hsla(360, 94, 95, 1);
+$red-50: hsla(360, 94, 98, 1);
+
+// Secodary Color
+$yellow-900: hsla(18, 90, 26, 1);
+$yellow-800: hsla(26, 93, 35, 1);
+$yellow-700: hsla(37, 98, 41, 1);
+$yellow-600: hsla(41, 91, 49, 1);
+$yellow-500: hsla(42, 86, 61, 1);
+$yellow-400: hsla(46, 96, 70, 1);
+$yellow-300: hsla(50, 96, 75, 1);
+$yellow-200: hsla(52, 96, 85, 1);
+$yellow-100: hsla(50, 99, 92, 1);
+$yellow-50: hsla(50, 99, 96, 1);
+
+// Neutrals
+$warm-grey-900: hsl(48, 15, 13, 1);
+$warm-grey-800: hsla(47, 13, 23, 1);
+$warm-grey-700: hsla(47, 11, 28, 1);
+$warm-grey-600: hsla(47, 9, 35, 1);
+$warm-grey-500: hsla(47, 8, 48, 1);
+$warm-grey-400: hsla(47, 8, 61, 1);
+$warm-grey-300: hsla(47, 11, 69, 1);
+$warm-grey-200: hsla(47, 15, 80, 1);
+$warm-grey-100: hsla(47, 13, 90, 1);
+$warm-grey-50: hsla(47, 13, 96, 1);
+
+$grey-900: hsla(0, 0, 13, 1);
+$grey-800: hsla(0, 0, 23, 1);
+$grey-700: hsla(0, 0, 32, 1);
+$grey-600: hsla(0, 0, 38, 1);
+$grey-500: hsla(0, 0, 49, 1);
+$grey-400: hsla(0, 0, 62, 1);
+$grey-300: hsla(0, 0, 69, 1);
+$grey-200: hsla(0, 0, 81, 1);
+$grey-100: hsla(0, 0, 88, 1);
+$grey-50: hsla(0, 0, 95, 1);
+
+// Accent colors
+$blue-900: hsla(204, 90, 15, 1);
+$blue-800: hsla(203, 92, 23, 1);
+$blue-700: hsla(201, 100, 33, 1);
+$blue-600: hsla(201, 88, 42, 1);
+$blue-500: hsla(200, 84, 49, 1);
+$blue-400: hsla(199, 93, 53, 1);
+$blue-300: hsla(199, 97, 63, 1);
+$blue-200: hsla(201, 93, 82, 1);
+$blue-100: hsla(202, 92, 95, 1);
+$blue-50: hsla(204, 90, 97, 1);
+
+// success colors
+$green-900: hsla(125, 97, 14, 1);
+$green-800: hsla(125, 86, 20, 1);
+$green-700: hsla(125, 79, 26, 1);
+$green-600: hsla(124, 75, 30, 1);
+$green-500: hsla(122, 73, 35, 1);
+$green-400: hsla(123, 57, 45, 1);
+$green-300: hsla(123, 53, 55, 1);
+$green-200: hsla(124, 63, 74, 1);
+$green-100: hsla(127, 65, 85, 1);
+$green-50: hsla(125, 65, 93, 1);
+
+$black: $grey-900;
+$white: hsla(0, 0, 100, 1);

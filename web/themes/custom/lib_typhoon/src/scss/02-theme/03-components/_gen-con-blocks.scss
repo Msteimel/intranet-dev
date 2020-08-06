@@ -1,0 +1,462 @@
+.lib-gen-con--wrap {
+  max-width: rem(850);
+  margin: 0;
+
+  h1 {
+    margin-bottom: $space-3xl;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+}
+
+// .lib-gen-con--page-title {
+// }
+
+.lib-gen-con--block {
+  margin-bottom: $space-4xl;
+
+  .lib-block-title {
+    display: inline-block;
+  }
+
+  p + h2 {
+    margin-top: $space-lg;
+  }
+  p + h3,
+  p + h4,
+  p + h5,
+  p + h6 {
+    margin-top: $space-md;
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+  & p + p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.lib-img-block {
+  @include clearfix;
+}
+
+.lib-text-img--right {
+  .lib-gen-con--img-wrap {
+    float: right;
+    margin-left: $space-lg;
+
+    @include bp(xs) {
+      float: initial;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.lib-text-img--left {
+  .lib-gen-con--img-wrap {
+    float: left;
+    margin-right: $space-lg;
+
+    @include bp(xs) {
+      float: initial;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.lib-block--lg-img {
+  .lib-gen-con--img-wrap {
+    max-width: rem(850);
+
+    figure {
+      position: relative;
+      padding-top: percentage(9/16);
+    }
+  }
+}
+
+.lib-block--two-img {
+  .lib-gen-con--img-wrap {
+    max-width: rem(400);
+
+    @include bp(md) {
+      max-width: 45%;
+    }
+
+    @include bp(xs) {
+      max-width: 100%;
+    }
+  }
+}
+
+.lib-block--three-img {
+  .lib-gen-con--img-wrap {
+    max-width: rem(250);
+
+    @include bp(md) {
+      max-width: 32%;
+    }
+
+    @include bp(xs) {
+      max-width: 100%;
+    }
+  }
+}
+
+.lib-block--two-img,
+.lib-block--three-img {
+  .lib-content-wrap {
+    display: flex;
+    justify-content: space-around;
+    @include bp(xs) {
+      flex-direction: column;
+    }
+  }
+}
+
+.lib-gen-con--img-wrap {
+  max-width: rem(300);
+  width: 100%;
+
+  figure {
+    position: relative;
+    padding-top: percentage(400/400);
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    box-shadow: $vert-dark-2;
+  }
+
+  figcaption {
+    padding-top: $space-sm;
+    text-align: center;
+    font-style: italic;
+  }
+}
+
+.lib-block--link-list {
+  .lib-link-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: $space-2xl 0 0 0;
+
+    @include bp(xs) {
+      margin: $space-lg 0 0 $space-md;
+    }
+  }
+
+  .lib-link-list--item {
+    position: relative;
+    width: 50%;
+    margin-bottom: $space-md;
+    padding-right: $space-xs;
+
+    @include bp(xs) {
+      width: 100%;
+      padding: $space-xs 0;
+    }
+
+    a {
+      display: inline-block;
+      font-family: $heading-font;
+      font-weight: 400;
+      line-height: 1.5;
+      padding-left: $space-2xl;
+      color: $link-color;
+      text-decoration: none;
+      transition: 0.3s ease;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        font-family: 'FontAwesome';
+        content: '\f15c';
+        font-size: $fs-lg;
+        left: 0;
+        color: inherit;
+      }
+
+      &:hover,
+      &:focus {
+        color: $link-hover-color;
+      }
+    }
+    /*
+ |--------------------------------------------------------------------------
+ | Changes icon based on file type
+ |--------------------------------------------------------------------------
+*/
+    $doc-types: (
+      '.docx': '\f1c2',
+      '.pdf': '\f1c1',
+      '.xlsx': '\f1c3',
+      '.jpg': '\f1c5',
+      '.png': '\f1c5',
+      '.com': '\f35d',
+      '.net': '\f35d',
+      '.edu': '\f35d',
+      '.org': '\f35d',
+    );
+
+    @each $docType, $icon in $doc-types {
+      @if "a[href*='#{$docType}']" {
+        a[href*='#{$docType}']::before {
+          content: $icon;
+        }
+      }
+    }
+  }
+}
+
+.lib-link-list--abstract {
+  margin: $space-2xl 0 0 0;
+
+  .lib-abstract-item {
+    position: relative;
+    margin-bottom: $space-lg;
+    padding-left: $space-2xl;
+
+    &::before {
+      @include vert_center(0);
+      font-family: 'FontAwesome';
+      content: '\f35d';
+      // font-size: $fs-md;
+      left: 0;
+      color: $primary-color;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    h4 {
+      line-height: 1.5;
+      color: inherit;
+      display: inline-block;
+    }
+
+    a {
+      color: $link-color;
+      text-decoration: none;
+      transition: 0.3s ease;
+
+      &:hover,
+      &:focus {
+        color: $link-hover-color;
+      }
+    }
+  }
+}
+
+.lib-quote-block {
+  position: relative;
+
+  padding: $space-2xl 0 0;
+  text-align: center;
+}
+
+.lib-block--quote {
+}
+
+.lib-quote {
+  max-width: 75%;
+  font-family: $heading-font;
+  font-style: italic;
+  font-size: $fs-lg;
+  margin: 0 auto;
+
+  @include bp(sm) {
+    font-size: $fs-md;
+  }
+
+  @include bp(xs) {
+    max-width: 95%;
+  }
+
+  cite {
+    display: block;
+    position: relative;
+    font-style: initial;
+    margin: 0 auto;
+    padding: $space-md $space-sm 0;
+    color: $red-500;
+
+    &::before,
+    &::after {
+      content: '\2014';
+      color: $yellow-600;
+      padding: 0 $space-sm;
+    }
+
+    &::before {
+      left: -10%;
+    }
+
+    &::after {
+      right: -10%;
+    }
+  }
+}
+
+.lib-block--quote-banner {
+  padding: $space-2xl 0 $space-3xl;
+  background-color: $red-600;
+
+  .lib-quote--marks {
+    background-color: $yellow-300;
+
+    i {
+      color: $red-600;
+    }
+  }
+
+  .lib-quote {
+    max-width: rem(637.5);
+    color: $red-50;
+
+    @include bp(xs) {
+      max-width: 90%;
+    }
+
+    cite {
+      color: $yellow-300;
+
+      &::before,
+      &::after {
+        color: $red-50;
+      }
+    }
+  }
+}
+
+.lib-quote--marks {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
+  width: rem(32);
+  height: rem(32);
+  border-radius: 100%;
+  background-color: $red-200;
+
+  i {
+    @include absolute-center;
+    position: absolute;
+    color: $red-700;
+    text-align: center;
+  }
+}
+
+.lib-block--quote-ribbon {
+  position: relative;
+  padding: $space-2xl 0 $space-2xl;
+  background-color: $white;
+  box-shadow: $vert-light-2;
+  border-radius: $br2;
+  border-left: solid 4px $red-500;
+  quotes: '“' '”';
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 12%;
+    font-family: $heading-font;
+    font-size: rem(102);
+    line-height: 1;
+    color: $yellow-500;
+
+    @include bp(sm) {
+      font-size: $fs-6xl;
+    }
+
+    @include bp(xs) {
+      font-size: $fs-4xl;
+    }
+  }
+
+  &::before {
+    content: open-quote;
+    left: 4%;
+
+    @include bp(xs) {
+      left: 2%;
+    }
+  }
+
+  &::after {
+    content: close-quote;
+    right: 4%;
+
+    @include bp(xs) {
+      right: 2%;
+    }
+  }
+
+  .lib-quote {
+    @include bp(xs) {
+      max-width: 90%;
+    }
+  }
+
+  .quote-angles {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+
+    &::before,
+    &::after {
+      content: '';
+      width: 10rem;
+      height: 5rem;
+      position: absolute;
+      transform: rotate(135deg);
+      transition: background-color 0.3s ease-in;
+    }
+
+    &::before {
+      bottom: -10%;
+      right: -9%;
+      background-color: $red-500;
+
+      @include bp(sm) {
+        right: -14%;
+      }
+
+      @include bp(xs) {
+        right: -18%;
+      }
+    }
+
+    &::after {
+      bottom: -12%;
+      right: -13%;
+      background-color: $red-400;
+
+      @include bp(sm) {
+        right: -19%;
+      }
+      @include bp(xs) {
+        right: -25%;
+      }
+    }
+  }
+}

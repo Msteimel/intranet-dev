@@ -1,0 +1,93 @@
+$h1-color: $warm-grey-900;
+$h1-fs: $fs-4xl;
+$h1-lh: 1;
+$h1-ls: -1px;
+
+$h2-color: $warm-grey-900;
+$h2-fs: $fs-2xl;
+$h2-lh: 1.1;
+
+$h3-color: $warm-grey-900;
+$h3-fs: $fs-xl;
+$h3-lh: 1.13;
+
+$h4-color: $warm-grey-900;
+$h4-fs: $fs-lg;
+$h4-lh: 1.25;
+
+$h5-color: $warm-grey-900;
+$h5-fs: $fs-md;
+$h5-lh: 1.5;
+
+$h6-color: $warm-grey-900;
+$h6-fs: $fs-xs;
+$h6-lh: 1.5;
+
+$lead-color: $warm-grey-900;
+$lead-fs: $fs-lg;
+$lead-lh: 1.5;
+
+h1,
+.h1 {
+  font-family: $heading-font;
+  color: $h1-color;
+  font-size: $h1-fs;
+  line-height: $h1-lh;
+  letter-spacing: $h1-ls;
+  margin: 0;
+  margin-bottom: $space-2xl;
+
+  @include bp(sm) {
+    font-size: $fs-3xl;
+  }
+}
+
+h1 + h2 {
+  margin-bottom: $space-3xl;
+}
+
+h2,
+.h2 {
+  font-family: $heading-font;
+  color: $h2-color;
+  font-size: $h2-fs;
+  line-height: $h2-lh;
+  margin: 0;
+  margin-bottom: $space-md;
+}
+h3,
+.h3 {
+  font-family: $heading-font;
+  color: $h3-color;
+  font-size: $h3-fs;
+  line-height: $h3-lh;
+  margin: 0;
+  margin-bottom: $space-md;
+}
+h4,
+.h4 {
+  font-family: $heading-font;
+  color: $h4-color;
+  font-size: $h4-fs;
+  line-height: $h4-lh;
+  margin: 0em;
+  margin-bottom: $space-xs;
+}
+h5,
+.h5 {
+  font-family: $heading-font;
+  color: $h5-color;
+  font-size: $h5-fs;
+  line-height: $h5-lh;
+  margin: 0em;
+  margin-bottom: $space-xs;
+}
+h6,
+.h6 {
+  font-family: $heading-font;
+  color: $h6-color;
+  font-size: $h6-fs;
+  line-height: $h6-lh;
+  margin: 0em;
+  margin-bottom: $space-xs;
+}

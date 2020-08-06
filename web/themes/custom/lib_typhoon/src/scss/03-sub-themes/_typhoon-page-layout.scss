@@ -1,0 +1,26 @@
+.typhoon-page-wrap {
+  padding-top: rem(70);
+  flex: 1;
+
+  p {
+    max-width: 800px;
+  }
+}
+
+.typoon-main-content-wrap {
+  margin-top: $space-4xl;
+  padding: 0 $space-xl 0;
+  max-width: 1200px;
+
+  // @include media-breakpoint-down(sm) {
+  //   padding: 0 rem(24) 0;
+  // }
+
+  // @include media-breakpoint-down(sm) {
+  //   padding: 0 rem(12) 0;
+  // }
+}
+
+.typhoon-full-height {
+  height: 100%;
+}

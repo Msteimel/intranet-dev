@@ -1,0 +1,89 @@
+.lib-alert--wrap {
+  flex-wrap: wrap;
+}
+
+.lib-alert {
+  position: relative;
+  // min-width: 300px;
+  // max-width: 450px;
+  overflow: hidden;
+  border-radius: $br4;
+  box-shadow: $vert-light-2;
+  display: flex;
+
+  .lib-alert--icon-block {
+    width: $space-4xl;
+  }
+
+  i {   
+    @include vert_center;
+    left: -$space-xl;
+    font-size: 82px;
+  }
+}
+
+.lib-alert--text {
+  span {
+    display: block;
+  }
+
+  .alert-text--main {
+    line-height: 1;
+  }
+}
+
+.lib-alert--red {
+  .lib-alert--icon-block {
+    background-color: $red-600;
+  }
+
+  i {
+    color: $red-400;
+  }
+
+  .alert-text--main {
+    color: $red-600;
+  }
+}
+
+.lib-alert--yellow {
+  .lib-alert--icon-block {
+    background-color: $yellow-600;
+  }
+
+  i {
+    color: $yellow-400;
+  }
+
+  .alert-text--main {
+    color: $yellow-600;
+  }
+}
+
+.lib-alert--green {
+  .lib-alert--icon-block {
+    background-color: $green-600;
+  }
+
+  i {
+    color: $green-400;
+  }
+
+  .alert-text--main {
+    color: $green-600;
+  }
+}
+
+.lib-alert--blue {
+  .lib-alert--icon-block {
+    background-color: $blue-600;
+  }
+
+  i {
+    color: $blue-400;
+  }
+
+  .alert-text--main {
+    color: $blue-600;
+  }
+}

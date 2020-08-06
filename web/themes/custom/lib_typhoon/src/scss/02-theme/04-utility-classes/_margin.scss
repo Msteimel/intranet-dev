@@ -1,0 +1,222 @@
+/*================================================
+			margin classes
+==================================================*/
+// creates classes like `.lib-mt-med`
+
+$margin-list: (
+  '7xl': $space-7xl,
+  '6xl': $space-6xl,
+  '5xl': $space-5xl,
+  '4xl': $space-4xl,
+  '3xl': $space-3xl,
+  'xl': $space-xl,
+  'lg': $space-lg,
+  '2xl': $space-2xl,
+  'md': $space-md,
+  'sm': $space-sm,
+  'xs': $space-xs,
+  '2xs': $space-2xs,
+  '0': $space-0,
+  'auto': auto,
+);
+
+@each $space, $spacing in $margin-list {
+  .lib-m-#{$space} {
+    margin: $spacing;
+  }
+
+  .lib-mx-#{$space} {
+    margin-left: $spacing;
+    margin-right: $spacing;
+  }
+
+  .lib-my-#{$space} {
+    margin-top: $spacing;
+    margin-bottom: $spacing;
+  }
+
+  .lib-mt-#{$space} {
+    margin-top: $spacing;
+  }
+
+  .lib-mr-#{$space} {
+    margin-right: $spacing;
+  }
+
+  .lib-mb-#{$space} {
+    margin-bottom: $spacing;
+  }
+
+  .lib-ml-#{$space} {
+    margin-left: $spacing;
+  }
+}
+
+@each $space, $spacing in $margin-list {
+  @include bp(xl) {
+    .xl\:lib-m-#{$space} {
+      margin: $spacing;
+    }
+    .xl\:lib-mx-#{$space} {
+      margin-left: $spacing;
+      margin-right: $spacing;
+    }
+
+    .xl\:lib-my-#{$space} {
+      margin-top: $spacing;
+      margin-bottom: $spacing;
+    }
+
+    .xl\:lib-mt-#{$space} {
+      margin-top: $spacing;
+    }
+
+    .xl\:lib-mr-#{$space} {
+      margin-right: $spacing;
+    }
+
+    .xl\:lib-mb-#{$space} {
+      margin-bottom: $spacing;
+    }
+
+    .xl\:lib-ml-#{$space} {
+      margin-left: $spacing;
+    }
+  }
+}
+
+@each $space, $spacing in $margin-list {
+  @include bp(lg) {
+    .lg\:lib-m-#{$space} {
+      margin: $spacing;
+    }
+
+    .lg\:lib-mx-#{$space} {
+      margin-left: $spacing;
+      margin-right: $spacing;
+    }
+
+    .lg\:lib-my-#{$space} {
+      margin-top: $spacing;
+      margin-bottom: $spacing;
+    }
+
+    .lg\:lib-mt-#{$space} {
+      margin-top: $spacing;
+    }
+
+    .lg\:lib-mr-#{$space} {
+      margin-right: $spacing;
+    }
+
+    .lg\:lib-mb-#{$space} {
+      margin-bottom: $spacing;
+    }
+
+    .lg\:lib-ml-#{$space} {
+      margin-left: $spacing;
+    }
+  }
+}
+
+@each $space, $spacing in $margin-list {
+  @include bp(md) {
+    .md\:lib-m-#{$space} {
+      margin: $spacing;
+    }
+
+    .md\:lib-mx-#{$space} {
+      margin-left: $spacing;
+      margin-right: $spacing;
+    }
+
+    .md\:lib-my-#{$space} {
+      margin-top: $spacing;
+      margin-bottom: $spacing;
+    }
+
+    .md\:lib-mt-#{$space} {
+      margin-top: $spacing;
+    }
+
+    .md\:lib-mr-#{$space} {
+      margin-right: $spacing;
+    }
+
+    .md\:lib-mb-#{$space} {
+      margin-bottom: $spacing;
+    }
+
+    .md\:lib-ml-#{$space} {
+      margin-left: $spacing;
+    }
+  }
+}
+
+@each $space, $spacing in $margin-list {
+  @include bp(sm) {
+    .sm\:lib-m-#{$space} {
+      margin: $spacing;
+    }
+
+    .sm\:lib-mx-#{$space} {
+      margin-left: $spacing;
+      margin-right: $spacing;
+    }
+
+    .sm\:lib-my-#{$space} {
+      margin-top: $spacing;
+      margin-bottom: $spacing;
+    }
+
+    .sm\:lib-mt-#{$space} {
+      margin-top: $spacing;
+    }
+
+    .sm\:lib-mr-#{$space} {
+      margin-right: $spacing;
+    }
+
+    .sm\:lib-mb-#{$space} {
+      margin-bottom: $spacing;
+    }
+
+    .sm\:lib-ml-#{$space} {
+      margin-left: $spacing;
+    }
+  }
+}
+
+@each $space, $spacing in $margin-list {
+  @include bp(xs) {
+    .xs\:lib-m-#{$space} {
+      margin: $spacing;
+    }
+
+    .xs\:lib-mx-#{$space} {
+      margin-left: $spacing;
+      margin-right: $spacing;
+    }
+
+    .xs\:lib-my-#{$space} {
+      margin-top: $spacing;
+      margin-bottom: $spacing;
+    }
+
+    .xs\:lib-mt-#{$space} {
+      margin-top: $spacing;
+    }
+
+    .xs\:lib-mr-#{$space} {
+      margin-right: $spacing;
+    }
+
+    .xs\:lib-mb-#{$space} {
+      margin-bottom: $spacing;
+    }
+
+    .xs\:lib-ml-#{$space} {
+      margin-left: $spacing;
+    }
+  }
+}

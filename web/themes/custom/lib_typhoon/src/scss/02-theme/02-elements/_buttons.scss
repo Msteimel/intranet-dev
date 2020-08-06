@@ -1,0 +1,164 @@
+/*================================================
+			Button Elements
+==================================================*/
+$button-font: $heading-font;
+
+// primary button variables
+$button-primary-background-color: $primary-color;
+$button-primary-border-color: transparent;
+$button-primary_border-radius: 2px;
+$button-primary-text: $white;
+$button-primary-box-shadow: $vert-dark-1;
+$button-primary_hover-background-color: $red-400;
+$button-primary_hover-box-shadow: $vert-dark-3;
+
+// secondary button variables
+$button-secondary-background-color: $secondary-color;
+$button-secondary-border-color: transparent;
+$button-secondary-text: $warm-grey-900;
+$button-secondary-box-shadow: $vert-light-1;
+$button-secondary_hover-background-color: $yellow-400;
+$button-secondary_hover-box-shadow: $vert-light-3;
+
+// accent button variables
+$button-accent-background-color: $accent-color;
+$button-accent-border-color: transparent;
+$button-accent-text: $white;
+$button-accent-box-shadow: $vert-dark-1;
+$button-accent_hover-background-color: $blue-400;
+$button-accent_hover-box-shadow: $vert-dark-3;
+
+a.lib-button,
+button.lib-button,
+input[type='reset'].lib-button,
+input[type='submit'].lib-button,
+input[type='button'].lib-button {
+  // @include responsive-text(14px, 20px);
+  background-color: $button-primary-background-color;
+  border: 1px solid $button-primary-border-color;
+  border-radius: $button-primary_border-radius;
+  // box-sizing: border-box;
+  box-shadow: $button-primary-box-shadow;
+  color: $button-primary-text;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $button-font;
+  font-size: $fs-md;
+  line-height: 1rem;
+  padding: 1em 1.5em;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s ease;
+
+  &:focus,
+  &:hover {
+    color: $white;
+    background-color: $button-primary_hover-background-color;
+    box-shadow: $button-primary_hover-box-shadow;
+    text-decoration: none;
+  }
+
+  &:active {
+    background-color: $red-700;
+    box-shadow: $button-primary-box-shadow;
+  }
+}
+
+a.lib-button.lib-button-icon,
+button.lib-button.lib-button-icon,
+input[type='reset'].lib-button.lib-button-icon,
+input[type='submit'].lib-button.lib-button-icon,
+input[type='button'].lib-button.lib-button-icon {
+  padding: 1em 2em 1em 1em;
+  position: relative;
+
+  &::before,
+  &::after {
+    @include vert_center;
+    font-family: 'Fontawesome';
+    font-size: $fs-xs;
+    content: '\f054';
+    transition: right 0.3s;
+  }
+
+  &::before {
+    right: 0.5rem;
+  }
+
+  &::after {
+    right: 1rem;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      right: 0.6em;
+    }
+  }
+}
+
+.lib-button-full {
+  width: 100%;
+}
+
+.lib-button-large {
+  // @include responsive-text(16px, 24px);
+  padding: 1.2em 1.5em;
+}
+
+.lib-button-small {
+  // @include responsive-text(10px, 16px);
+  padding: 0.8em 1em;
+}
+
+.lib-button.lib-button-ghost {
+  background-color: transparent;
+  border-color: $red-600;
+  color: $red-600;
+
+  &:hover {
+    // background-color: darken(#fff, 5%);
+  }
+}
+
+a.lib-button.lib-button-secondary,
+button.lib-button.lib-button-secondary,
+input[type='reset'].lib-button-secondary,
+input[type='submit'].lib-button-secondary,
+input[type='button'].lib-button-secondary {
+  background-color: $button-secondary-background-color;
+  border-color: $button-secondary-border-color;
+  color: $button-secondary-text;
+
+  &:hover {
+    color: $button-secondary-text;
+    background-color: $button-secondary_hover-background-color;
+    box-shadow: $button-secondary_hover-box-shadow;
+  }
+
+  &:active {
+    background-color: $yellow-600;
+    box-shadow: $button-secondary-box-shadow;
+  }
+}
+
+a.lib-button.lib-button-accent,
+button.lib-button.lib-button-accent,
+input[type='reset'].lib-button-accent,
+input[type='submit'].lib-button-accent,
+input[type='button'].lib-button-accent {
+  background-color: $button-accent-background-color;
+  border-color: $button-accent-border-color;
+  color: $button-accent-text;
+
+  &:hover {
+    color: $button-accent-text;
+    background-color: $button-accent_hover-background-color;
+    box-shadow: $button-accent_hover-box-shadow;
+  }
+
+  &:active {
+    background-color: $blue-700;
+    box-shadow: $button-primary-box-shadow;
+  }
+}

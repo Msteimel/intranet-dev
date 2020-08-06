@@ -1,0 +1,32 @@
+name: Lib Typhoon
+type: theme
+description: "Iowa State Library Typhoon Design System"
+core_version_requirement: 9.x
+base theme: stable
+
+libraries:
+  - lib_typhoon/global
+libraries-extend:
+  -
+
+regions:
+  start_of_page: "Start of Page"
+  drupal_admin: "Drupal Admin Menus (For menu blocks)"
+  site_links_bar: "Site Links Bar"
+  nav_bar: "Navigation Bar"
+  post_nav: "Post Navigation"
+  help: "Help"
+  above_content: "Above Content"
+  content: "Content"
+  #sidebar_right: 'Aside'
+  post_content: "Post Content"
+  footer_above: "Above Footer"
+  #footer_associates: 'Footer Associates (Not used in this theme)'
+  footer_social: "Footer Social (Above)"
+  footer_contact: "Footer Contact (Column 1)"
+  footer_links: "Footer Links (Column 2)"
+  footer_legal: "Footer Legal (Column 3)"
+  footer: "Footer"
+  end_of_page: "End of Page"
+  page_top: "Page top"
+  page_bottom: "Page top"

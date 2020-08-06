@@ -1,0 +1,64 @@
+// $break-lg: 900px;
+
+// $table-text: $black;
+// $table-header-bg-color: #666;
+// $table-body-bg-color: #aaa;
+// $table-border-color: $secondary-color;
+
+// $table-fold: ml;
+
+// table {
+// 	border: 1px solid $table-border-color;
+// 	border-spacing: 0;
+// 	margin: 1em 0 3em;
+// 	width: 100%;
+
+// 	& + table,
+// 	& + h3 {
+// 		margin-top: 2.5em;
+// 	}
+// }
+
+// tr {
+// 	text-align: center;
+// 	vertical-align: middle;
+// }
+
+// th,
+// td {
+// 	padding: 1em 1em;
+// 	text-align: center;
+// 	vertical-align: middle;
+// 	box-sizing: border-box;
+
+// 	&:first-child {
+// 		&:empty {
+// 			@include bp($table-fold) {
+// 				display: block;
+// 			}
+// 		}
+// 	}
+// }
+
+// thead {
+// 	background-color: $table-header-bg-color;
+// 	color: $table-text;
+
+// 	th {
+// 		vertical-align: middle;
+// 	}
+// }
+
+// tbody {
+// 	color: $table-text;
+// 	width: 100%;
+
+// 	tr:nth-of-type(odd) {
+// 		background-color: $table-body-bg-color;
+
+// 		@include bp($table-fold) {
+// 			background-color: transparent;
+// 			padding-left: 0;
+// 		}
+// 	}
+// }

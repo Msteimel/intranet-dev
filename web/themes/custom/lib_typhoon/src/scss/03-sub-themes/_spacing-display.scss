@@ -1,0 +1,122 @@
+.typhoon-spacing-table {
+  width: 100%;
+  max-width: 1000px;
+
+  thead {
+    border-bottom: 1px solid $warm-grey-200;
+  }
+
+  tr {
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $warm-grey-200;
+    }
+
+    td {
+      padding: 1rem 0;
+    }
+
+    .spacing-display {
+      background-color: $blue-100;
+      display: inline-block;
+      border-radius: $br2;
+      line-height: 0;
+
+      div {
+        width: $space-2xl;
+        height: $space-2xl;
+        background-color: $red-500;
+        border-radius: $br2;
+      }
+    }
+
+    &:last-of-type {
+      .spacing-display {
+        display: block;
+      }
+    }
+  }
+}
+
+.responsive-display {
+  background-color: $blue-100;
+  display: inline-block;
+  border-radius: $br2;
+  line-height: 0;
+
+  div {
+    width: $space-2xl;
+    height: $space-2xl;
+    background-color: $red-500;
+    border-radius: $br2;
+  }
+}
+
+.utility-spacing {
+  .example {
+    width: $space-4xl;
+  }
+
+  .display {
+    width: $space-5xl;
+    text-align: center;
+  }
+
+  .description {
+    width: 17rem;
+    padding-left: 2rem;
+  }
+
+  .margin-all {
+    margin: $space-md;
+  }
+
+  .margin-x {
+    margin: 0 $space-md;
+  }
+
+  .margin-y {
+    margin: $space-md 0;
+  }
+
+  .margin-t {
+    margin-top: $space-md;
+  }
+
+  .margin-r {
+    margin-right: $space-md;
+  }
+
+  .margin-b {
+    margin-bottom: $space-md;
+  }
+
+  .margin-l {
+    margin-left: $space-md;
+  }
+
+  .margin-auto {
+    margin: 0 auto;
+  }
+}
+
+.spacing-tokens {
+  @include bp(xl) {
+    max-width: 50%;
+  }
+
+  width: 100%;
+
+  .modifier {
+    width: 15rem;
+
+    @include bp(xs) {
+      width: 10rem;
+    }
+  }
+
+  .value {
+    span {
+      display: block;
+    }
+  }
+}

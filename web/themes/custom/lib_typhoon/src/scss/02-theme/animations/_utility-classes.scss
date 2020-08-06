@@ -1,0 +1,58 @@
+// Triggers on page load
+.load-in {
+	@include load-in;
+}
+
+.load-left {
+	@include load-left;
+}
+
+.load-right {
+	@include load-right;
+}
+
+.load-up {
+	@include load-up;
+}
+
+.load-down {
+	@include load-down;
+}
+
+// triggers when element is in
+// this section is attached to some JS
+.fade-in {
+	@include fade-in;
+}
+
+.fade-up {
+	@include fade-up;
+}
+
+.fade-down {
+	@include fade-down;
+}
+
+.fade-left {
+	@include fade-left;
+}
+
+.fade-right {
+	@include fade-right;
+}
+
+.fade-up-left {
+	@include fade-up-left;
+}
+
+.fade-down-left {
+	@include fade-down-left;
+}
+
+.fade-up-right {
+	@include fade-up-right;
+}
+
+.fade-down-right {
+	@include fade-down-right;
+}

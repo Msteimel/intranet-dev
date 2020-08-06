@@ -1,0 +1,58 @@
+.lib-show {
+}
+
+.lib-show--item {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  // border-radius: $br4;
+  box-shadow: $vert-light-2;
+  transition: box-shadow 0.3s ease;
+  padding: $space-md $space-2xl;
+
+  &:not(last-of-type) {
+    margin-bottom: $space-md;
+  }
+
+  &:hover {
+    box-shadow: $vert-light-3;
+  }
+}
+
+.lib-show--title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: $white;
+
+  h4 {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .icon {
+    display: inline-block;
+    position: relative;
+    height: rem(16);
+    width: rem(16);
+    transition: transform 0.5s ease;
+
+    &::before {
+      @include absolute-center();
+      font-family: 'FontAwesome';
+      content: '\f078';
+    }
+
+    .js-open & {
+      transform: rotateZ(180deg);
+    }
+  }
+}
+
+.lib-show--content {
+  overflow: hidden;
+  text-align: left;
+  transition: height 0.3s;
+}

@@ -1,0 +1,63 @@
+
+$code-background-color: #aaa;
+$code-color: $black;
+
+$block-quote-border: #666;
+
+.codeblock, pre, code {
+	background-color: $code-background-color;
+    // box-shadow: 2px 3px 5px #ccc;
+    box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+	color: $code-color;
+    display: inline-block;
+    margin: 0;
+    font-family: Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    word-spacing: normal;
+    word-break: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    border-radius: 3px;
+    padding: 0.5rem;
+    overflow: auto;
+}
+
+blockquote, .blockquote {
+	border-left: 5px solid $block-quote-border;
+	font-style: italic;
+	margin: 0 0 1rem;
+	padding: 1em;
+}
+
+blockquote.quote {
+    padding: 2em;
+    position: relative;
+    
+    &::before, 
+    &::after  {
+        font-size: 3em;
+        position: absolute;
+    }
+
+     &::before {
+        content: "\201C";
+        left: 0;
+        top: 0;
+     } 
+
+    &::after {
+        bottom: -1rem;
+        content: "\201D";
+        right: 0;
+    }
+}
+
+cite {
+	display: block;
+    font-size: 1.15em;
+	text-align: right;
+}

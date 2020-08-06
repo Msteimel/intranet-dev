@@ -1,0 +1,39 @@
+/*================================================
+			Function
+==================================================*/
+// strips units
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+// Calculate px from a rem/em value
+@function px-calc($rem, $base-val: $fs-md) {
+  @if unit($rem) == px {
+    @return $rem;
+  }
+  @if not unitless($rem) {
+    $rem: strip-unit($rem);
+  }
+  @if not unitless($base-val) {
+    $base-val: strip-unit($base-val);
+  }
+  @return ($rem * $base-val) * 1px;
+}
+
+// Calculate rems from a px value
+@function rem($px, $base-val: 16px) {
+  @if unit($px) == rem {
+    @return $px;
+  }
+  @if not unitless($px) {
+    $px: strip-unit($px);
+  }
+  @if not unitless($base-val) {
+    $base-val: strip-unit($base-val);
+  }
+  @return ($px / $base-val) * 1rem;
+}
+
+@function em($px, $base-val: 16px) {
+  @return ($px, / $base-val) * 1em;
+}

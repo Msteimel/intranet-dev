@@ -1,0 +1,435 @@
+$card-width: rem(375);
+$card-width-mobile: 100%;
+
+// defualt card is red
+$basic-card-box-shadow: $vert-light-2;
+$basic-card-dark-shadow-hover: $vert-dark-4;
+$basic-card-light-shadow-hover: $vert-light-4;
+$basic-card-border-color: $red-400;
+$basic-card-border-color-hover: $red-700;
+$basic-card-background-hover: $red-500;
+$basic-card-light-tri: $red-400;
+$basic-card-light-tri-hover: $red-600;
+$basic-card-dark-tri: $red-500;
+$basic-card-dark-tri-hover: $red-700;
+$basic-card-text-color-hover: $white;
+$basic-card-text-red: $link-color;
+
+// decided to go with colors vs 'secondary' so colors could be endless
+// yellow card
+$yellow-basic-card-border-color: $yellow-500;
+$yellow-basic-card-border-color-hover: $yellow-600;
+$yellow-basic-card-background-hover: $yellow-400;
+$yellow-basic-card-light-tri: $yellow-500;
+$yellow-basic-card-light-tri-hover: $yellow-500;
+$yellow-basic-card-dark-tri: $yellow-600;
+$yellow-basic-card-dark-tri-hover: $yellow-600;
+$yellow-basic-card-text-color-hover: $text-color;
+$yellow-basic-card-text-yellow: $yellow-800;
+
+// blue card
+$blue-basic-card-border-color: $blue-600;
+$blue-basic-card-border-color-hover: $blue-700;
+$blue-basic-card-background-hover: $blue-500;
+$blue-basic-card-light-tri: $blue-500;
+$blue-basic-card-light-tri-hover: $blue-600;
+$blue-basic-card-dark-tri: $blue-600;
+$blue-basic-card-dark-tri-hover: $blue-700;
+$blue-basic-card-text-color-hover: $white;
+$blue-basic-card-text-blue: $blue-700;
+
+.lib-basic-card--wrap {
+  display: flex;
+  flex-wrap: wrap;
+
+  .lib-grid & {
+    display: grid;
+    gap: $space-lg;
+    grid-template-columns: repeat(auto-fit, minmax(rem(375), 1fr));
+  }
+}
+
+.lib-basic-card {
+  max-width: $card-width;
+
+  .lib-grid & {
+    max-width: none;
+  }
+
+  @include bp(sm) {
+    width: $card-width-mobile;
+  }
+
+  // &:last-of-type {
+  //   margin-bottom: 0;
+  // }
+
+  .lib-basic-card--link {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: $white;
+    height: 100%;
+    text-decoration: none;
+    box-shadow: $basic-card-box-shadow;
+    overflow: hidden;
+    transition: background-color 0.3s ease-in, border-color 0.3s ease-in,
+      box-shadow 0.3s ease-in;
+    z-index: 1;
+
+    &::before,
+    &::after {
+      content: '';
+      width: rem(88);
+      height: rem(50);
+      position: absolute;
+      transform: rotate(45deg);
+      transition: background-color 0.3s ease-in;
+    }
+
+    &::before {
+      top: $card-width * -0.03;
+      right: $card-width * -0.08;
+      background-color: $basic-card-light-tri;
+    }
+
+    &::after {
+      top: $card-width * -0.07;
+      right: $card-width * -0.11;
+      background-color: $basic-card-dark-tri;
+    }
+
+    // Hover triggers
+    &:hover,
+    &:focus {
+      background-color: $basic-card-background-hover;
+      border-color: $basic-card-border-color-hover;
+      box-shadow: $basic-card-dark-shadow-hover;
+
+      &::before {
+        background-color: $basic-card-light-tri-hover;
+      }
+
+      &::after {
+        background-color: $basic-card-dark-tri-hover;
+      }
+
+      [class*='lib-icon-'] {
+        color: $basic-card-text-color-hover;
+      }
+
+      .lib-basic-card--text-wrap {
+        border-color: $basic-card-border-color-hover;
+      }
+
+      .lib-basic-card--category {
+        color: $basic-card-text-color-hover;
+      }
+
+      .lib-basic-card--title {
+        color: $basic-card-text-color-hover;
+      }
+
+      .lib-basic-card--desc {
+        color: $basic-card-text-color-hover;
+      }
+
+      .lib-cta {
+        color: $basic-card-text-color-hover;
+
+        &::after {
+          right: 0.6em;
+        }
+      }
+    }
+  }
+
+  [class*='lib-icon-'] {
+    font-size: $fs-2xl;
+    color: $basic-card-text-red;
+    transition: color 0.3s ease-in;
+  }
+
+  .lib-basic-card--text-wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: $space-xl $space-lg $space-2xl $space-xl;
+    border-left: 4px solid $basic-card-border-color;
+    transition: border-color 0.3s ease-in;
+  }
+
+  .lib-basic-card--category {
+    display: block;
+    line-height: 1.5;
+    font-size: $fs-sm;
+    color: $basic-card-text-red;
+    transition: color 0.3s ease-in;
+  }
+
+  .lib-basic-card--title {
+    transition: color 0.3s ease-in;
+  }
+
+  .lib-basic-card--desc {
+    flex-grow: 1;
+    transition: color 0.3s ease-in;
+  }
+
+  .lib-cta--wrap {
+    margin-top: auto;
+  }
+
+  .lib-cta {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    padding-right: $space-xl;
+    padding-bottom: 0.1rem;
+    margin: 0;
+    color: $basic-card-text-red;
+    transition: color 0.3s ease-in;
+
+    &::before,
+    &::after {
+      @include vert_center;
+      font-family: 'Fontawesome';
+      font-size: $fs-xs;
+      content: '\f054';
+      transition: right 0.3s;
+    }
+
+    &::before {
+      right: 0.5rem;
+    }
+
+    &::after {
+      right: 1rem;
+    }
+  }
+}
+
+// Yellow card
+.lib-basic-card.lib-basic-card--yellow {
+  .lib-basic-card--link {
+    box-shadow: $basic-card-box-shadow;
+
+    &::before {
+      background-color: $yellow-basic-card-light-tri;
+    }
+
+    &::after {
+      background-color: $yellow-basic-card-dark-tri;
+    }
+
+    // Hover triggers
+    &:hover,
+    &:focus {
+      background-color: $yellow-basic-card-background-hover;
+      border-color: $yellow-basic-card-border-color-hover;
+      box-shadow: $basic-card-light-shadow-hover;
+
+      &::before {
+        background-color: $yellow-basic-card-light-tri-hover;
+      }
+
+      &::after {
+        background-color: $yellow-basic-card-dark-tri-hover;
+      }
+
+      [class*='lib-icon-'] {
+        color: $yellow-basic-card-text-color-hover;
+      }
+
+      .lib-basic-card--category {
+        color: $yellow-basic-card-text-color-hover;
+      }
+
+      .lib-basic-card--text-wrap {
+        border-color: $yellow-basic-card-border-color-hover;
+      }
+
+      .lib-basic-card--title {
+        color: $yellow-basic-card-text-color-hover;
+      }
+
+      .lib-basic-card--desc {
+        color: $yellow-basic-card-text-color-hover;
+      }
+
+      .lib-cta {
+        color: $yellow-basic-card-text-color-hover;
+      }
+    }
+  }
+
+  [class*='lib-icon-'] {
+    font-size: $fs-2xl;
+    color: $yellow-basic-card-text-yellow;
+    transition: color 0.3s ease-in;
+  }
+
+  .lib-basic-card--text-wrap {
+    border-left: 4px solid $yellow-basic-card-border-color;
+  }
+
+  .lib-basic-card--category {
+    color: $yellow-basic-card-text-yellow;
+  }
+
+  .lib-cta {
+    color: $yellow-basic-card-text-yellow;
+  }
+}
+
+// blue card
+.lib-basic-card.lib-basic-card--blue {
+  .lib-basic-card--link {
+    box-shadow: $basic-card-box-shadow;
+
+    &::before {
+      background-color: $blue-basic-card-light-tri;
+    }
+
+    &::after {
+      background-color: $blue-basic-card-dark-tri;
+    }
+
+    // Hover triggers
+    &:hover,
+    &:focus {
+      background-color: $blue-basic-card-background-hover;
+      border-color: $blue-basic-card-border-color-hover;
+      box-shadow: $basic-card-light-shadow-hover;
+
+      &::before {
+        background-color: $blue-basic-card-light-tri-hover;
+      }
+
+      &::after {
+        background-color: $blue-basic-card-dark-tri-hover;
+      }
+
+      [class*='lib-icon-'] {
+        color: $blue-basic-card-text-color-hover;
+      }
+
+      .lib-basic-card--text-wrap {
+        border-color: $blue-basic-card-border-color-hover;
+      }
+
+      .lib-basic-card--category {
+        color: $blue-basic-card-text-color-hover;
+      }
+
+      .lib-basic-card--title {
+        color: $blue-basic-card-text-color-hover;
+      }
+
+      .lib-basic-card--desc {
+        color: $blue-basic-card-text-color-hover;
+      }
+
+      .lib-cta {
+        color: $blue-basic-card-text-color-hover;
+      }
+    }
+  }
+
+  [class*='lib-icon-'] {
+    font-size: $fs-2xl;
+    color: $blue-basic-card-text-blue;
+    transition: color 0.3s ease-in;
+  }
+
+  .lib-basic-card--text-wrap {
+    border-left: 4px solid $blue-basic-card-border-color;
+  }
+
+  .lib-basic-card--category {
+    color: $blue-basic-card-text-blue;
+  }
+
+  .lib-cta {
+    color: $blue-basic-card-text-blue;
+  }
+}
+
+//
+
+.lib-basic-card--image {
+  .lib-basic-card--link {
+    &::before,
+    &::after {
+      content: '';
+      width: 0;
+    }
+  }
+
+  .lib-basic-card--image-wrap {
+    position: relative;
+
+    .lib-basic-card--text-wrap {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: auto;
+      border: none;
+      padding-bottom: $space-xs;
+    }
+  }
+
+  figure {
+    position: relative;
+    padding-top: percentage(411/575);
+    overflow: hidden;
+    margin: 0;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .lib-basic-card--text-wrap {
+    position: relative;
+    padding-top: $space-md;
+  }
+
+  .lib-basic-card--category,
+  .lib-basic-card--title {
+    color: $white;
+  }
+}
+
+.lib-basic-card.lib-basic-card--yellow.lib-basic-card--image {
+  .lib-basic-card--link {
+    .lib-basic-card--category,
+    .lib-basic-card--title {
+      color: $white;
+
+      &:hover,
+      &:focus {
+        color: $white;
+      }
+    }
+  }
+}
+
+.lib-basic-card.lib-basic-card--blue.lib-basic-card--image {
+  .lib-basic-card--link {
+    .lib-basic-card--category,
+    .lib-basic-card--title {
+      color: $white;
+
+      &:hover,
+      &:focus {
+        color: $white;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.typhoon-page-intro {
+  .lib-button {
+    width: rem(200);
+
+    @include bp(xs) {
+      width: 100%;
+    }
+  }
+}

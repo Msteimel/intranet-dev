@@ -1,0 +1,102 @@
+/* --------------------------------
+
+This mixin allows you to do the same as all the others with customization
+
+--------------------------------*/
+@mixin stagger-fade($num, $x: 0, $y: 3rem, $delay: 0.25s) {
+  .stagger {
+    @include fade-in;
+    transform: translate($x, $y);
+  }
+
+  @for $i from 1 through $num {
+    .stagger:nth-child(#{$i}) {
+      transition: transform 0.5s ease $delay * $i, opacity 1s ease $delay * $i;
+    }
+  }
+}
+
+// staggered fade in based on number of elements
+@mixin stagger-fade-in($num, $delay: 0.25s) {
+  .stagger {
+    @include fade-in;
+  }
+
+  @for $i from 1 through $num {
+    .stagger:nth-child(#{$i}) {
+      transition: transform 0.5s ease $delay * $i, opacity 1s ease $delay * $i;
+    }
+  }
+}
+
+@mixin stagger-fade-up($num, $delay: 0.25s) {
+  .stagger {
+    @include fade-up;
+  }
+
+  @for $i from 1 through $num {
+    .stagger:nth-child(#{$i}) {
+      transition: transform 0.5s ease $delay * $i, opacity 1s ease $delay * $i;
+    }
+  }
+}
+
+@mixin stagger-fade-up-reverse($num, $delay: 0.25s) {
+  .stagger {
+    @include fade-up;
+  }
+
+  @for $i from 1 through $num {
+    .stagger:nth-last-child(#{$i}) {
+      transition: transform 0.5s ease $delay * $i, opacity 1s ease $delay * $i;
+    }
+  }
+}
+
+@mixin stagger-fade-down($num, $delay: 0.25s) {
+  .stagger {
+    @include fade-down;
+  }
+
+  @for $i from 1 through $num {
+    .stagger:nth-child(#{$i}) {
+      transition: transform 0.5s ease $delay * $i, opacity 1s ease $delay * $i;
+    }
+  }
+}
+
+@mixin stagger-fade-down-reverse($num, $delay: 0.25s) {
+  .stagger {
+    @include fade-down;
+  }
+
+  @for $i from 1 through $num {
+    .stagger:nth-last-child(#{$i}) {
+      transition: transform 0.5s ease $delay * $i, opacity 1s ease $delay * $i;
+    }
+  }
+}
+
+@mixin stagger-fade-left($num, $delay: 0.25s) {
+  .stagger-left {
+    @include fade-left;
+  }
+
+  @for $i from 1 through $num {
+    .stagger-left:nth-child(#{$i}) {
+      transition: transform 0.5s ease $delay * $i, opacity 1s ease $delay * $i;
+    }
+  }
+}
+
+@mixin stagger-fade-right($num, $delay: 0.25s) {
+  .stagger {
+    @include fade-right;
+  }
+
+  @for $i from 1 through $num {
+    .stagger:nth-child(#{$i}) {
+      transition: transform 0.5s ease $delay * $i, opacity 1s ease $delay * $i;
+    }
+  }
+}

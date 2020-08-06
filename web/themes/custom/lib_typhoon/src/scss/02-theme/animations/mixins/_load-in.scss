@@ -1,0 +1,19 @@
+@mixin load-in {
+	animation: load-in 1s ease-out forwards;
+}
+
+@mixin load-left {
+	animation: load-left 1s ease-out forwards;
+}
+
+@mixin load-right {
+	animation: load-right 1s ease-out forwards;
+}
+
+@mixin load-up {
+	animation: load-up 1s ease-out forwards;
+}
+
+@mixin load-down {
+	animation: load-down 1s ease-out forwards;
+}

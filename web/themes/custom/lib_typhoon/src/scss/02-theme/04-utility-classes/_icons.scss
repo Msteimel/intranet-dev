@@ -1,0 +1,88 @@
+@font-face {
+  font-family: 'library-icons';
+  src: url('/src/fonts/library-icons/library-icons.eot');
+  src: url('/src/fonts/library-icons#iefix') format('embedded-opentype'),
+    url('/src/fonts/library-icons/library-icons.ttf?5458qa') format('truetype'),
+    url('/src/fonts/library-icons/library-icons.woff?5458qa') format('woff'),
+    url('/src/fonts/library-icons/library-icons.svg?5458qa#library-icons')
+      format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^='lib-icon-'],
+[class*=' lib-icon-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'library-icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: $fs-xl;
+  color: $warm-grey-900;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+$icon-list: (
+  'calendar': \e900,
+  'letter': \e901,
+  'documents': \e902,
+  'art': \e903,
+  'book': \e904,
+  'business-and-economic': \e905,
+  'carnival-masks': \e906,
+  'diploma': \e907,
+  'fraternity': \e908,
+  'sorority': \e909,
+  'computer-lab': \e90a,
+  'computing-science': \e90b,
+  'online-courses': \e90c,
+  'earning-a-degree': \e90d,
+  'educational-programs': \e90e,
+  'engineering': \e90f,
+  'faculty-shield': \e910,
+  'female-student': \e911,
+  'freshman': \e912,
+  'graduate-student': \e913,
+  'graduation-ceremony': \e914,
+  'group-of-students': \e915,
+  'international-university': \e916,
+  'law': \e917,
+  'library': \e918,
+  'male-student': \e919,
+  'medicine': \e91a,
+  'military': \e91b,
+  'professor-consultation': \e91c,
+  'science-lab': \e91d,
+  'science-symbol': \e91e,
+  'social-sciences': \e91f,
+  'sport-centre': \e920,
+  'sport-faculty': \e921,
+  'cafe': \e922,
+  'hostel': \e923,
+  'id': \e924,
+  'organization': \e925,
+  'students-on-lecture': \e926,
+  'study-process': \e927,
+  'study-tools': \e928,
+  'teaching': \e929,
+  'university-app': \e92a,
+  'building': \e92b,
+  'campus': \e92c,
+  'hospital': \e92d,
+  'lecture': \e92e,
+  'museum': \e92f,
+  'professor': \e930,
+);
+
+@each $icon-key, $icon-value in $icon-list {
+  .lib-icon-#{$icon-key}::before {
+    content: '#{$icon-value}';
+  }
+}

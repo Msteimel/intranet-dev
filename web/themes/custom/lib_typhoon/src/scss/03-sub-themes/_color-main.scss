@@ -1,0 +1,29 @@
+.typhoon-main-color--wrap {
+}
+
+.typhoon-main-color--list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.typhoon-main-color--display {
+  box-shadow: $vert-light-1;
+  transition: box-shadow 0.3s ease;
+
+  &:hover,
+  &:focus {
+    box-shadow: $vert-light-2;
+  }
+
+  .color-display {
+    height: 100px;
+    min-width: 225px;
+  }
+
+  .text-wrap {
+    p {
+      line-height: 1;
+    }
+  }
+}

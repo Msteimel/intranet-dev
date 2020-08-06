@@ -1,0 +1,221 @@
+/*================================================
+			padding classes
+==================================================*/
+// creates classes like `.lib-pt4`
+
+$padding-list: (
+  '7xl': $space-7xl,
+  '6xl': $space-6xl,
+  '5xl': $space-5xl,
+  '4xl': $space-4xl,
+  '3xl': $space-3xl,
+  'xl': $space-xl,
+  'lg': $space-lg,
+  '2xl': $space-2xl,
+  'md': $space-md,
+  'sm': $space-sm,
+  'xs': $space-xs,
+  '2xs': $space-2xs,
+  '0': $space-0,
+);
+
+@each $space, $spacing in $padding-list {
+  .lib-p-#{$space} {
+    padding: $spacing;
+  }
+
+  .lib-px-#{$space} {
+    padding-left: $spacing;
+    padding-right: $spacing;
+  }
+
+  .lib-py-#{$space} {
+    padding-top: $spacing;
+    padding-bottom: $spacing;
+  }
+
+  .lib-pt-#{$space} {
+    padding-top: $spacing;
+  }
+
+  .lib-pr-#{$space} {
+    padding-right: $spacing;
+  }
+
+  .lib-pb-#{$space} {
+    padding-bottom: $spacing;
+  }
+
+  .lib-pl-#{$space} {
+    padding-left: $spacing;
+  }
+}
+
+@each $space, $spacing in $padding-list {
+  @include bp(xl) {
+    .xl\:lib-p-#{$space} {
+      padding: $spacing;
+    }
+    .xl\:lib-px-#{$space} {
+      padding-left: $spacing;
+      padding-right: $spacing;
+    }
+
+    .xl\:lib-py-#{$space} {
+      padding-top: $spacing;
+      padding-bottom: $spacing;
+    }
+
+    .xl\:lib-pt-#{$space} {
+      padding-top: $spacing;
+    }
+
+    .xl\:lib-pr-#{$space} {
+      padding-right: $spacing;
+    }
+
+    .xl\:lib-pb-#{$space} {
+      padding-bottom: $spacing;
+    }
+
+    .xl\:lib-pl-#{$space} {
+      padding-left: $spacing;
+    }
+  }
+}
+
+@each $space, $spacing in $padding-list {
+  @include bp(lg) {
+    .lg\:lib-p-#{$space} {
+      padding: $spacing;
+    }
+
+    .lg\:lib-px-#{$space} {
+      padding-left: $spacing;
+      padding-right: $spacing;
+    }
+
+    .lg\:lib-py-#{$space} {
+      padding-top: $spacing;
+      padding-bottom: $spacing;
+    }
+
+    .lg\:lib-pt-#{$space} {
+      padding-top: $spacing;
+    }
+
+    .lg\:lib-pr-#{$space} {
+      padding-right: $spacing;
+    }
+
+    .lg\:lib-pb-#{$space} {
+      padding-bottom: $spacing;
+    }
+
+    .lg\:lib-pl-#{$space} {
+      padding-left: $spacing;
+    }
+  }
+}
+
+@each $space, $spacing in $padding-list {
+  @include bp(md) {
+    .md\:lib-p-#{$space} {
+      padding: $spacing;
+    }
+
+    .md\:lib-px-#{$space} {
+      padding-left: $spacing;
+      padding-right: $spacing;
+    }
+
+    .md\:lib-py-#{$space} {
+      padding-top: $spacing;
+      padding-bottom: $spacing;
+    }
+
+    .md\:lib-pt-#{$space} {
+      padding-top: $spacing;
+    }
+
+    .md\:lib-pr-#{$space} {
+      padding-right: $spacing;
+    }
+
+    .md\:lib-pb-#{$space} {
+      padding-bottom: $spacing;
+    }
+
+    .md\:lib-pl-#{$space} {
+      padding-left: $spacing;
+    }
+  }
+}
+
+@each $space, $spacing in $padding-list {
+  @include bp(sm) {
+    .sm\:lib-p-#{$space} {
+      padding: $spacing;
+    }
+
+    .sm\:lib-px-#{$space} {
+      padding-left: $spacing;
+      padding-right: $spacing;
+    }
+
+    .sm\:lib-py-#{$space} {
+      padding-top: $spacing;
+      padding-bottom: $spacing;
+    }
+
+    .sm\:lib-pt-#{$space} {
+      padding-top: $spacing;
+    }
+
+    .sm\:lib-pr-#{$space} {
+      padding-right: $spacing;
+    }
+
+    .sm\:lib-pb-#{$space} {
+      padding-bottom: $spacing;
+    }
+
+    .sm\:lib-pl-#{$space} {
+      padding-left: $spacing;
+    }
+  }
+}
+
+@each $space, $spacing in $padding-list {
+  @include bp(xs) {
+    .xs\:lib-p-#{$space} {
+      padding: $spacing;
+    }
+
+    .xs\:lib-px-#{$space} {
+      padding-left: $spacing;
+      padding-right: $spacing;
+    }
+
+    .xs\:lib-py-#{$space} {
+      padding-top: $spacing;
+      padding-bottom: $spacing;
+    }
+
+    .xs\:lib-pt-#{$space} {
+      padding-top: $spacing;
+    }
+
+    .xs\:lib-pr-#{$space} {
+      padding-right: $spacing;
+    }
+
+    .xs\:lib-pb-#{$space} {
+      padding-bottom: $spacing;
+    }
+
+    .xs\:lib-pl-#{$space} {
+      padding-left: $spacing;
+    }
+  }
+}

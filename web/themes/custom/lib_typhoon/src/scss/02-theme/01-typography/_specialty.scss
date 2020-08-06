@@ -1,0 +1,70 @@
+$header-special-fs: $space-4xl;
+
+@mixin angledSlashes($font-size) {
+  font-size: $font-size;
+  &::before,
+  &::after {
+    width: 0.125 * $font-size;
+    height: 0.625 * $font-size;
+  }
+}
+
+.lib-header-special {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.lib-header-special--text {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
+  @include angledSlashes($header-special-fs);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: $yellow-500;
+    transform-origin: center;
+    transform: rotate(45deg) scaleY(2) translateX(0);
+    z-index: 5;
+  }
+
+  &::before {
+    top: -10%;
+    left: -$space-xs;
+  }
+
+  &::after {
+    bottom: -6%;
+    right: -$space-lg;
+  }
+
+  @include bp(md) {
+    @include angledSlashes($space-3xl);
+  }
+
+  @include bp(xs) {
+    @include angledSlashes($space-2xl);
+    display: inline;
+  }
+}
+
+.lib-header-special--sub {
+  display: block;
+  max-width: 100%;
+  padding-left: $space-xs;
+  font-size: $fs-xl;
+  text-align: left;
+
+  @include bp(md) {
+    font-size: $fs-lg;
+    padding-left: 0;
+  }
+
+  @include bp(sm) {
+    font-size: $fs-md;
+  }
+}

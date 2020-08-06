@@ -1,0 +1,19 @@
+/*================================================
+			Display type utility classes
+==================================================*/
+// creates classes like `.lib-fs16`
+
+$display-list: (
+  'grid': grid,
+  'flex': flex,
+  'inline': inline,
+  'inline-block': inline-block,
+  'block': block,
+  'none': none,
+);
+
+@each $display, $value in $display-list {
+  .lib-#{$display} {
+    display: $value;
+  }
+}

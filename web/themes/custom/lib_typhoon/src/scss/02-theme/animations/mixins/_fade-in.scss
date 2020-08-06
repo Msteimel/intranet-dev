@@ -1,0 +1,59 @@
+@mixin fade-in {
+	transition: transform 0.5s ease 0.25s, opacity 1s ease 0.25s;
+	opacity: 0;
+	visibility: hidden;
+}
+
+/* --------------------------------
+
+This mixin allows you to do the same as all the others with customization
+
+--------------------------------*/
+
+@mixin custom-fade($x, $y) {
+	transform: translate($x, $y);
+	@include fade-in;
+}
+
+// Main Directions
+@mixin fade-up {
+	transform: translateY(3rem);
+	@include fade-in;
+}
+
+@mixin fade-down {
+	transform: translateY(-3rem);
+	@include fade-in;
+}
+
+@mixin fade-left {
+	transform: translateX(3rem);
+	@include fade-in;
+}
+
+@mixin fade-right {
+	transform: translateX(-3rem);
+	@include fade-in;
+}
+
+// Diagonal Directions
+
+@mixin fade-up-left {
+	transform: translate(3rem, 3rem);
+	@include fade-in;
+}
+
+@mixin fade-down-left {
+	transform: translate(3rem, -3rem);
+	@include fade-in;
+}
+
+@mixin fade-up-right {
+	transform: translate(-3rem, 3rem);
+	@include fade-in;
+}
+
+@mixin fade-down-right {
+	transform: translate(-3rem, -3rem);
+	@include fade-in;
+}

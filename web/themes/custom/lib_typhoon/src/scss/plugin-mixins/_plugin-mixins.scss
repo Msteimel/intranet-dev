@@ -1,0 +1,173 @@
+/* --------------------------------
+ANIMATIONS
+--------------------------------*/
+
+@mixin fade-in {
+  transition: transform 0.5s ease 0.25s, opacity 1s ease 0.25s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+// Single element animation
+
+@mixin custom-fade($x, $y) {
+  transform: translate($x, $y);
+  @include fade-in;
+}
+
+// multiple element animation
+
+@mixin stagger-fade($num, $x: 0, $y: 3rem, $delay: 0.25s) {
+  .stagger {
+    @include fade-in;
+    transform: translate($x, $y);
+  }
+
+  @for $i from 1 through $num {
+    .stagger:nth-child(#{$i}) {
+      transition: transform 0.5s ease $delay * $i, opacity 1s ease $delay * $i;
+    }
+  }
+}
+
+@mixin load-in {
+  animation: load-in 1s ease-out forwards;
+}
+
+@mixin load-left {
+  animation: load-left 1s ease-out forwards;
+}
+
+@mixin load-right {
+  animation: load-right 1s ease-out forwards;
+}
+
+@mixin load-up {
+  animation: load-up 1s ease-out forwards;
+}
+
+@mixin load-down {
+  animation: load-down 1s ease-out forwards;
+}
+
+/* --------------------------------
+Utility Mixins
+--------------------------------*/
+
+// positions
+
+@mixin position($position, $args) {
+  @each $o in top right bottom left {
+    $i: index($args, $o);
+    @if $i and $i + 1 <= length($args) and type-of(nth($args, $i + 1)) == number
+    {
+      #{$o}: nth($args, $i + 1);
+    }
+  }
+  position: $position;
+}
+
+@mixin absolute($args: '') {
+  @include position(absolute, $args);
+}
+
+@mixin fixed($args: '') {
+  @include position(fixed, $args);
+}
+
+@mixin relative($args: '') {
+  @include position(relative, $args);
+}
+
+// image ratio
+@mixin img-ratio($width: 16, $height: 9) {
+  padding-top: percentage($width / $height);
+}
+
+// Arrows mixin
+@mixin arrow($direction: down, $size: 5px, $color: #555) {
+  width: 0;
+  height: 0;
+  @if ($direction == left) {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+  } @else if ($direction == right) {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+  } @else if ($direction == down) {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+  } @else {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+  }
+}
+
+@mixin linear-gradient(
+  $pos,
+  $G1,
+  $G2: false,
+  $G3: false,
+  $G4: false,
+  $G5: false,
+  $G6: false,
+  $G7: false,
+  $G8: false,
+  $G9: false,
+  $G10: false,
+  $deprecated-pos1: left top,
+  $deprecated-pos2: left bottom,
+  $fallback: false
+) {
+  // Detect what type of value exists in $pos
+  $pos-type: type-of(nth($pos, 1));
+  $pos-spec: null;
+  $pos-degree: null;
+
+  // If $pos is missing from mixin, reassign vars and add default position
+  @if ($pos-type == color) or (nth($pos, 1) == 'transparent') {
+    $G10: $G9;
+    $G9: $G8;
+    $G8: $G7;
+    $G7: $G6;
+    $G6: $G5;
+    $G5: $G4;
+    $G4: $G3;
+    $G3: $G2;
+    $G2: $G1;
+    $G1: $pos;
+    $pos: null;
+  }
+
+  @if $pos {
+    $positions: _linear-positions-parser($pos);
+    $pos-degree: nth($positions, 1);
+    $pos-spec: nth($positions, 2);
+  }
+
+  $full: compact($G1, $G2, $G3, $G4, $G5, $G6, $G7, $G8, $G9, $G10);
+
+  // Set $G1 as the default fallback color
+  $fallback-color: nth($G1, 1);
+
+  // If $fallback is a color use that color as the fallback color
+  @if (type-of($fallback) == color) or ($fallback == 'transparent') {
+    $fallback-color: $fallback;
+  }
+
+  background-color: $fallback-color;
+  background-image: _deprecated-webkit-gradient(
+    linear,
+    $deprecated-pos1,
+    $deprecated-pos2,
+    $full
+  ); // Safari <= 5.0
+  background-image: -webkit-linear-gradient(
+    $pos-degree $full
+  ); // Safari 5.1+, Chrome
+  background-image: unquote('linear-gradient(#{$pos-spec}#{$full})');
+}
