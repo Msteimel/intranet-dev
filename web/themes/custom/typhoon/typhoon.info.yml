@@ -1,0 +1,22 @@
+name: Typhoon
+type: theme
+description: "Iowa State Library Typhoon Design System"
+core_version_requirement: 9.x
+base theme: stable
+
+libraries:
+  - typhoon/global
+libraries-extend:
+  -
+
+regions:
+  header: "Header"
+  primary_menu: "Primary Menu"
+  secondary_menu: "Secondary Menu"
+  highlighted: "Highlighted"
+  help: "Help"
+  content: "Content"
+  sidebar_first: "Sidebar First"
+  sidebar_second: "Sidebar Second"
+  footer: "Footer"
+  breadcrumb: "Breadcrumb"
