@@ -1,0 +1,134 @@
+/**
+ * @file
+ * CSS styles for the official Iowa State Navbar
+ *
+ * It is strongly recommended that the Iowa State Navbar be included in all
+ * Iowa State University websites. If it is not desired or relevant, remove or
+ * disable it. Never repurpose or modify in any way.
+ *
+ * The ISU Navbar does not require any external CSS frameworks.
+ *
+ * Other required files:
+ * - templates/parts/isu-navbar.html.twig
+ * - js/isu-navbar.js
+ */
+
+.isu-navbar {
+  display: block;
+  font-size: 14px;
+  color: #dddddd;
+  background: #333333;
+}
+.isu-navbar a {
+  position: relative;
+  display: block;
+  padding: 4px 8px;
+  color: #dddddd;
+  line-height: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 250ms ease;
+}
+  .isu-navbar a:hover,
+  .isu-navbar a:focus,
+  .isu-navbar_dropdown.has-focus {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #555555;
+  }
+.isu-navbar_container { /* This is a ul */
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 0;
+  padding-right: 15px;
+  padding-left: 15px;
+  list-style-type: none;
+}
+  /* Breakpoints mimic Bootstrap 4 */
+  @media (min-width: 576px) {
+    .isu-navbar_container {
+      width: 540px;
+    }
+  }
+  @media (min-width: 768px) {
+    .isu-navbar_container {
+      width: 720px;
+    }
+  }
+  @media (min-width: 992px) {
+    .isu-navbar_container {
+      width: 960px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .isu-navbar_container {
+      width: 1140px;
+    }
+  }
+
+/* Forces list items to break */
+.isu-navbar_break {
+  width: 100%;
+}
+  @media screen and (min-width: 576px) {
+    .isu-navbar_break {
+      width: 0px;
+      flex-grow: 1;
+    }
+  }
+
+.isu-navbar_dropdown {
+  position: relative;
+}
+.isu-navbar_dropdown-toggle:after {
+  content: "\f107";
+  display: inline-block;
+  margin: 0 0 0 6px;
+  text-align: center;
+  vertical-align: top;
+  font-family: "FontAwesome";
+}
+  @media screen and (max-width: 991px) {
+    .isu-navbar_dropdown-toggle:after {
+      display: none;
+    }
+  }
+
+.isu-navbar_dropdown-menu {
+  list-style: none;
+  position: absolute;
+  top: 100%; left: 0;
+  margin: 0;
+  padding: 0;
+  background-color: #555555;
+  z-index: 9999;
+}
+.isu-navbar_alpha {
+  display: flex;
+  min-width: 675px; /* Needs to be set manually for IE11 */
+}
+.isu-navbar_dropdown-menu a:hover,
+.isu-navbar_dropdown-menu a:focus,
+.isu-navbar_dropdown-menu.has-focus {
+  background-color: #757575;
+}
+
+/* -------------------------------------- */
+/* Dropdown menus
+/* -------------------------------------- */
+
+.isu-navbar_dropdown[aria-expanded='false'] .isu-navbar_dropdown-menu {
+  display: none;
+}
+@media (min-width: 992px) {
+  .isu-navbar_dropdown_alpha:hover > .isu-navbar_alpha {
+    display: flex;
+  }
+  .isu-navbar_dropdown_signons:hover > .isu-navbar_signons {
+    display: block;
+  }
+}

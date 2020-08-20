@@ -1,0 +1,107 @@
+{#
+/**
+ * @file
+ * Theme override for an 'submit' #type form element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
+ *
+ * @see template_preprocess_input()
+ */
+#}
+
+{% if attributes.hasClass('isu-search__search-btn') %}
+  {# This class is added with a preprocess function in iastate_theme.theme #}
+
+  <button{{ attributes.addClass('btn').setAttribute('id', 'search_edit-submit') }}>
+    <span class="fa fa-search" aria-hidden="true"></span>
+    <span class="isu-search__search-btn-text">Submit search</span>
+  </button>
+
+{% elseif attributes.value == 'Add another item' %}
+
+  {% 
+    set submit_classes = [
+      'btn', 
+      'btn-sm', 
+      'btn-outline-success',  
+      'isu-add-another-item-button', 
+      'isu-form-submit'
+      ] 
+  %}
+
+  <button{{ attributes.addClass(submit_classes) }}>{{ attributes.value }}</button>
+
+{% elseif attributes.value == 'Remove' %}
+
+  {% 
+    set submit_classes = [
+      'btn', 
+      'btn-sm', 
+      'btn-outline-danger', 
+      'isu-remove-button', 
+      'isu-form-submit'
+    ] 
+  %}
+
+  <button{{ attributes.addClass(submit_classes) }}>{{ attributes.value }}</button>
+
+{% elseif attributes.value == 'Delete' %}
+
+  {% 
+    set submit_classes = [
+      'btn', 
+      'btn-sm', 
+      'btn-outline-danger', 
+      'isu-remove-button', 
+      'isu-form-submit'
+    ] 
+  %}
+
+  <button{{ attributes.addClass(submit_classes) }}>{{ attributes.value }}</button>
+
+{% elseif attributes.value == 'Preview' %}
+
+  {% 
+    set submit_classes = [
+      'btn', 
+      'btn-outline-info', 
+      'isu-preview-button', 
+      'isu-form-submit' 
+    ] 
+  %}
+
+  <button{{ attributes.addClass(submit_classes) }}>{{ attributes.value }}</button>
+
+{% elseif attributes.value == 'Save and publish' or 'Save and keep published' %}
+
+  {% 
+    set submit_classes = [
+      'btn', 
+      'btn-success', 
+      'isu-form-submit'
+    ] 
+  %}
+
+  <button{{ attributes.addClass(submit_classes) }}>{{ attributes.value }}</button>
+
+{% elseif attributes.value == 'Save as unpublished' or 'Save and unpublish' %}
+
+  <button{{ attributes }}>{{ attributes.value }}</button>
+
+{% else %}
+
+  {% 
+    set submit_classes = [
+      'btn', 
+      'btn-sm', 
+      'btn-success', 
+      'isu-form-submit'
+    ] 
+  %}
+  
+  <button{{ attributes.addClass(submit_classes) }}>{{ attributes.value }}
+  </button>
+
+{% endif %}
