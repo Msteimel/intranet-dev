@@ -1,0 +1,11 @@
+// This is a general css edits for the admin that will need to be parsed out further.
+
+.views-exposed-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(rem(200), 1fr));
+  gap: $space-sm;
+}
+
+.form-item {
+  margin-bottom: $space-lg;
+}

@@ -31,7 +31,7 @@ code {
   vertical-align: middle;
 }
 
-p > a {
+a {
   position: relative;
   color: $link-color;
   text-decoration: none;
@@ -39,7 +39,7 @@ p > a {
   transition: 0.3s ease;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
