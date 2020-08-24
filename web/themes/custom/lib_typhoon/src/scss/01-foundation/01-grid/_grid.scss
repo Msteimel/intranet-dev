@@ -7,12 +7,12 @@
     grid-template-columns: 1fr;
   }
 
-  header,
-  footer {
+  // .lib-header,
+  .lib-footer {
     grid-column: 1 / -1;
   }
 
-  aside {
+  .lib-side-nav {
     grid-column: 1 / 2;
 
     @include bp(sm) {
@@ -20,7 +20,7 @@
     }
   }
 
-  main {
+  .lib-body {
     grid-column: 2 / -1;
 
     @include bp(sm) {

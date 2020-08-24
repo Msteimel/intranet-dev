@@ -5,7 +5,7 @@
  * Make theme settings available in templates
  */
 
-function lib_typhoon_preprocess_page(&$variables) { 
-  $variables['lib_navbar'] = theme_get_setting('lib_navbar');
+// function lib_typhoon_preprocess_page(&$variables) { 
+//   $variables['lib_navbar'] = theme_get_setting('lib_navbar');
 
-}
+// }
