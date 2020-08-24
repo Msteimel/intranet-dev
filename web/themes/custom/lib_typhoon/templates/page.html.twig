@@ -43,42 +43,43 @@
  * @see html.html.twig
  */
 #}
-<div class="layout-container front">
+<div class="layout-container lib-grid front">
 
-  <header role="banner">
+  {# <header role="banner">
     {{ page.header }}
-  </header>
+  </header> #}
 
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
+  {% include "@lib_typhoon/nav.html.twig" %}
 
-  {{ page.breadcrumb }}
-
-  {{ page.highlighted }}
-
-  {{ page.help }}
-
-
-  <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-    <div class="layout-content">
-      {{ page.content }}
-    </div>{# /.layout-content #}
-
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
-
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
-
-  </main>
+  <div class"lib-body">
+    {{ page.breadcrumb }}
+  
+    {{ page.highlighted }}
+  
+    {{ page.help }}
+  
+  
+    <main role="main">
+      <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+  
+      <div class="layout-content">
+        {{ page.content }}
+      </div>{# /.layout-content #}
+  
+      {% if page.sidebar_first %}
+        <aside class="layout-sidebar-first" role="complementary">
+          {{ page.sidebar_first }}
+        </aside>
+      {% endif %}
+  
+      {% if page.sidebar_second %}
+        <aside class="layout-sidebar-second" role="complementary">
+          {{ page.sidebar_second }}
+        </aside>
+      {% endif %}
+  
+    </main>
+  </div>
 
   {% if page.footer %}
     <footer role="contentinfo">
