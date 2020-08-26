@@ -1,0 +1,22 @@
+uuid: 6cf8a7b6-889d-4698-bba5-10338a27768a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - lib_typhoon
+_core:
+  default_config_hash: YRY68JWkaUiGeZlWMv1nzeIgDm0ZZwXYgpqUpLFzwAY
+id: lib_typhoon_content
+theme: lib_typhoon
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,29 @@
+uuid: 4c3288cc-5b93-4687-b1ba-98998bc5eb7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - menu_block
+  theme:
+    - lib_typhoon
+id: mainnavigation_2
+theme: lib_typhoon
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Main navigation'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 2
+  depth: 0
+  expand: false
+  parent: 'main:'
+  suggestion: main
+visibility: {  }

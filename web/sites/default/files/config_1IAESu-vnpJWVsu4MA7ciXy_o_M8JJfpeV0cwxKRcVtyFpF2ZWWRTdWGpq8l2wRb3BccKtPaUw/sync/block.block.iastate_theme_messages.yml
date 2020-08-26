@@ -1,0 +1,22 @@
+uuid: 84ca4865-d05f-4707-9ce2-4af9986940b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - iastate_theme
+_core:
+  default_config_hash: 8U5Le2-uSrRRWRQ4C25C7yZetS2X_DiQmCep0GdsPDY
+id: iastate_theme_messages
+theme: iastate_theme
+region: content
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

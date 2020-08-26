@@ -1,0 +1,10 @@
+uuid: c5c7ebab-f2f3-4879-9026-a088154b8ca4
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.staff
+label: Staff
+targetEntityType: block_content
+cache: true

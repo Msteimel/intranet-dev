@@ -1,0 +1,53 @@
+uuid: c19c3444-baa9-4ea6-97d1-a583447ce0ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.employee.field_department
+    - field.field.node.employee.field_employee_email
+    - field.field.node.employee.field_first_name
+    - field.field.node.employee.field_last_name
+    - node.type.employee
+  module:
+    - options
+    - text
+    - user
+id: node.employee.default
+targetEntityType: node
+bundle: employee
+mode: default
+content:
+  field_department:
+    weight: 105
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_employee_email:
+    weight: 104
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_first_name:
+    weight: 102
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_last_name:
+    weight: 103
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

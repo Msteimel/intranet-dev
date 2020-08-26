@@ -1,0 +1,22 @@
+uuid: 9f6746a1-4d1e-4171-ab50-c6b5686a57bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - iastate_theme
+_core:
+  default_config_hash: 4IpoJ5VfHHiP3reDmqkNfFUcMP3rpNEvPheCKYZJJr8
+id: iastate_theme_help
+theme: iastate_theme
+region: content
+weight: -6
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

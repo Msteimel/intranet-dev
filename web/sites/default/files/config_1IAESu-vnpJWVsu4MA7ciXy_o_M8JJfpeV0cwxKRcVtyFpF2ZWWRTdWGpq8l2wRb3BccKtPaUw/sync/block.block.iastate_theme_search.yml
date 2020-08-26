@@ -1,0 +1,23 @@
+uuid: d79c2114-e8ea-47ad-86b9-cb6753de5972
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - iastate_theme
+_core:
+  default_config_hash: DmiZdUmPFsxmBa-BOytgF3rHYgepkIHxQnbpycVcM3Q
+id: iastate_theme_search
+theme: iastate_theme
+region: header_second
+weight: -6
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: '0'
+  page_id: ''
+visibility: {  }

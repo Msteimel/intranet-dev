@@ -1,0 +1,8 @@
+uuid: 92330c2b-9078-49d6-a77c-6959087b6c86
+langcode: en
+status: true
+dependencies: {  }
+id: side-menu
+label: 'Side Menu'
+description: 'Side menu for sub-pages'
+locked: false

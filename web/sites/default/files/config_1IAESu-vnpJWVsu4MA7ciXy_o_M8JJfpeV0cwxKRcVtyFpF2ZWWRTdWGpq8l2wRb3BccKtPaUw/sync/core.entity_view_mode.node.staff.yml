@@ -1,0 +1,10 @@
+uuid: b745e4ec-7584-4e33-ad2d-067058631774
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.staff
+label: Staff
+targetEntityType: node
+cache: true

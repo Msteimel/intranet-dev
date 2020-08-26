@@ -1,0 +1,18 @@
+uuid: 05d6a592-0853-450c-abc0-055b409cd5df
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_employee_email
+field_name: field_employee_email
+entity_type: node
+type: email
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

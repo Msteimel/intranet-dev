@@ -1,0 +1,36 @@
+uuid: 5307dda9-cfe2-418d-ab24-b432775d248b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.staff_news.body
+    - field.field.node.staff_news.field_preview_text
+    - node.type.staff_news
+  module:
+    - text
+    - user
+id: node.staff_news.default
+targetEntityType: node
+bundle: staff_news
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_preview_text:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

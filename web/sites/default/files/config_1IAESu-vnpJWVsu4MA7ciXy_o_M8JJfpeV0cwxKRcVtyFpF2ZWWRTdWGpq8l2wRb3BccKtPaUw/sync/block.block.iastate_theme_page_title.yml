@@ -1,0 +1,20 @@
+uuid: 0e3f07d5-337b-4771-af70-ef9ffc3a5243
+langcode: en
+status: true
+dependencies:
+  theme:
+    - iastate_theme
+_core:
+  default_config_hash: p4QfjeXcgJFgBMRj0s_9p4LcN6X3gw0FvkXxr_bv3Go
+id: iastate_theme_page_title
+theme: iastate_theme
+region: content
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

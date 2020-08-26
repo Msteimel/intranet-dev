@@ -1,0 +1,19 @@
+uuid: 0438c7d5-3e90-4da9-8363-263719ce415f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+      - side-menu
+    parent: 'main:'
+name: 'Staff News'
+type: staff_news
+description: 'Big time news updates!'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

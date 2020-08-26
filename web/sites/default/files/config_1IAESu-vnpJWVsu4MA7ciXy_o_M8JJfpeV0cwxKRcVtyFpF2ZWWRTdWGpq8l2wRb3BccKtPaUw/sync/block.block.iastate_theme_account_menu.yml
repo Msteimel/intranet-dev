@@ -1,0 +1,27 @@
+uuid: d1e2df3c-eac6-4576-9b9a-9e977005f1e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - iastate_theme
+_core:
+  default_config_hash: qgj70osBjDK8BmEdsDROqKew4sOeGM-EXeuN86Cnjek
+id: iastate_theme_account_menu
+theme: iastate_theme
+region: sidebar_first
+weight: -5
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,21 @@
+uuid: 7bfcc21b-c84e-40b0-882a-5bbce95b7fba
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - lib_typhoon
+id: searchform
+theme: lib_typhoon
+region: utility_menu
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  provider: search
+  label_display: visible
+  page_id: ''
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: b1683f51-8e85-43c0-92c7-20244c596946
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - views
+id: node.field_staff
+field_name: field_staff
+entity_type: node
+type: entity_reference
+settings:
+  target_type: view
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

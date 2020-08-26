@@ -1,0 +1,20 @@
+uuid: 5671c70e-d567-46c4-8fd8-a1b4d925fbed
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_preview_text
+field_name: field_preview_text
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,22 @@
+uuid: ec943862-8e29-4862-b000-040615b60636
+langcode: en
+status: false
+dependencies:
+  theme:
+    - typhoon
+_core:
+  default_config_hash: ddy1OsBbWxjwEI8VL1viD4I69qcLHOkul4BxbTqLBTs
+id: typhoon_primary_local_tasks
+theme: typhoon
+region: sidebar_first
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: false
+visibility: {  }

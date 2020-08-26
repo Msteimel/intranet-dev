@@ -1,0 +1,21 @@
+uuid: 3c9f0cb9-17c0-4891-a0a8-68ea552cb948
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_department
+    - node.type.employee
+  module:
+    - options
+id: node.employee.field_department
+field_name: field_department
+entity_type: node
+bundle: employee
+label: Department
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

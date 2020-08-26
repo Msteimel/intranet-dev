@@ -1,0 +1,27 @@
+uuid: ce5c5895-bc9b-4cd0-a29b-8c8783d6a3d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - iastate_theme
+_core:
+  default_config_hash: CA6X-QuYZaRoyJ2EcjFDJhV-V0jbMri17Q_2qX7d3s0
+id: iastate_theme_main_menu
+theme: iastate_theme
+region: menu_navbar
+weight: -6
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 2
+  expand_all_items: true
+visibility: {  }
