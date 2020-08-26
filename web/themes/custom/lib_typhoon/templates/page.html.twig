@@ -43,15 +43,14 @@
  * @see html.html.twig
  */
 #}
-<div class="layout-container lib-grid front">
+<div class="layout-container lib-grid">
 
-  {# <header role="banner">
+ <header role="banner" class="lib-header">
     {{ page.header }}
-  </header> #}
-
-  {% include "@lib_typhoon/nav.html.twig" %}
-
-  <div class"lib-body">
+    {% include "@lib_typhoon/nav.html.twig" %}
+  </header>
+  
+    <div class="lib-body">
     {{ page.breadcrumb }}
   
     {{ page.highlighted }}

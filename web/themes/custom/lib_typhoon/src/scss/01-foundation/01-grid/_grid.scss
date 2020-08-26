@@ -21,7 +21,7 @@
   }
 
   .lib-body {
-    grid-column: 2 / -1;
+    grid-column: 1 / -1;
 
     @include bp(sm) {
       grid-column: 1 / -1;

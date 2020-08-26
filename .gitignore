@@ -26,3 +26,4 @@ Vagrantfile.local
 
 #extra files
 node_modules
+drupal/web/sites/default/files/php/twig/*
