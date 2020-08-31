@@ -45,8 +45,59 @@
   }
 }
 
+.lib-lead-block p:first-of-type {
+  color: $lead-color;
+  font-size: $lead-fs;
+}
+
 .lib-img-block {
   @include clearfix;
+}
+
+.lib-gen-con--img-wrap {
+  width: 100%;
+
+  &.large {
+    max-width: rem(400);
+  }
+  &.medium {
+    max-width: rem(300);
+  }
+  &.small {
+    max-width: rem(200);
+  }
+
+  figure {
+    position: relative;
+    // padding-top: percentage(400/400);
+  }
+
+  // div {
+  // padding-top: percentage(400/400);
+  // position: relative;
+  // overflow: hidden;
+  // box-shadow: $vert-dark-2;
+
+  img {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    box-shadow: $vert-dark-2;
+    // z-index: 1;
+  }
+  // }
+
+  figcaption {
+    // position: relative;
+    padding-top: $space-sm;
+    background-color: white;
+    text-align: center;
+    font-style: italic;
+    // z-index: 2;
+  }
 }
 
 .lib-text-img--right {
@@ -125,32 +176,6 @@
   }
 }
 
-.lib-gen-con--img-wrap {
-  max-width: rem(300);
-  width: 100%;
-
-  figure {
-    position: relative;
-    padding-top: percentage(400/400);
-  }
-
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    box-shadow: $vert-dark-2;
-  }
-
-  figcaption {
-    padding-top: $space-sm;
-    text-align: center;
-    font-style: italic;
-  }
-}
-
 .lib-block--link-list {
   .lib-link-list {
     display: flex;
@@ -186,8 +211,8 @@
       &::before {
         position: absolute;
         top: 0;
-        font-family: 'FontAwesome';
-        content: '\f15c';
+        font-family: "FontAwesome";
+        content: "\f15c";
         font-size: $fs-lg;
         left: 0;
         color: inherit;
@@ -204,20 +229,20 @@
  |--------------------------------------------------------------------------
 */
     $doc-types: (
-      '.docx': '\f1c2',
-      '.pdf': '\f1c1',
-      '.xlsx': '\f1c3',
-      '.jpg': '\f1c5',
-      '.png': '\f1c5',
-      '.com': '\f35d',
-      '.net': '\f35d',
-      '.edu': '\f35d',
-      '.org': '\f35d',
+      ".docx": "\f1c2",
+      ".pdf": "\f1c1",
+      ".xlsx": "\f1c3",
+      ".jpg": "\f1c5",
+      ".png": "\f1c5",
+      ".com": "\f35d",
+      ".net": "\f35d",
+      ".edu": "\f35d",
+      ".org": "\f35d"
     );
 
     @each $docType, $icon in $doc-types {
       @if "a[href*='#{$docType}']" {
-        a[href*='#{$docType}']::before {
+        a[href*="#{$docType}"]::before {
           content: $icon;
         }
       }
@@ -235,8 +260,8 @@
 
     &::before {
       @include vert_center(0);
-      font-family: 'FontAwesome';
-      content: '\f35d';
+      font-family: "FontAwesome";
+      content: "\f35d";
       // font-size: $fs-md;
       left: 0;
       color: $primary-color;
@@ -300,7 +325,7 @@
 
     &::before,
     &::after {
-      content: '\2014';
+      content: "\2014";
       color: $yellow-600;
       padding: 0 $space-sm;
     }
@@ -370,7 +395,7 @@
   box-shadow: $vert-light-2;
   border-radius: $br2;
   border-left: solid 4px $red-500;
-  quotes: '“' '”';
+  quotes: "“" "”";
   overflow: hidden;
 
   &::before,
@@ -424,7 +449,7 @@
 
     &::before,
     &::after {
-      content: '';
+      content: "";
       width: 10rem;
       height: 5rem;
       position: absolute;

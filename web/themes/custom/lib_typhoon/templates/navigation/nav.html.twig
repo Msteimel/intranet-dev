@@ -1,0 +1,30 @@
+{# <div>
+  <div>{{ page.secondary_menu }}</div>
+  <div>{{ page.primary_menu }}</div>
+</div> #}
+
+  <div class="lib-util-nav--wrap lib-bg-red-600">
+    <div class="lib-util-nav lib-px-3xl">
+      <div class="triangles"></div>
+      <ul class="lib-util-nav--list">
+         {% if lib_util_nav1_text %}
+          <li><a href="{{ lib_util_nav1_url }}">{{ lib_util_nav1_text }}</a></li>
+        {% endif %}
+        {% if lib_util_nav2_text %}
+          <li><a href="{{ lib_util_nav2_url }}">{{ lib_util_nav2_text }}</a></li>
+        {% endif %}
+
+        {{page.utility_menu}}
+      </ul>
+    </div>
+  </div>
+  <div class="lib-main-nav--wrap md:lib-px-lg lib-px-3xl">
+    <div class="lib-main-nav">
+      <div class="logo-wrap">
+        <div class="logo">
+          <a href="/"><img src="{{ relative_logo_url }}" alt="ISU Library Logo"></a>
+        </div>
+      </div>
+      {{ page.primary_menu }}
+    </div>
+  </div>
