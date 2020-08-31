@@ -9,9 +9,26 @@
 use Drupal\Core\Form\FormStateInterface;
 
 function lib_typhoon_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
-  if( $form_id === 'search_block_form') {
-    $form['actions']['submit']['#attributes']['class'][] = 'isu-search__search-btn';
-    $form['keys']['#attributes']['class'][] = 'isu-search__search-input';
-    $form['#attributes']['class'][] = 'isu-search__search-form';
+  if( $form_id == 'search_block_form') {
+    $form['#attributes']['class'][] = 'lib-search__search-form';
+    $form['keys']['#attributes']['class'][] = 'lib-search__search-input';
+    $form['keys']['#attributes']['placeholder'][] = 'Search Terms';
+    $form['actions']['submit']['#attributes']['class'][] = 'lib-search__search-button';
   }
+}
+
+/*
+ * Implements theme_preprocess_page().
+ *
+ * Make theme settings available in templates
+ */
+
+function lib_typhoon_preprocess_page(&$variables) {
+  $variables['relative_logo_url'] = file_url_transform_relative(file_create_url(theme_get_setting('logo.url')));
+    
+    $variables['lib_util_nav1_text'] = theme_get_setting('lib_util_nav1_text');
+    $variables['lib_util_nav1_url'] = theme_get_setting('lib_util_nav1_url');
+    
+    $variables['lib_util_nav2_text'] = theme_get_setting('lib_util_nav2_text');
+    $variables['lib_util_nav2_url'] = theme_get_setting('lib_util_nav2_url');
 }

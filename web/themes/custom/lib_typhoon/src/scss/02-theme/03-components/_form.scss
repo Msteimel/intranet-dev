@@ -62,6 +62,7 @@ $radio-button-checked: $green-600;
   input[type="email"],
   input[type="tel"],
   input[type="number"],
+  input[type="search"],
   textarea,
   select {
     @include appearance(none);

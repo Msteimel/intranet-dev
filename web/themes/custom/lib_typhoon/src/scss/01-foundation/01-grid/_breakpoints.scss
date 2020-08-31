@@ -1,22 +1,21 @@
 @mixin bp($breakpoint) {
-  @if $breakpoint == xs {
+  @if $breakpoint == "xs" {
     @media (max-width: $sm) {
       @content;
     }
-  }
-  @if else $breakpoint == sm {
+  } @else if $breakpoint == "sm" {
     @media (max-width: $md) {
       @content;
     }
-  } @else if $breakpoint == md {
+  } @else if $breakpoint == "md" {
     @media (max-width: $lg) {
       @content;
     }
-  } @else if $breakpoint == lg {
+  } @else if $breakpoint == "lg" {
     @media (max-width: $xl) {
       @content;
     }
-  } @else if $breakpoint == xl {
+  } @else if $breakpoint == "xl" {
     @media (min-width: $xl) {
       @content;
     }

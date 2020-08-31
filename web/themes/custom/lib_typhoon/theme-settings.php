@@ -22,22 +22,39 @@
  *   A keyed array containing the current state of the form.
  */
 function lib_typhoon_form_system_theme_settings_alter(&$form, &$form_state) { 
-    // Create a section for Lib theme settings
-  $form['lib_typhoon_theme_settings'] = array(
+
+  // Create a section for util nav link
+  $form['lib_util_nav_links'] = array(
     '#type'         => 'details',
-    '#title'        => t('Lib Typhoon Theme Settings'),
-    '#description'  => t('Configure Typhoon Theme options'),
-    '#weight' => -1000,
+    '#title'        => t('Utility Nav Links'),
+    '#description'  => t('Quick Nav links displayed at the top of the Page.'),
+    '#weight' => -800,
     '#open' => TRUE,
   );
   
-  // Theme test options
-  // $form['WHICH_SECTION']['OPTION_NAME']
-  $form['lib_typhoon_theme_settings']['lib_navbar'] = array(
-    '#type'         => 'checkbox',
-    '#title'        => t('Show lib navbar'),
-    '#default_value' => theme_get_setting('lib_navbar'),
-    '#description'  => t('Check this option if you\'d like to show some secret stuff.'),
-  );
+  // 1
+  $form['lib_util_nav_links']['lib_util_nav1_text'] = array(
+      '#type'   => 'textfield',
+      '#title'  => t('Util Nav 1 Text'),
+      '#default_value'  => theme_get_setting('lib_util_nav1_text'),
+    );
 
+  $form['lib_util_nav_links']['lib_util_nav1_url'] = array(
+      '#type'   => 'url',
+      '#title'  => t('Util Nav 1 URL'),
+      '#default_value'  => theme_get_setting('lib_util_nav1_url'),
+    );
+
+  // 2
+  $form['lib_util_nav_links']['lib_util_nav2_text'] = array(
+      '#type'   => 'textfield',
+      '#title'  => t('Util Nav 2 Text'),
+      '#default_value'  => theme_get_setting('lib_util_nav2_text'),
+    );
+
+  $form['lib_util_nav_links']['lib_util_nav2_url'] = array(
+      '#type'   => 'url',
+      '#title'  => t('Util Nav 2 URL'),
+      '#default_value'  => theme_get_setting('lib_util_nav2_url'),
+    );
 }
