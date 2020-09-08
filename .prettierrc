@@ -1,0 +1,17 @@
+{
+  "trailingComma": "es5",
+  "singleQuote": true,
+  "useTabs": false,
+  "tabWidth": 2,
+  "semi": true,
+  "bracketSpacing": true,
+  "arrowParens": "avoid",
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "endOfLine": "lf",
+  "quoteProps": "as-needed",
+  "htmlWhitespaceSensitivity": "css",
+  "twigAlwaysBreakObjects": "false",
+  "insertPragma": false,
+  "plugins": ["./node_modules/prettier-plugin-twig-melody"]
+}
