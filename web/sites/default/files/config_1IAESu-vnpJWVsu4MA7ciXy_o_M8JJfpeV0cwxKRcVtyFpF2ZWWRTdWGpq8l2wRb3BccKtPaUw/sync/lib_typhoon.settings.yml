@@ -9,3 +9,9 @@ logo:
 favicon:
   use_default: 1
 lib_navbar: 1
+lib-util-nav1-text: 'Staff Directory'
+lib-util-nav1-url: 'http://drupalvm.test/staff-directory'
+lib_util_nav1_text: 'Staff Directory'
+lib_util_nav1_url: 'http://drupalvm.test/staff-directory'
+lib_util_nav2_text: Departments
+lib_util_nav2_url: 'http://drupalvm.test/node/5'

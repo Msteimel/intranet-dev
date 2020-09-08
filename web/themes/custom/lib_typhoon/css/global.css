@@ -1122,7 +1122,6 @@ table th {
 
 .lib-block--lg-img .lib-gen-con--img-wrap figure {
   position: relative;
-  padding-top: 56.25%;
 }
 
 .lib-block--two-img .lib-gen-con--img-wrap {
@@ -1157,8 +1156,8 @@ table th {
   }
 }
 
-.lib-block--two-img .lib-content-wrap,
-.lib-block--three-img .lib-content-wrap {
+.lib-block--two-img,
+.lib-block--three-img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1167,8 +1166,8 @@ table th {
 }
 
 @media (max-width: 576px) {
-  .lib-block--two-img .lib-content-wrap,
-  .lib-block--three-img .lib-content-wrap {
+  .lib-block--two-img,
+  .lib-block--three-img {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1219,7 +1218,9 @@ table th {
 
 .lib-block--link-list .lib-link-list--item a::before {
   position: absolute;
-  top: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   font-family: "FontAwesome";
   content: "\F15C";
   font-size: 1.125rem;
@@ -1227,9 +1228,34 @@ table th {
   color: inherit;
 }
 
+.lib-block--link-list .lib-link-list--item a::after {
+  height: 0;
+}
+
 .lib-block--link-list .lib-link-list--item a:hover,
 .lib-block--link-list .lib-link-list--item a:focus {
   color: #921127;
+}
+
+.lib-block--link-list .lib-link-list--item a:hover::after,
+.lib-block--link-list .lib-link-list--item a:focus::after {
+  height: 0;
+}
+
+.lib-block--link-list .lib-link-list--item a[href*=".com"]::before {
+  content: "\F35D";
+}
+
+.lib-block--link-list .lib-link-list--item a[href*=".net"]::before {
+  content: "\F35D";
+}
+
+.lib-block--link-list .lib-link-list--item a[href*=".edu"]::before {
+  content: "\F35D";
+}
+
+.lib-block--link-list .lib-link-list--item a[href*=".org"]::before {
+  content: "\F35D";
 }
 
 .lib-block--link-list .lib-link-list--item a[href*=".docx"]::before {
@@ -1252,22 +1278,6 @@ table th {
   content: "\F1C5";
 }
 
-.lib-block--link-list .lib-link-list--item a[href*=".com"]::before {
-  content: "\F35D";
-}
-
-.lib-block--link-list .lib-link-list--item a[href*=".net"]::before {
-  content: "\F35D";
-}
-
-.lib-block--link-list .lib-link-list--item a[href*=".edu"]::before {
-  content: "\F35D";
-}
-
-.lib-block--link-list .lib-link-list--item a[href*=".org"]::before {
-  content: "\F35D";
-}
-
 .lib-link-list--abstract {
   margin: 2.5rem 0 0 0;
 }
@@ -1275,18 +1285,6 @@ table th {
 .lib-link-list--abstract .lib-abstract-item {
   position: relative;
   margin-bottom: 1.5rem;
-  padding-left: 2.5rem;
-}
-
-.lib-link-list--abstract .lib-abstract-item::before {
-  position: absolute;
-  top: 0;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  font-family: "FontAwesome";
-  content: "\F35D";
-  left: 0;
-  color: #c6102e;
 }
 
 .lib-link-list--abstract .lib-abstract-item:last-of-type {
@@ -1300,15 +1298,80 @@ table th {
 }
 
 .lib-link-list--abstract .lib-abstract-item a {
+  display: block;
+  padding-left: 2.5rem;
+  padding-bottom: .5rem;
   color: #c6102e;
   text-decoration: none;
   -webkit-transition: .3s ease;
   transition: .3s ease;
 }
 
+.lib-link-list--abstract .lib-abstract-item a::before {
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  font-family: "FontAwesome";
+  content: "\F35D";
+  font-size: 1.125rem;
+  font-weight: 400;
+  left: 0;
+  color: #c6102e;
+}
+
+.lib-link-list--abstract .lib-abstract-item a::after {
+  height: 0;
+}
+
 .lib-link-list--abstract .lib-abstract-item a:hover,
 .lib-link-list--abstract .lib-abstract-item a:focus {
   color: #921127;
+}
+
+.lib-link-list--abstract .lib-abstract-item a:hover::before,
+.lib-link-list--abstract .lib-abstract-item a:focus::before {
+  color: #921127;
+}
+
+.lib-link-list--abstract .lib-abstract-item p {
+  padding-left: 2.5rem;
+}
+
+.lib-link-list--abstract .lib-abstract-item a[href*=".com"]::before {
+  content: "\F35D";
+}
+
+.lib-link-list--abstract .lib-abstract-item a[href*=".net"]::before {
+  content: "\F35D";
+}
+
+.lib-link-list--abstract .lib-abstract-item a[href*=".edu"]::before {
+  content: "\F35D";
+}
+
+.lib-link-list--abstract .lib-abstract-item a[href*=".org"]::before {
+  content: "\F35D";
+}
+
+.lib-link-list--abstract .lib-abstract-item a[href*=".docx"]::before {
+  content: "\F1C2";
+}
+
+.lib-link-list--abstract .lib-abstract-item a[href*=".pdf"]::before {
+  content: "\F1C1";
+}
+
+.lib-link-list--abstract .lib-abstract-item a[href*=".xlsx"]::before {
+  content: "\F1C3";
+}
+
+.lib-link-list--abstract .lib-abstract-item a[href*=".jpg"]::before {
+  content: "\F1C5";
+}
+
+.lib-link-list--abstract .lib-abstract-item a[href*=".png"]::before {
+  content: "\F1C5";
 }
 
 .lib-quote-block {
@@ -1335,6 +1398,11 @@ table th {
   .lib-quote {
     max-width: 95%;
   }
+}
+
+.lib-quote p {
+  font-size: 1.125rem;
+  color: #212121;
 }
 
 .lib-quote cite {
@@ -1376,13 +1444,16 @@ table th {
 
 .lib-block--quote-banner .lib-quote {
   max-width: 39.84375rem;
-  color: #fff5f5;
 }
 
 @media (max-width: 576px) {
   .lib-block--quote-banner .lib-quote {
     max-width: 90%;
   }
+}
+
+.lib-block--quote-banner .lib-quote p {
+  color: #fff5f5;
 }
 
 .lib-block--quote-banner .lib-quote cite {
@@ -1402,6 +1473,10 @@ table th {
   height: 2rem;
   border-radius: 100%;
   background-color: #f9aaac;
+}
+
+.lib-block--quote-ribbon .lib-quote--marks {
+  display: none;
 }
 
 .lib-quote--marks i {

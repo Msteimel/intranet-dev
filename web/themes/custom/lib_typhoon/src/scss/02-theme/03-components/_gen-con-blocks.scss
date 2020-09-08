@@ -22,13 +22,14 @@
     display: inline-block;
   }
 
-  p + h2 {
+  p+h2 {
     margin-top: $space-lg;
   }
-  p + h3,
-  p + h4,
-  p + h5,
-  p + h6 {
+
+  p+h3,
+  p+h4,
+  p+h5,
+  p+h6 {
     margin-top: $space-md;
   }
 
@@ -36,7 +37,7 @@
     margin-top: 0;
   }
 
-  & p + p:last-of-type {
+  & p+p:last-of-type {
     margin-bottom: 0;
   }
 
@@ -60,43 +61,31 @@
   &.large {
     max-width: rem(400);
   }
+
   &.medium {
     max-width: rem(300);
   }
+
   &.small {
     max-width: rem(200);
   }
 
   figure {
     position: relative;
-    // padding-top: percentage(400/400);
   }
 
-  // div {
-  // padding-top: percentage(400/400);
-  // position: relative;
-  // overflow: hidden;
-  // box-shadow: $vert-dark-2;
-
   img {
-    // position: absolute;
-    // top: 0;
-    // left: 0;
     max-width: 100%;
     width: 100%;
     height: auto;
     box-shadow: $vert-dark-2;
-    // z-index: 1;
   }
-  // }
 
   figcaption {
-    // position: relative;
     padding-top: $space-sm;
     background-color: white;
     text-align: center;
     font-style: italic;
-    // z-index: 2;
   }
 }
 
@@ -132,7 +121,7 @@
 
     figure {
       position: relative;
-      padding-top: percentage(9/16);
+      // padding-top: percentage(9/16);
     }
   }
 }
@@ -167,12 +156,13 @@
 
 .lib-block--two-img,
 .lib-block--three-img {
-  .lib-content-wrap {
-    display: flex;
-    justify-content: space-around;
-    @include bp(xs) {
-      flex-direction: column;
-    }
+  // .lib-content-wrap {
+  display: flex;
+  justify-content: space-around;
+
+  @include bp(xs) {
+    flex-direction: column;
+    // }
   }
 }
 
@@ -209,8 +199,7 @@
       transition: 0.3s ease;
 
       &::before {
-        position: absolute;
-        top: 0;
+        @include vert_center;
         font-family: "FontAwesome";
         content: "\f15c";
         font-size: $fs-lg;
@@ -218,29 +207,39 @@
         color: inherit;
       }
 
+      // overrides default link underline
+      &::after {
+        height: 0;
+      }
+
       &:hover,
       &:focus {
         color: $link-hover-color;
+
+        &::after {
+          height: 0;
+        }
       }
     }
+
     /*
  |--------------------------------------------------------------------------
  | Changes icon based on file type
  |--------------------------------------------------------------------------
 */
-    $doc-types: (
+    $doc-types: (".com": "\f35d",
+      ".net": "\f35d",
+      ".edu": "\f35d",
+      ".org": "\f35d",
       ".docx": "\f1c2",
       ".pdf": "\f1c1",
       ".xlsx": "\f1c3",
       ".jpg": "\f1c5",
       ".png": "\f1c5",
-      ".com": "\f35d",
-      ".net": "\f35d",
-      ".edu": "\f35d",
-      ".org": "\f35d"
     );
 
-    @each $docType, $icon in $doc-types {
+    @each $docType,
+    $icon in $doc-types {
       @if "a[href*='#{$docType}']" {
         a[href*="#{$docType}"]::before {
           content: $icon;
@@ -256,16 +255,6 @@
   .lib-abstract-item {
     position: relative;
     margin-bottom: $space-lg;
-    padding-left: $space-2xl;
-
-    &::before {
-      @include vert_center(0);
-      font-family: "FontAwesome";
-      content: "\f35d";
-      // font-size: $fs-md;
-      left: 0;
-      color: $primary-color;
-    }
 
     &:last-of-type {
       margin-bottom: 0;
@@ -278,13 +267,59 @@
     }
 
     a {
+      display: block;
+      padding-left: $space-2xl;
+      padding-bottom: $space-xs;
       color: $link-color;
       text-decoration: none;
       transition: 0.3s ease;
 
+      &::before {
+        @include vert_center(0);
+        font-family: "FontAwesome";
+        content: "\f35d";
+        font-size: $fs-lg;
+        font-weight: 400;
+        left: 0;
+        color: $primary-color;
+      }
+
+      // overrides default link underline
+      &::after {
+        height: 0;
+      }
+
       &:hover,
       &:focus {
         color: $link-hover-color;
+
+        &::before {
+          color: $link-hover-color;
+        }
+      }
+    }
+
+    p {
+      padding-left: $space-2xl;
+    }
+
+    $doc-types: (".com": "\f35d",
+      ".net": "\f35d",
+      ".edu": "\f35d",
+      ".org": "\f35d",
+      ".docx": "\f1c2",
+      ".pdf": "\f1c1",
+      ".xlsx": "\f1c3",
+      ".jpg": "\f1c5",
+      ".png": "\f1c5",
+    );
+
+    @each $docType,
+    $icon in $doc-types {
+      @if "a[href*='#{$docType}']" {
+        a[href*="#{$docType}"]::before {
+          content: $icon;
+        }
       }
     }
   }
@@ -297,8 +332,7 @@
   text-align: center;
 }
 
-.lib-block--quote {
-}
+.lib-block--quote {}
 
 .lib-quote {
   max-width: 75%;
@@ -313,6 +347,11 @@
 
   @include bp(xs) {
     max-width: 95%;
+  }
+
+  p {
+    font-size: $fs-lg;
+    color: $text-color;
   }
 
   cite {
@@ -354,10 +393,13 @@
 
   .lib-quote {
     max-width: rem(637.5);
-    color: $red-50;
 
     @include bp(xs) {
       max-width: 90%;
+    }
+
+    p {
+      color: $red-50;
     }
 
     cite {
@@ -380,6 +422,10 @@
   border-radius: 100%;
   background-color: $red-200;
 
+  .lib-block--quote-ribbon & {
+    display: none;
+  }
+
   i {
     @include absolute-center;
     position: absolute;
@@ -395,7 +441,7 @@
   box-shadow: $vert-light-2;
   border-radius: $br2;
   border-left: solid 4px $red-500;
-  quotes: "“" "”";
+  quotes: "“""”";
   overflow: hidden;
 
   &::before,
@@ -479,6 +525,7 @@
       @include bp(sm) {
         right: -19%;
       }
+
       @include bp(xs) {
         right: -25%;
       }

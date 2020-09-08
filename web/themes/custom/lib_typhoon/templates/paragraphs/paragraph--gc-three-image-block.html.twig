@@ -41,19 +41,62 @@
 {%
   set classes = [
     'lib-gen-con--block',
-    'lib-text-block',
-    paragraph.field_gc_text_block_lead.value ? 'lib-lead-block' : '',
+    'lib-img-block',
+    'lib-block--three-img',
+    paragraph.field_gc_text_img_side.value,
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished',
   ]
 %}
+
+{% set leftImgSrc = file_url(paragraph.field_three_img_img_left.entity.uri.value) %}
+{% set leftImgAlt = paragraph.field_three_img_img_left.alt %}
+
+{% set centerImgSrc = file_url(paragraph.field_three_img_img_center.entity.uri.value) %}
+{% set centerImgAlt = paragraph.field_three_img_img_center.alt %}
+
+{% set rightImgSrc = file_url(paragraph.field_three_img_img_right.entity.uri.value) %}
+{% set rightImgAlt = paragraph.field_three_img_img_right.alt %}
+
 {% block paragraph %}
 
-  <div{{attributes.addClass(classes)}}>
-    {% block content %}
-      {{ content|without('field_gc_text_block_lead') }}
-    {% endblock %}
-  </div>
+	<div{{attributes.addClass(classes)}}>
+		{% block content %}
+			<div class="lib-gen-con--img-wrap">
+				<figure>
+					{# <div> #}
+					<img
+					src="{{ leftImgSrc }}" alt="{{ leftImgAlt }}"/>
+					{# </div> #}
+					<figcaption>
+						{{ leftImgAlt }}
+					</figcaption>
+				</figure>
+			</div>
+			<div class="lib-gen-con--img-wrap">
+				<figure>
+					{# <div> #}
+					<img
+					src="{{ centerImgSrc }}" alt="{{ centerImgAlt }}"/>
+					{# </div> #}
+					<figcaption>
+						{{ centerImgAlt }}
+					</figcaption>
+				</figure>
+			</div>
+			<div class="lib-gen-con--img-wrap">
+				<figure>
+					{# <div> #}
+					<img
+					src="{{ rightImgSrc }}" alt="{{ rightImgAlt }}"/>
+					{# </div> #}
+					<figcaption>
+						{{ rightImgAlt }}
+					</figcaption>
+				</figure>
+			</div>
+		{% endblock %}
+	</div>
 {% endblock paragraph %}
