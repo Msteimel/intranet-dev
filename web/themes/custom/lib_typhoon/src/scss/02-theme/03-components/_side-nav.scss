@@ -1,0 +1,130 @@
+$header-nav-main-height: $space-3xl; // nav-height in pixels
+$header-nav-links: $red-500;
+
+$header-content-max-width: 1400px;
+
+.lib-side-nav--wrap {
+
+  .lib-side-nav {
+    display: grid;
+    max-width: $header-content-max-width;
+    margin: auto;
+
+    ul {
+      margin: 0;
+    }
+  }
+
+  .lib-nav--list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 0;
+  }
+
+  .nav--item {
+    // line-height: $header-nav-main-height;
+    position: relative;
+    transition: background-color ease 0.3s, color ease 0.3s;
+
+    &:nth-last-child(1),
+    &:nth-last-child(2) {
+      .lib-nav--dropdown {
+        left: unset;
+        right: 0;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      +.lib-nav--dropdown {
+        display: block;
+      }
+    }
+
+    .nav--link {
+      display: block;
+      height: $header-nav-main-height;
+      padding: 0 $space-2xl;
+      line-height: $header-nav-main-height;
+
+      &:hover,
+      &:focus {
+        background-color: $red-500;
+        color: $white;
+
+        +.lib-nav--dropdown {
+          display: block;
+        }
+      }
+
+      &::after {
+        background-color: transparent;
+      }
+    }
+  }
+
+  .lib-nav--dropdown {
+    display: none;
+    position: absolute;
+    top: $header-nav-main-height;
+    left: 0;
+    width: rem(300);
+    padding: $space-lg $space-lg;
+    list-style-type: none;
+    background-color: $white;
+    border-radius: 2px;
+    box-shadow: $vert-light-2;
+
+    .nav--item:hover &,
+    .nav--item:focus & {
+      display: block;
+    }
+
+    &:hover {
+      +.nav--item {
+        background-color: $red-500;
+        color: $white;
+      }
+    }
+
+    .dropdown--item {
+      a {
+        display: block;
+        overflow: hidden;
+        padding: $space-xs $space-sm $space-xs $space-lg;
+        font-size: $fs-md;
+        color: $black;
+        font-weight: 400;
+
+        &::after {
+          @include vert_center;
+          content: "\f054";
+          font-family: "Fontawesome";
+          background-color: transparent;
+          // top: $space-2xs;
+          left: -1rem;
+          height: auto;
+          bottom: unset;
+          transition: left ease 0.3s;
+        }
+
+        &:hover {
+          color: $red-500;
+
+          &::after {
+            left: 0;
+          }
+        }
+      }
+
+      .is-active {
+        color: $red-500;
+
+        &::after {
+          left: 0;
+        }
+      }
+    }
+  }
+}
