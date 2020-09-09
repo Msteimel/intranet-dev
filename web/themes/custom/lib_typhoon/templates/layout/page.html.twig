@@ -50,7 +50,8 @@
     {% include "@lib_typhoon/navigation/nav.html.twig" %}
   </header>
 
-  <div class="lib-body lib-px-2xl">
+  <div class="lib-body lib-mx-auto lib-px-2xl">
+
     {{ page.breadcrumb }}
     {{ page.highlighted }}
     {{ page.help }}
@@ -62,18 +63,17 @@
         {{ page.content }}
       </div>
       {# /.layout-content #}
-      {% if page.sidebar_first %}
-        <aside class="layout-sidebar-first" role="complementary">
-          {% include "@lib_typhoon/navigation/side-nav.html.twig" %}
-        </aside>
-      {% endif %}
-      {% if page.sidebar_second %}
-        <aside class="layout-sidebar-second" role="complementary">
-          {{ page.sidebar_second }}
-        </aside>
-      {% endif %}
-
     </main>
+    {% if page.sidebar_first %}
+      <aside class="layout-sidebar-first" role="complementary">
+        {% include "@lib_typhoon/navigation/side-nav.html.twig" %}
+      </aside>
+    {% endif %}
+    {# {% if page.sidebar_second %}
+                    <aside class="layout-sidebar-second" role="complementary">
+                      {{ page.sidebar_second }}
+                    </aside>
+                  {% endif %} #}
   </div>
   {% if page.footer %}
     <footer role="contentinfo">

@@ -22,9 +22,22 @@
 
   .lib-body {
     grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 100%;
+    max-width: rem(1500);
+
 
     @include bp(sm) {
       grid-column: 1 / -1;
+    }
+
+    main {
+      grid-column: 1 / 9;
+    }
+
+    .layout-sidebar-first {
+      grid-column: 9 / 12
     }
   }
 }
