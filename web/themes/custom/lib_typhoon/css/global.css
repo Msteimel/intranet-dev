@@ -3380,35 +3380,35 @@ table th {
   border-bottom: 2px solid #f1be46;
 }
 
-.lib-main-nav {
+.lib-main-nav--wrap .lib-nav {
   display: grid;
   max-width: 1400px;
   margin: auto;
 }
 
-.lib-main-nav .logo-wrap {
+.lib-main-nav--wrap .lib-nav .logo-wrap {
   grid-column: 1/-1;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.lib-main-nav .logo-wrap .logo {
+.lib-main-nav--wrap .lib-nav .logo-wrap .logo {
   max-width: 18.75rem;
 }
 
-.lib-main-nav .logo-wrap .logo a::after {
+.lib-main-nav--wrap .lib-nav .logo-wrap .logo a::after {
   background: transparent;
 }
 
-.lib-main-nav .logo-wrap img {
+.lib-main-nav--wrap .lib-nav .logo-wrap img {
   max-width: 100%;
 }
 
-.lib-main-nav ul {
+.lib-main-nav--wrap .lib-nav ul {
   margin: 0;
 }
 
-.lib-main-nav--list {
+.lib-main-nav--wrap .lib-nav--list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3418,46 +3418,46 @@ table th {
   margin-bottom: 0;
 }
 
-.main-nav--item {
+.lib-main-nav--wrap .nav--item {
   position: relative;
   -webkit-transition: background-color ease .3s,color ease .3s;
   transition: background-color ease .3s,color ease .3s;
 }
 
-.main-nav--item:nth-last-child(1) .lib-main-nav--dropdown,
-.main-nav--item:nth-last-child(2) .lib-main-nav--dropdown {
+.lib-main-nav--wrap .nav--item:nth-last-child(1) .lib-nav--dropdown,
+.lib-main-nav--wrap .nav--item:nth-last-child(2) .lib-nav--dropdown {
   left: unset;
   right: 0;
 }
 
-.main-nav--item:hover+.lib-main-nav--dropdown,
-.main-nav--item:focus+.lib-main-nav--dropdown {
+.lib-main-nav--wrap .nav--item:hover+.lib-nav--dropdown,
+.lib-main-nav--wrap .nav--item:focus+.lib-nav--dropdown {
   display: block;
 }
 
-.main-nav--item .main-nav--link {
+.lib-main-nav--wrap .nav--item .nav--link {
   display: block;
   height: 3rem;
   padding: 0 2.5rem;
   line-height: 3rem;
 }
 
-.main-nav--item .main-nav--link:hover,
-.main-nav--item .main-nav--link:focus {
+.lib-main-nav--wrap .nav--item .nav--link:hover,
+.lib-main-nav--wrap .nav--item .nav--link:focus {
   background-color: #c6102e;
   color: #fff;
 }
 
-.main-nav--item .main-nav--link:hover+.lib-main-nav--dropdown,
-.main-nav--item .main-nav--link:focus+.lib-main-nav--dropdown {
+.lib-main-nav--wrap .nav--item .nav--link:hover+.lib-nav--dropdown,
+.lib-main-nav--wrap .nav--item .nav--link:focus+.lib-nav--dropdown {
   display: block;
 }
 
-.main-nav--item .main-nav--link::after {
+.lib-main-nav--wrap .nav--item .nav--link::after {
   background-color: transparent;
 }
 
-.lib-main-nav--dropdown {
+.lib-main-nav--wrap .lib-nav--dropdown {
   display: none;
   position: absolute;
   top: 3rem;
@@ -3471,17 +3471,17 @@ table th {
           box-shadow: 0 2px 4px rgba(0,0,0,.12),0 3px 6px rgba(0,0,0,.15);
 }
 
-.main-nav--item:hover .lib-main-nav--dropdown,
-.main-nav--item:focus .lib-main-nav--dropdown {
+.nav--item:hover .lib-main-nav--wrap .lib-nav--dropdown,
+.nav--item:focus .lib-main-nav--wrap .lib-nav--dropdown {
   display: block;
 }
 
-.lib-main-nav--dropdown:hover+.main-nav--item {
+.lib-main-nav--wrap .lib-nav--dropdown:hover+.nav--item {
   background-color: #c6102e;
   color: #fff;
 }
 
-.lib-main-nav--dropdown .dropdown--item a {
+.lib-main-nav--wrap .lib-nav--dropdown .dropdown--item a {
   display: block;
   overflow: hidden;
   padding: .5rem .75rem .5rem 1.5rem;
@@ -3490,7 +3490,7 @@ table th {
   font-weight: 400;
 }
 
-.lib-main-nav--dropdown .dropdown--item a::after {
+.lib-main-nav--wrap .lib-nav--dropdown .dropdown--item a::after {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -3505,19 +3505,19 @@ table th {
   transition: left ease .3s;
 }
 
-.lib-main-nav--dropdown .dropdown--item a:hover {
+.lib-main-nav--wrap .lib-nav--dropdown .dropdown--item a:hover {
   color: #c6102e;
 }
 
-.lib-main-nav--dropdown .dropdown--item a:hover::after {
+.lib-main-nav--wrap .lib-nav--dropdown .dropdown--item a:hover::after {
   left: 0;
 }
 
-.lib-main-nav--dropdown .dropdown--item .is-active {
+.lib-main-nav--wrap .lib-nav--dropdown .dropdown--item .is-active {
   color: #c6102e;
 }
 
-.lib-main-nav--dropdown .dropdown--item .is-active::after {
+.lib-main-nav--wrap .lib-nav--dropdown .dropdown--item .is-active::after {
   left: 0;
 }
 

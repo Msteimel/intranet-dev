@@ -33,56 +33,59 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul{{ attributes.addClass('lib-main-nav--list') }}>
-    {% else %}
-      <ul class="lib-main-nav--dropdown">
-    {% endif %}
-    {% for item in items %}
-    {# Assign classes based on if the item is an open parent, closed parent, 
-      active, or a has a submenu. #}
-      {%
+      <ul{{attributes.addClass('lib-nav--list')}}>
+      {% else %}
+        <ul class="lib-nav--dropdown">
+        {% endif %}
+        {% for item in items %}
+          {# Assign classes based on if the item is an open parent, closed parent, active, or a has a submenu. #}
+          {%
           set classes = [
-            menu_level ? 'dropdown--item' : 'main-nav--item',
-            item.is_expanded ? 'main-nav--item_expanded',
-            item.is_collapsed ? 'main-nav--item_collapsed',
-            item.in_active_trail ? 'main-nav--item_active-trail',
+            menu_level ? 'dropdown--item' : 'nav--item',
+            item.is_expanded ? 'nav--item_expanded',
+            item.is_collapsed ? 'nav--item_collapsed',
+            item.in_active_trail ? 'nav--item_active-trail',
             item.below ? 'lib-dropdown-menu ',
           ]
         %}
 
-       {% if item.below %} {# If the item has children, it will be a dropdown. #}
-        <li{{ item.attributes.addClass(classes).setAttribute('aria-expanded', 'false') }}>
-      {% else %} {# If the item does not have children, it will not be a dropdown. #}
-        <li{{ item.attributes.addClass(classes) }}>
-      {% endif %}
+          {% if item.below %}
+            {# If the item has children, it will be a dropdown. #}
+            <li{{item.attributes.addClass(classes).setAttribute('aria-expanded','false')}}>
+            {% else %}
+              {# If the item does not have children, it will not be a dropdown. #}
+              <li{{item.attributes.addClass(classes)}}>
+              {% endif %}
 
-       {# Assign classes based on if the link is a parent or not, and if it is active or not #}
-        {%
+              {# Assign classes based on if the link is a parent or not, and if it is active or not #}
+              {%
           set link_classes = [
-            not menu_level ? 'main-nav--link',
+            not menu_level ? 'nav--link',
             item.in_active_trail ? 'is-active',
           ]
         %}
-        {# If the item is a parent, it acts as a toggle to open the menu. #}
-        {% 
+              {# If the item is a parent, it acts as a toggle to open the menu. #}
+              {% 
           set toggle_classes = [
-           'main-nav--link', 
+           'nav--link', 
            'lib-dropdown-toggle'
           ]
         %}
 
-        {% if item.below %} {# If the item has children, it is a toggle. #}
-          {# <div class="isu-dropdown-toggle_wrapper"> #}
-            {{ link(item.title, item.url, {'class': toggle_classes}) }}
-            {# <button class="isu-dropdown-toggle_mobile"><span class="fa fa-angle-down"></span><span class="sr-only">Open dropdown menu</span></button> #}
-          {# </div> #}
-          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
-        {% else %} {# If the item does not have children, it's just a normal link. #}
-          {{ link(item.title, item.url, {'class': link_classes}) }}
-        {% endif %}
-        
-      </li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-{% endmacro %}
+              {% if item.below %}
+                {# If the item has children, it is a toggle. #}
+                {# <div class="isu-dropdown-toggle_wrapper"> #}
+                {{ link(item.title, item.url, {'class': toggle_classes}) }}
+                {# <button class="isu-dropdown-toggle_mobile"><span class="fa fa-angle-down"></span><span class="sr-only">Open dropdown menu</span></button> #}
+                {# </div> #}
+                {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+              {% else %}
+                {# If the item does not have children, it's just a normal link. #}
+                {{ link(item.title, item.url, {'class': link_classes}) }}
+              {% endif %}
+
+            </li>
+          {% endfor %}
+        </ul>
+    {% endif %}
+  {% endmacro %}

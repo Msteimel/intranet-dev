@@ -64,7 +64,7 @@
       {# /.layout-content #}
       {% if page.sidebar_first %}
         <aside class="layout-sidebar-first" role="complementary">
-          {{ page.sidebar_first }}
+          {% include "@lib_typhoon/navigation/side-nav.html.twig" %}
         </aside>
       {% endif %}
       {% if page.sidebar_second %}
