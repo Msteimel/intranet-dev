@@ -1,130 +1,115 @@
-$header-nav-main-height: $space-3xl; // nav-height in pixels
-$header-nav-links: $red-500;
+$side-nav-main-height: $space-3xl; // nav-height in pixels
+$side-nav-links: $red-500;
 
-$header-content-max-width: 1400px;
 
-.lib-side-nav--wrap {
+.lib-side-nav {
+  // display: grid;
+  // margin: auto;
+}
 
-  .lib-side-nav {
-    display: grid;
-    max-width: $header-content-max-width;
-    margin: auto;
+.lib-side-nav--list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 0;
+  list-style-type: none;
+}
 
-    ul {
-      margin: 0;
-    }
-  }
+.lib-side-nav--item {
 
-  .lib-nav--list {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin-bottom: 0;
-  }
-
-  .nav--item {
-    // line-height: $header-nav-main-height;
+  .lib-side-nav--link {
+    display: block;
+    height: $side-nav-main-height;
+    padding: 0 $space-2xl;
+    line-height: $side-nav-main-height;
+    // transition: background-color ease 0.3s, color ease 0.3s;
     position: relative;
-    transition: background-color ease 0.3s, color ease 0.3s;
 
-    &:nth-last-child(1),
-    &:nth-last-child(2) {
-      .lib-nav--dropdown {
-        left: unset;
-        right: 0;
-      }
+    &::before,
+    &::after {
+      display: none;
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: $space-2xs;
+      background-color: $yellow-500;
+      top: 0;
     }
 
-    &:hover,
-    &:focus {
-      +.lib-nav--dropdown {
-        display: block;
-      }
+    &::before {
+      right: 0;
     }
 
-    .nav--link {
-      display: block;
-      height: $header-nav-main-height;
-      padding: 0 $space-2xl;
-      line-height: $header-nav-main-height;
-
-      &:hover,
-      &:focus {
-        background-color: $red-500;
-        color: $white;
-
-        +.lib-nav--dropdown {
-          display: block;
-        }
-      }
-
-      &::after {
-        background-color: transparent;
-      }
-    }
-  }
-
-  .lib-nav--dropdown {
-    display: none;
-    position: absolute;
-    top: $header-nav-main-height;
-    left: 0;
-    width: rem(300);
-    padding: $space-lg $space-lg;
-    list-style-type: none;
-    background-color: $white;
-    border-radius: 2px;
-    box-shadow: $vert-light-2;
-
-    .nav--item:hover &,
-    .nav--item:focus & {
-      display: block;
+    &::after {
+      left: 0;
     }
 
     &:hover {
-      +.nav--item {
-        background-color: $red-500;
-        color: $white;
+      color: $white;
+      background-color: $red-500;
+
+      &::before,
+      &::after {
+        display: block
       }
     }
+  }
+}
 
-    .dropdown--item {
-      a {
-        display: block;
-        overflow: hidden;
-        padding: $space-xs $space-sm $space-xs $space-lg;
-        font-size: $fs-md;
-        color: $black;
-        font-weight: 400;
+.lib-sub-list--item {
+  .lib-side-nav--link {
+    height: $side-nav-main-height;
+    line-height: $side-nav-main-height;
+    color: $text-color;
 
-        &::after {
-          @include vert_center;
-          content: "\f054";
-          font-family: "Fontawesome";
-          background-color: transparent;
-          // top: $space-2xs;
-          left: -1rem;
-          height: auto;
-          bottom: unset;
-          transition: left ease 0.3s;
-        }
+    &:hover,
+    &:focus {
+      background-color: $red-500;
+      color: $white;
 
-        &:hover {
-          color: $red-500;
-
-          &::after {
-            left: 0;
-          }
-        }
+      &::before,
+      &::after {
+        display: none;
       }
+    }
+  }
+}
 
-      .is-active {
-        color: $red-500;
 
-        &::after {
-          left: 0;
-        }
-      }
+.lib-side-nav--sub-list {
+  list-style-type: none;
+
+  .lib-side-nav--link {
+    display: block;
+    overflow: hidden;
+    font-size: $fs-md;
+    font-weight: 400;
+
+    &::after {
+      @include vert_center;
+      content: "\f054";
+      font-family: "Fontawesome";
+      background-color: transparent;
+      left: -1rem;
+      height: auto;
+      bottom: unset;
+      transition: left ease 0.3s;
+    }
+
+    // &:hover {
+    //   color: $red-500;
+
+    //   &::after {
+    //     left: 0;
+    //   }
+    // }
+  }
+
+  .is-active {
+    color: $red-500;
+
+    &::after {
+      left: 0;
     }
   }
 }
