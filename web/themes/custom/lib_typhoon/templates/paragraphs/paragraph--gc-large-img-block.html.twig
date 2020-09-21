@@ -43,7 +43,6 @@
     'lib-gen-con--block',
     'lib-img-block',
     'lib-block--lg-img',
-    paragraph.field_gc_text_img_side.value,
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
@@ -51,17 +50,18 @@
   ]
 %}
 
-{% set imgSrc = file_url(paragraph.field_large_image_image.entity.uri.value) %}
-{% set imgAlt = paragraph.field_large_image_image.alt %}
+{% set imgSrc = file_url(paragraph.field_gc_large_image_image.entity.uri.value) %}
+{% set imgAlt = paragraph.field_gc_large_image_image.alt %}
 
 {% block paragraph %}
 
-  <div{{ attributes.addClass(classes) }}>
+  <div{{attributes.addClass(classes)}}>
     {% block content %}
-     <div class="lib-gen-con--img-wrap">
+      <div class="lib-gen-con--img-wrap">
         <figure>
           {# <div> #}
-            <img src="{{ imgSrc }}" alt="{{ imgAlt }}" />
+          <img
+          src="{{ imgSrc }}" alt="{{ imgAlt }}"/>
           {# </div> #}
           <figcaption>
             {{ imgAlt }}

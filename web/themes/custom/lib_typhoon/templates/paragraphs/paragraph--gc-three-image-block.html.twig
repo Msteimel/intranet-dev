@@ -43,7 +43,6 @@
     'lib-gen-con--block',
     'lib-img-block',
     'lib-block--three-img',
-    paragraph.field_gc_text_img_side.value,
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
@@ -51,52 +50,52 @@
   ]
 %}
 
-{% set leftImgSrc = file_url(paragraph.field_three_img_img_left.entity.uri.value) %}
-{% set leftImgAlt = paragraph.field_three_img_img_left.alt %}
+{% set leftImgSrc = file_url(paragraph.field_gc_three_img_img_left.entity.uri.value) %}
+{% set leftImgAlt = paragraph.field_gc_three_img_img_left.alt %}
 
-{% set centerImgSrc = file_url(paragraph.field_three_img_img_center.entity.uri.value) %}
-{% set centerImgAlt = paragraph.field_three_img_img_center.alt %}
+{% set centerImgSrc = file_url(paragraph.field_gc_three_img_img_center.entity.uri.value) %}
+{% set centerImgAlt = paragraph.field_gc_three_img_img_center.alt %}
 
-{% set rightImgSrc = file_url(paragraph.field_three_img_img_right.entity.uri.value) %}
-{% set rightImgAlt = paragraph.field_three_img_img_right.alt %}
+{% set rightImgSrc = file_url(paragraph.field_gc_three_img_img_right.entity.uri.value) %}
+{% set rightImgAlt = paragraph.field_gc_three_img_img_right.alt %}
 
 {% block paragraph %}
 
-	<div{{attributes.addClass(classes)}}>
-		{% block content %}
-			<div class="lib-gen-con--img-wrap">
-				<figure>
-					{# <div> #}
-					<img
-					src="{{ leftImgSrc }}" alt="{{ leftImgAlt }}"/>
-					{# </div> #}
-					<figcaption>
-						{{ leftImgAlt }}
-					</figcaption>
-				</figure>
-			</div>
-			<div class="lib-gen-con--img-wrap">
-				<figure>
-					{# <div> #}
-					<img
-					src="{{ centerImgSrc }}" alt="{{ centerImgAlt }}"/>
-					{# </div> #}
-					<figcaption>
-						{{ centerImgAlt }}
-					</figcaption>
-				</figure>
-			</div>
-			<div class="lib-gen-con--img-wrap">
-				<figure>
-					{# <div> #}
-					<img
-					src="{{ rightImgSrc }}" alt="{{ rightImgAlt }}"/>
-					{# </div> #}
-					<figcaption>
-						{{ rightImgAlt }}
-					</figcaption>
-				</figure>
-			</div>
-		{% endblock %}
-	</div>
+  <div{{attributes.addClass(classes)}}>
+    {% block content %}
+      <div class="lib-gen-con--img-wrap">
+        <figure>
+          {# <div> #}
+          <img
+          src="{{ leftImgSrc }}" alt="{{ leftImgAlt }}"/>
+          {# </div> #}
+          <figcaption>
+            {{ leftImgAlt }}
+          </figcaption>
+        </figure>
+      </div>
+      <div class="lib-gen-con--img-wrap">
+        <figure>
+          {# <div> #}
+          <img
+          src="{{ centerImgSrc }}" alt="{{ centerImgAlt }}"/>
+          {# </div> #}
+          <figcaption>
+            {{ centerImgAlt }}
+          </figcaption>
+        </figure>
+      </div>
+      <div class="lib-gen-con--img-wrap">
+        <figure>
+          {# <div> #}
+          <img
+          src="{{ rightImgSrc }}" alt="{{ rightImgAlt }}"/>
+          {# </div> #}
+          <figcaption>
+            {{ rightImgAlt }}
+          </figcaption>
+        </figure>
+      </div>
+    {% endblock %}
+  </div>
 {% endblock paragraph %}

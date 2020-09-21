@@ -42,7 +42,7 @@
   set classes = [
     'lib-gen-con--block',
     'lib-text-block',
-    paragraph.field_gc_text_block_lead.value ? 'lib-lead-block' : '',
+    paragraph.field_gc_text_lead.value ? 'lib-lead-block' : '',
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
@@ -53,7 +53,7 @@
 
   <div{{attributes.addClass(classes)}}>
     {% block content %}
-      {{ content|without('field_gc_text_block_lead') }}
+      {{ content|without('field_gc_text_lead') }}
     {% endblock %}
   </div>
 {% endblock paragraph %}

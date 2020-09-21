@@ -43,7 +43,6 @@
     'lib-gen-con--block',
     'lib-img-block',
     'lib-block--two-img',
-    paragraph.field_gc_text_img_side.value,
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
@@ -51,11 +50,11 @@
   ]
 %}
 
-{% set leftImgSrc = file_url(paragraph.field_two_img_img_left.entity.uri.value) %}
-{% set leftImgAlt = paragraph.field_two_img_img_left.alt %}
+{% set leftImgSrc = file_url(paragraph.field_gc_two_img_img_left.entity.uri.value) %}
+{% set leftImgAlt = paragraph.field_gc_two_img_img_left.alt %}
 
-{% set rightImgSrc = file_url(paragraph.field_two_img_img_right.entity.uri.value) %}
-{% set rightImgAlt = paragraph.field_two_img_img_right.alt %}
+{% set rightImgSrc = file_url(paragraph.field_gc_two_img_img_right.entity.uri.value) %}
+{% set rightImgAlt = paragraph.field_gc_two_img_img_right.alt %}
 
 {% block paragraph %}
   <div{{attributes.addClass(classes)}}>

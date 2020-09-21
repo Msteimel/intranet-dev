@@ -57,11 +57,11 @@
 
 {% block paragraph %}
 
-  <div{{ attributes.addClass(classes) }}>
+  <div{{attributes.addClass(classes)}}>
     {% block content %}
-     <div class="lib-gen-con--img-wrap {{imgSize}}">
+      <div class="lib-gen-con--img-wrap {{imgSize}}">
         <figure>
-            <img src="{{ imgSrc }}" alt="{{ imgAlt }}" />
+          <img src="{{ imgSrc }}" alt="{{ imgAlt }}"/>
           <figcaption>
             {{ imgAlt }}
           </figcaption>
