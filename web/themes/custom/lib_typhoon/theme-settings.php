@@ -57,4 +57,43 @@ function lib_typhoon_form_system_theme_settings_alter(&$form, &$form_state) {
       '#title'  => t('Util Nav 2 URL'),
       '#default_value'  => theme_get_setting('lib_util_nav2_url'),
     );
+
+  // 3
+  $form['lib_util_nav_links']['lib_util_nav3_text'] = array(
+      '#type'   => 'textfield',
+      '#title'  => t('Util Nav 3 Text'),
+      '#default_value'  => theme_get_setting('lib_util_nav3_text'),
+    );
+
+  $form['lib_util_nav_links']['lib_util_nav3_url'] = array(
+      '#type'   => 'url',
+      '#title'  => t('Util Nav 3 URL'),
+      '#default_value'  => theme_get_setting('lib_util_nav3_url'),
+    );
+
+  // 4
+  $form['lib_util_nav_links']['lib_util_nav4_text'] = array(
+      '#type'   => 'textfield',
+      '#title'  => t('Util Nav 4 Text'),
+      '#default_value'  => theme_get_setting('lib_util_nav4_text'),
+    );
+
+  $form['lib_util_nav_links']['lib_util_nav4_url'] = array(
+      '#type'   => 'url',
+      '#title'  => t('Util Nav 4 URL'),
+      '#default_value'  => theme_get_setting('lib_util_nav4_url'),
+    );
+
+  // 5
+  $form['lib_util_nav_links']['lib_util_nav5_text'] = array(
+      '#type'   => 'textfield',
+      '#title'  => t('Util Nav 5 Text'),
+      '#default_value'  => theme_get_setting('lib_util_nav5_text'),
+    );
+
+  $form['lib_util_nav_links']['lib_util_nav5_url'] = array(
+      '#type'   => 'url',
+      '#title'  => t('Util Nav 5 URL'),
+      '#default_value'  => theme_get_setting('lib_util_nav5_url'),
+    );
 }

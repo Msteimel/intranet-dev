@@ -31,4 +31,13 @@ function lib_typhoon_preprocess_page(&$variables) {
     
     $variables['lib_util_nav2_text'] = theme_get_setting('lib_util_nav2_text');
     $variables['lib_util_nav2_url'] = theme_get_setting('lib_util_nav2_url');
+
+    $variables['lib_util_nav3_text'] = theme_get_setting('lib_util_nav3_text');
+    $variables['lib_util_nav3_url'] = theme_get_setting('lib_util_nav3_url');
+
+    $variables['lib_util_nav4_text'] = theme_get_setting('lib_util_nav4_text');
+    $variables['lib_util_nav4_url'] = theme_get_setting('lib_util_nav4_url');
+
+    $variables['lib_util_nav5_text'] = theme_get_setting('lib_util_nav5_text');
+    $variables['lib_util_nav5_url'] = theme_get_setting('lib_util_nav5_url');
 }
