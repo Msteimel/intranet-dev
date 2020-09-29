@@ -3,13 +3,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.employee.field_department
+    - field.field.node.employee.field_employee_admin_cabinet
+    - field.field.node.employee.field_employee_bio
+    - field.field.node.employee.field_employee_department
     - field.field.node.employee.field_employee_email
-    - field.field.node.employee.field_first_name
-    - field.field.node.employee.field_last_name
+    - field.field.node.employee.field_employee_image
+    - field.field.node.employee.field_employee_job_title
+    - field.field.node.employee.field_employee_name
+    - field.field.node.employee.field_employee_phone
     - node.type.employee
   module:
-    - options
+    - image
     - text
     - user
 id: node.employee.default
@@ -17,33 +21,70 @@ targetEntityType: node
 bundle: employee
 mode: default
 content:
-  field_department:
-    weight: 105
-    label: visually_hidden
+  field_employee_admin_cabinet:
+    weight: 107
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_employee_bio:
+    weight: 108
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    type: text_default
+    region: content
+  field_employee_department:
+    weight: 106
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_employee_email:
-    weight: 104
-    label: visually_hidden
+    weight: 103
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
-  field_first_name:
-    weight: 102
-    label: visually_hidden
-    settings: {  }
+  field_employee_image:
+    weight: 104
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
     third_party_settings: {  }
-    type: text_default
+    type: image
     region: content
-  field_last_name:
-    weight: 103
-    label: visually_hidden
-    settings: {  }
+  field_employee_job_title:
+    weight: 105
+    label: hidden
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    type: text_default
+    type: string
+    region: content
+  field_employee_name:
+    weight: 101
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_employee_phone:
+    weight: 102
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   links:
     weight: 100

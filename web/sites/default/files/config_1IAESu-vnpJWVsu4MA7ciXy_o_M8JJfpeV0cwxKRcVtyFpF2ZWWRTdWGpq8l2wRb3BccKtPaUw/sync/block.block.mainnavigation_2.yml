@@ -20,10 +20,10 @@ settings:
   provider: menu_block
   label_display: '0'
   follow: false
-  follow_parent: child
+  follow_parent: active
   level: 2
   depth: 0
-  expand: false
+  expand: true
   parent: 'main:'
-  suggestion: main
+  suggestion: side
 visibility: {  }

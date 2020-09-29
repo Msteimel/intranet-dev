@@ -1,4 +1,4 @@
-uuid: 3b766b78-9e4d-4f7c-8dc0-53897ff61352
+uuid: a99f5cca-03fc-46a2-975f-506c49865340
 langcode: en
 status: true
 dependencies:
@@ -9,9 +9,9 @@ id: node.employee.field_employee_email
 field_name: field_employee_email
 entity_type: node
 bundle: employee
-label: 'employee email'
+label: 'Employee Email'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
