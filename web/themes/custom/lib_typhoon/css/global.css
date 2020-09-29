@@ -759,6 +759,14 @@ input[type=button].lib-button:hover {
   text-decoration: none;
 }
 
+a.lib-button::after,
+button.lib-button::after,
+input[type=reset].lib-button::after,
+input[type=submit].lib-button::after,
+input[type=button].lib-button::after {
+  background: transparent;
+}
+
 a.lib-button:active,
 button.lib-button:active,
 input[type=reset].lib-button:active,
@@ -813,6 +821,10 @@ input[type=reset].lib-button.lib-button-icon::after,
 input[type=submit].lib-button.lib-button-icon::after,
 input[type=button].lib-button.lib-button-icon::after {
   right: 1rem;
+  left: unset;
+  bottom: unset;
+  height: unset;
+  width: unset;
 }
 
 a.lib-button.lib-button-icon:hover::after,
@@ -826,6 +838,69 @@ input[type=submit].lib-button.lib-button-icon:focus::after,
 input[type=button].lib-button.lib-button-icon:hover::after,
 input[type=button].lib-button.lib-button-icon:focus::after {
   right: .6em;
+}
+
+a.lib-button.lib-button-icon--back,
+button.lib-button.lib-button-icon--back,
+input[type=reset].lib-button.lib-button-icon--back,
+input[type=submit].lib-button.lib-button-icon--back,
+input[type=button].lib-button.lib-button-icon--back {
+  padding: 1em 2em 1em 3em;
+  position: relative;
+}
+
+a.lib-button.lib-button-icon--back::before,
+a.lib-button.lib-button-icon--back::after,
+button.lib-button.lib-button-icon--back::before,
+button.lib-button.lib-button-icon--back::after,
+input[type=reset].lib-button.lib-button-icon--back::before,
+input[type=reset].lib-button.lib-button-icon--back::after,
+input[type=submit].lib-button.lib-button-icon--back::before,
+input[type=submit].lib-button.lib-button-icon--back::after,
+input[type=button].lib-button.lib-button-icon--back::before,
+input[type=button].lib-button.lib-button-icon--back::after {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-family: "Fontawesome";
+  font-size: .75rem;
+  content: "\F053";
+  -webkit-transition: left .3s;
+  transition: left .3s;
+}
+
+a.lib-button.lib-button-icon--back::before,
+button.lib-button.lib-button-icon--back::before,
+input[type=reset].lib-button.lib-button-icon--back::before,
+input[type=submit].lib-button.lib-button-icon--back::before,
+input[type=button].lib-button.lib-button-icon--back::before {
+  left: 1.5rem;
+}
+
+a.lib-button.lib-button-icon--back::after,
+button.lib-button.lib-button-icon--back::after,
+input[type=reset].lib-button.lib-button-icon--back::after,
+input[type=submit].lib-button.lib-button-icon--back::after,
+input[type=button].lib-button.lib-button-icon--back::after {
+  left: 2rem;
+  right: unset;
+  bottom: unset;
+  height: unset;
+  width: unset;
+}
+
+a.lib-button.lib-button-icon--back:hover::after,
+a.lib-button.lib-button-icon--back:focus::after,
+button.lib-button.lib-button-icon--back:hover::after,
+button.lib-button.lib-button-icon--back:focus::after,
+input[type=reset].lib-button.lib-button-icon--back:hover::after,
+input[type=reset].lib-button.lib-button-icon--back:focus::after,
+input[type=submit].lib-button.lib-button-icon--back:hover::after,
+input[type=submit].lib-button.lib-button-icon--back:focus::after,
+input[type=button].lib-button.lib-button-icon--back:hover::after,
+input[type=button].lib-button.lib-button-icon--back:focus::after {
+  left: 2em;
 }
 
 .lib-button-full {
@@ -2531,21 +2606,24 @@ table th {
   grid-template-columns: repeat(auto-fit, minmax(23.4375rem, 1fr));
 }
 
-.lib-basic-card {
+.lib-basic-card--wrap {
   max-width: 23.4375rem;
 }
 
-.lib-grid .lib-basic-card {
-  max-width: none;
-}
-
 @media (max-width: 768px) {
-  .lib-basic-card {
+  .lib-basic-card--wrap {
     width: 100%;
   }
 }
 
-.lib-basic-card .lib-basic-card--link {
+.lib-basic-card--wrap [class*=lib-icon-] {
+  font-size: 2rem;
+  color: #c6102e;
+  -webkit-transition: color .3s ease-in;
+  transition: color .3s ease-in;
+}
+
+.lib-basic-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2556,6 +2634,7 @@ table th {
   position: relative;
   background-color: #fff;
   height: 100%;
+  border-left: 4px solid #e23c44;
   text-decoration: none;
   -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.12),0 3px 6px rgba(0,0,0,.15);
           box-shadow: 0 2px 4px rgba(0,0,0,.12),0 3px 6px rgba(0,0,0,.15);
@@ -2567,8 +2646,8 @@ table th {
   z-index: 1;
 }
 
-.lib-basic-card .lib-basic-card--link::before,
-.lib-basic-card .lib-basic-card--link::after {
+.lib-basic-card::before,
+.lib-basic-card::after {
   content: "";
   width: 5.5rem;
   height: 3.125rem;
@@ -2579,79 +2658,67 @@ table th {
   transition: background-color .3s ease-in;
 }
 
-.lib-basic-card .lib-basic-card--link::before {
+.lib-basic-card::before {
   top: -0.703125rem;
   right: -1.875rem;
   background-color: #e23c44;
 }
 
-.lib-basic-card .lib-basic-card--link::after {
+.lib-basic-card::after {
   top: -1.640625rem;
   right: -2.578125rem;
   background-color: #c6102e;
 }
 
-.lib-basic-card .lib-basic-card--link:hover,
-.lib-basic-card .lib-basic-card--link:focus {
+.lib-basic-card:hover,
+.lib-basic-card:focus {
   background-color: #c6102e;
   border-color: #921127;
   -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.15),0 15px 25px rgba(0,0,0,.25);
           box-shadow: 0 5px 10px rgba(0,0,0,.15),0 15px 25px rgba(0,0,0,.25);
 }
 
-.lib-basic-card .lib-basic-card--link:hover::before,
-.lib-basic-card .lib-basic-card--link:focus::before {
+.lib-basic-card:hover::before,
+.lib-basic-card:focus::before {
   background-color: #b0112c;
 }
 
-.lib-basic-card .lib-basic-card--link:hover::after,
-.lib-basic-card .lib-basic-card--link:focus::after {
+.lib-basic-card:hover::after,
+.lib-basic-card:focus::after {
   background-color: #921127;
 }
 
-.lib-basic-card .lib-basic-card--link:hover [class*=lib-icon-],
-.lib-basic-card .lib-basic-card--link:focus [class*=lib-icon-] {
+.lib-basic-card:hover [class*=lib-icon-],
+.lib-basic-card:focus [class*=lib-icon-] {
   color: #fff;
 }
 
-.lib-basic-card .lib-basic-card--link:hover .lib-basic-card--text-wrap,
-.lib-basic-card .lib-basic-card--link:focus .lib-basic-card--text-wrap {
-  border-color: #921127;
-}
-
-.lib-basic-card .lib-basic-card--link:hover .lib-basic-card--category,
-.lib-basic-card .lib-basic-card--link:focus .lib-basic-card--category {
+.lib-basic-card:hover .lib-basic-card--category,
+.lib-basic-card:focus .lib-basic-card--category {
   color: #fff;
 }
 
-.lib-basic-card .lib-basic-card--link:hover .lib-basic-card--title,
-.lib-basic-card .lib-basic-card--link:focus .lib-basic-card--title {
+.lib-basic-card:hover .lib-basic-card--title,
+.lib-basic-card:focus .lib-basic-card--title {
   color: #fff;
 }
 
-.lib-basic-card .lib-basic-card--link:hover .lib-basic-card--desc,
-.lib-basic-card .lib-basic-card--link:focus .lib-basic-card--desc {
+.lib-basic-card:hover .lib-basic-card--desc,
+.lib-basic-card:focus .lib-basic-card--desc {
   color: #fff;
 }
 
-.lib-basic-card .lib-basic-card--link:hover .lib-cta,
-.lib-basic-card .lib-basic-card--link:focus .lib-cta {
+.lib-basic-card:hover .lib-cta,
+.lib-basic-card:focus .lib-cta {
   color: #fff;
 }
 
-.lib-basic-card .lib-basic-card--link:hover .lib-cta::after,
-.lib-basic-card .lib-basic-card--link:focus .lib-cta::after {
+.lib-basic-card:hover .lib-cta::after,
+.lib-basic-card:focus .lib-cta::after {
   right: .6em;
 }
 
-.lib-basic-card [class*=lib-icon-] {
-  font-size: 2rem;
-  color: #c6102e;
-  -webkit-transition: color .3s ease-in;
-  transition: color .3s ease-in;
-}
-
-.lib-basic-card .lib-basic-card--text-wrap {
+.lib-basic-card--text-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2661,12 +2728,11 @@ table th {
           flex-direction: column;
   height: 100%;
   padding: 2rem 1.5rem 2.5rem 2rem;
-  border-left: 4px solid #e23c44;
   -webkit-transition: border-color .3s ease-in;
   transition: border-color .3s ease-in;
 }
 
-.lib-basic-card .lib-basic-card--category {
+.lib-basic-card--category {
   display: block;
   line-height: 1.5;
   font-size: .875rem;
@@ -2675,12 +2741,12 @@ table th {
   transition: color .3s ease-in;
 }
 
-.lib-basic-card .lib-basic-card--title {
+.lib-basic-card--title {
   -webkit-transition: color .3s ease-in;
   transition: color .3s ease-in;
 }
 
-.lib-basic-card .lib-basic-card--desc {
+.lib-basic-card--desc {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -2688,11 +2754,11 @@ table th {
   transition: color .3s ease-in;
 }
 
-.lib-basic-card .lib-cta--wrap {
+.lib-cta--wrap {
   margin-top: auto;
 }
 
-.lib-basic-card .lib-cta {
+.lib-cta {
   display: inline-block;
   position: relative;
   text-decoration: none;
@@ -2704,8 +2770,8 @@ table th {
   transition: color .3s ease-in;
 }
 
-.lib-basic-card .lib-cta::before,
-.lib-basic-card .lib-cta::after {
+.lib-cta::before,
+.lib-cta::after {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -2717,176 +2783,160 @@ table th {
   transition: right .3s;
 }
 
-.lib-basic-card .lib-cta::before {
+.lib-cta::before {
   right: .5rem;
 }
 
-.lib-basic-card .lib-cta::after {
+.lib-cta::after {
   right: 1rem;
 }
 
-.lib-basic-card.lib-basic-card--yellow .lib-basic-card--link {
+.lib-basic-card--yellow {
   -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.12),0 3px 6px rgba(0,0,0,.15);
           box-shadow: 0 2px 4px rgba(0,0,0,.12),0 3px 6px rgba(0,0,0,.15);
+  border-color: #f1be46;
 }
 
-.lib-basic-card.lib-basic-card--yellow .lib-basic-card--link::before {
+.lib-basic-card--yellow::before {
   background-color: #f1be46;
 }
 
-.lib-basic-card.lib-basic-card--yellow .lib-basic-card--link::after {
+.lib-basic-card--yellow::after {
   background-color: #efa70b;
 }
 
-.lib-basic-card.lib-basic-card--yellow .lib-basic-card--link:hover,
-.lib-basic-card.lib-basic-card--yellow .lib-basic-card--link:focus {
+.lib-basic-card--yellow:hover,
+.lib-basic-card--yellow:focus {
   background-color: #fcda69;
   border-color: #efa70b;
   -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.05),0 15px 25px rgba(0,0,0,.15);
           box-shadow: 0 5px 10px rgba(0,0,0,.05),0 15px 25px rgba(0,0,0,.15);
 }
 
-.lib-basic-card.lib-basic-card--yellow .lib-basic-card--link:hover::before,
-.lib-basic-card.lib-basic-card--yellow .lib-basic-card--link:focus::before {
+.lib-basic-card--yellow:hover::before,
+.lib-basic-card--yellow:focus::before {
   background-color: #f1be46;
 }
 
-.lib-basic-card.lib-basic-card--yellow .lib-basic-card--link:hover::after,
-.lib-basic-card.lib-basic-card--yellow .lib-basic-card--link:focus::after {
+.lib-basic-card--yellow:hover::after,
+.lib-basic-card--yellow:focus::after {
   background-color: #efa70b;
 }
 
-.lib-basic-card.lib-basic-card--yellow .lib-basic-card--link:hover [class*=lib-icon-],
-.lib-basic-card.lib-basic-card--yellow .lib-basic-card--link:focus [class*=lib-icon-] {
+.lib-basic-card--yellow:hover [class*=lib-icon-],
+.lib-basic-card--yellow:focus [class*=lib-icon-] {
   color: #212121;
 }
 
-.lib-basic-card.lib-basic-card--yellow .lib-basic-card--link:hover .lib-basic-card--category,
-.lib-basic-card.lib-basic-card--yellow .lib-basic-card--link:focus .lib-basic-card--category {
+.lib-basic-card--yellow:hover .lib-basic-card--category,
+.lib-basic-card--yellow:focus .lib-basic-card--category {
   color: #212121;
 }
 
-.lib-basic-card.lib-basic-card--yellow .lib-basic-card--link:hover .lib-basic-card--text-wrap,
-.lib-basic-card.lib-basic-card--yellow .lib-basic-card--link:focus .lib-basic-card--text-wrap {
-  border-color: #efa70b;
-}
-
-.lib-basic-card.lib-basic-card--yellow .lib-basic-card--link:hover .lib-basic-card--title,
-.lib-basic-card.lib-basic-card--yellow .lib-basic-card--link:focus .lib-basic-card--title {
+.lib-basic-card--yellow:hover .lib-basic-card--title,
+.lib-basic-card--yellow:focus .lib-basic-card--title {
   color: #212121;
 }
 
-.lib-basic-card.lib-basic-card--yellow .lib-basic-card--link:hover .lib-basic-card--desc,
-.lib-basic-card.lib-basic-card--yellow .lib-basic-card--link:focus .lib-basic-card--desc {
+.lib-basic-card--yellow:hover .lib-basic-card--desc,
+.lib-basic-card--yellow:focus .lib-basic-card--desc {
   color: #212121;
 }
 
-.lib-basic-card.lib-basic-card--yellow .lib-basic-card--link:hover .lib-cta,
-.lib-basic-card.lib-basic-card--yellow .lib-basic-card--link:focus .lib-cta {
+.lib-basic-card--yellow:hover .lib-cta,
+.lib-basic-card--yellow:focus .lib-cta {
   color: #212121;
 }
 
-.lib-basic-card.lib-basic-card--yellow [class*=lib-icon-] {
+.lib-basic-card--yellow [class*=lib-icon-] {
   font-size: 2rem;
   color: #ac4e06;
   -webkit-transition: color .3s ease-in;
   transition: color .3s ease-in;
 }
 
-.lib-basic-card.lib-basic-card--yellow .lib-basic-card--text-wrap {
-  border-left: 4px solid #f1be46;
-}
-
-.lib-basic-card.lib-basic-card--yellow .lib-basic-card--category {
+.lib-basic-card--yellow .lib-basic-card--category {
   color: #ac4e06;
 }
 
-.lib-basic-card.lib-basic-card--yellow .lib-cta {
+.lib-basic-card--yellow .lib-cta {
   color: #ac4e06;
 }
 
-.lib-basic-card.lib-basic-card--blue .lib-basic-card--link {
+.lib-basic-card--blue {
   -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.12),0 3px 6px rgba(0,0,0,.15);
           box-shadow: 0 2px 4px rgba(0,0,0,.12),0 3px 6px rgba(0,0,0,.15);
+  border-left: 4px solid #0d87c9;
 }
 
-.lib-basic-card.lib-basic-card--blue .lib-basic-card--link::before {
+.lib-basic-card--blue::before {
   background-color: #14a0e6;
 }
 
-.lib-basic-card.lib-basic-card--blue .lib-basic-card--link::after {
+.lib-basic-card--blue::after {
   background-color: #0d87c9;
 }
 
-.lib-basic-card.lib-basic-card--blue .lib-basic-card--link:hover,
-.lib-basic-card.lib-basic-card--blue .lib-basic-card--link:focus {
+.lib-basic-card--blue:hover,
+.lib-basic-card--blue:focus {
   background-color: #14a0e6;
   border-color: #006da8;
   -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.05),0 15px 25px rgba(0,0,0,.15);
           box-shadow: 0 5px 10px rgba(0,0,0,.05),0 15px 25px rgba(0,0,0,.15);
 }
 
-.lib-basic-card.lib-basic-card--blue .lib-basic-card--link:hover::before,
-.lib-basic-card.lib-basic-card--blue .lib-basic-card--link:focus::before {
+.lib-basic-card--blue:hover::before,
+.lib-basic-card--blue:focus::before {
   background-color: #0d87c9;
 }
 
-.lib-basic-card.lib-basic-card--blue .lib-basic-card--link:hover::after,
-.lib-basic-card.lib-basic-card--blue .lib-basic-card--link:focus::after {
+.lib-basic-card--blue:hover::after,
+.lib-basic-card--blue:focus::after {
   background-color: #006da8;
 }
 
-.lib-basic-card.lib-basic-card--blue .lib-basic-card--link:hover [class*=lib-icon-],
-.lib-basic-card.lib-basic-card--blue .lib-basic-card--link:focus [class*=lib-icon-] {
+.lib-basic-card--blue:hover [class*=lib-icon-],
+.lib-basic-card--blue:focus [class*=lib-icon-] {
   color: #fff;
 }
 
-.lib-basic-card.lib-basic-card--blue .lib-basic-card--link:hover .lib-basic-card--text-wrap,
-.lib-basic-card.lib-basic-card--blue .lib-basic-card--link:focus .lib-basic-card--text-wrap {
-  border-color: #006da8;
-}
-
-.lib-basic-card.lib-basic-card--blue .lib-basic-card--link:hover .lib-basic-card--category,
-.lib-basic-card.lib-basic-card--blue .lib-basic-card--link:focus .lib-basic-card--category {
+.lib-basic-card--blue:hover .lib-basic-card--category,
+.lib-basic-card--blue:focus .lib-basic-card--category {
   color: #fff;
 }
 
-.lib-basic-card.lib-basic-card--blue .lib-basic-card--link:hover .lib-basic-card--title,
-.lib-basic-card.lib-basic-card--blue .lib-basic-card--link:focus .lib-basic-card--title {
+.lib-basic-card--blue:hover .lib-basic-card--title,
+.lib-basic-card--blue:focus .lib-basic-card--title {
   color: #fff;
 }
 
-.lib-basic-card.lib-basic-card--blue .lib-basic-card--link:hover .lib-basic-card--desc,
-.lib-basic-card.lib-basic-card--blue .lib-basic-card--link:focus .lib-basic-card--desc {
+.lib-basic-card--blue:hover .lib-basic-card--desc,
+.lib-basic-card--blue:focus .lib-basic-card--desc {
   color: #fff;
 }
 
-.lib-basic-card.lib-basic-card--blue .lib-basic-card--link:hover .lib-cta,
-.lib-basic-card.lib-basic-card--blue .lib-basic-card--link:focus .lib-cta {
+.lib-basic-card--blue:hover .lib-cta,
+.lib-basic-card--blue:focus .lib-cta {
   color: #fff;
 }
 
-.lib-basic-card.lib-basic-card--blue [class*=lib-icon-] {
+.lib-basic-card--blue [class*=lib-icon-] {
   font-size: 2rem;
   color: #006da8;
   -webkit-transition: color .3s ease-in;
   transition: color .3s ease-in;
 }
 
-.lib-basic-card.lib-basic-card--blue .lib-basic-card--text-wrap {
-  border-left: 4px solid #0d87c9;
-}
-
-.lib-basic-card.lib-basic-card--blue .lib-basic-card--category {
+.lib-basic-card--blue .lib-basic-card--category {
   color: #006da8;
 }
 
-.lib-basic-card.lib-basic-card--blue .lib-cta {
+.lib-basic-card--blue .lib-cta {
   color: #006da8;
 }
 
-.lib-basic-card--image .lib-basic-card--link::before,
-.lib-basic-card--image .lib-basic-card--link::after {
+.lib-basic-card--image .lib-basic-card::before,
+.lib-basic-card--image .lib-basic-card::after {
   content: "";
   width: 0;
 }
@@ -2930,27 +2980,27 @@ table th {
   color: #fff;
 }
 
-.lib-basic-card.lib-basic-card--yellow.lib-basic-card--image .lib-basic-card--link .lib-basic-card--category,
-.lib-basic-card.lib-basic-card--yellow.lib-basic-card--image .lib-basic-card--link .lib-basic-card--title {
+.lib-basic-card--yellow.lib-basic-card--image .lib-basic-card--category,
+.lib-basic-card--yellow.lib-basic-card--image .lib-basic-card--title {
   color: #fff;
 }
 
-.lib-basic-card.lib-basic-card--yellow.lib-basic-card--image .lib-basic-card--link .lib-basic-card--category:hover,
-.lib-basic-card.lib-basic-card--yellow.lib-basic-card--image .lib-basic-card--link .lib-basic-card--category:focus,
-.lib-basic-card.lib-basic-card--yellow.lib-basic-card--image .lib-basic-card--link .lib-basic-card--title:hover,
-.lib-basic-card.lib-basic-card--yellow.lib-basic-card--image .lib-basic-card--link .lib-basic-card--title:focus {
+.lib-basic-card--yellow.lib-basic-card--image .lib-basic-card--category:hover,
+.lib-basic-card--yellow.lib-basic-card--image .lib-basic-card--category:focus,
+.lib-basic-card--yellow.lib-basic-card--image .lib-basic-card--title:hover,
+.lib-basic-card--yellow.lib-basic-card--image .lib-basic-card--title:focus {
   color: #fff;
 }
 
-.lib-basic-card.lib-basic-card--blue.lib-basic-card--image .lib-basic-card--link .lib-basic-card--category,
-.lib-basic-card.lib-basic-card--blue.lib-basic-card--image .lib-basic-card--link .lib-basic-card--title {
+.lib-basic-card--blue.lib-basic-card--image .lib-basic-card--category,
+.lib-basic-card--blue.lib-basic-card--image .lib-basic-card--title {
   color: #fff;
 }
 
-.lib-basic-card.lib-basic-card--blue.lib-basic-card--image .lib-basic-card--link .lib-basic-card--category:hover,
-.lib-basic-card.lib-basic-card--blue.lib-basic-card--image .lib-basic-card--link .lib-basic-card--category:focus,
-.lib-basic-card.lib-basic-card--blue.lib-basic-card--image .lib-basic-card--link .lib-basic-card--title:hover,
-.lib-basic-card.lib-basic-card--blue.lib-basic-card--image .lib-basic-card--link .lib-basic-card--title:focus {
+.lib-basic-card--blue.lib-basic-card--image .lib-basic-card--category:hover,
+.lib-basic-card--blue.lib-basic-card--image .lib-basic-card--category:focus,
+.lib-basic-card--blue.lib-basic-card--image .lib-basic-card--title:hover,
+.lib-basic-card--blue.lib-basic-card--image .lib-basic-card--title:focus {
   color: #fff;
 }
 
@@ -3528,22 +3578,11 @@ table th {
   left: 0;
 }
 
-.lib-side-nav--list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin: 0;
-  list-style-type: none;
+.lib-side-nav {
+  padding: 0;
 }
 
-.lib-side-nav--item .lib-side-nav--link {
+.lib-side-nav--link {
   display: block;
   height: 3rem;
   padding: 0 2.5rem;
@@ -3570,53 +3609,40 @@ table th {
   left: 0;
 }
 
-.lib-side-nav--item .lib-side-nav--link:hover {
+.lib-side-nav--item .lib-side-nav--link:hover,
+.lib-side-nav--item .lib-side-nav--link:focus,
+.lib-side-nav--item .lib-side-nav--link.is-active {
   color: #fff;
   background-color: #c6102e;
 }
 
 .lib-side-nav--item .lib-side-nav--link:hover::before,
-.lib-side-nav--item .lib-side-nav--link:hover::after {
+.lib-side-nav--item .lib-side-nav--link:hover::after,
+.lib-side-nav--item .lib-side-nav--link:focus::before,
+.lib-side-nav--item .lib-side-nav--link:focus::after,
+.lib-side-nav--item .lib-side-nav--link.is-active::before,
+.lib-side-nav--item .lib-side-nav--link.is-active::after {
   display: block;
 }
 
 .lib-sub-list--item .lib-side-nav--link {
-  height: 3rem;
-  line-height: 3rem;
-  color: #212121;
-}
-
-.lib-sub-list--item .lib-side-nav--link:hover,
-.lib-sub-list--item .lib-side-nav--link:focus {
-  background-color: #c6102e;
-  color: #fff;
-}
-
-.lib-sub-list--item .lib-side-nav--link:hover::before,
-.lib-sub-list--item .lib-side-nav--link:hover::after,
-.lib-sub-list--item .lib-side-nav--link:focus::before,
-.lib-sub-list--item .lib-side-nav--link:focus::after {
-  display: none;
-}
-
-.lib-side-nav--sub-list {
-  list-style-type: none;
-}
-
-.lib-side-nav--sub-list .lib-side-nav--link {
-  display: block;
   overflow: hidden;
+  padding: 0 2rem;
+  color: #212121;
   font-size: 1rem;
   font-weight: 400;
+  -webkit-transition: left ease .3s;
+  transition: left ease .3s;
 }
 
-.lib-side-nav--sub-list .lib-side-nav--link::after {
+.lib-sub-list--item .lib-side-nav--link::after {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   content: "\F054";
   font-family: "Fontawesome";
+  display: block;
   background-color: transparent;
   left: -1rem;
   height: auto;
@@ -3625,12 +3651,162 @@ table th {
   transition: left ease .3s;
 }
 
-.lib-side-nav--sub-list .is-active {
+.lib-sub-list--item .lib-side-nav--link:hover,
+.lib-sub-list--item .lib-side-nav--link:focus,
+.lib-sub-list--item .lib-side-nav--link.is-active {
+  color: #c6102e;
+  background-color: #fff;
+  -webkit-transition: left ease .3s;
+  transition: left ease .3s;
+}
+
+.lib-sub-list--item .lib-side-nav--link:hover::before,
+.lib-sub-list--item .lib-side-nav--link:focus::before,
+.lib-sub-list--item .lib-side-nav--link.is-active::before {
+  display: none;
+}
+
+.lib-sub-list--item .lib-side-nav--link:hover::after,
+.lib-sub-list--item .lib-side-nav--link:focus::after,
+.lib-sub-list--item .lib-side-nav--link.is-active::after {
+  left: .75rem;
+}
+
+.lib-sub-list--item .is-active {
   color: #c6102e;
 }
 
-.lib-side-nav--sub-list .is-active::after {
+.lib-sub-list--item .is-active::after {
   left: 0;
+}
+
+.lib-side-nav--sub-list {
+  list-style-type: none;
+}
+
+.lib-staff--image--wrap {
+  display: inline-block;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.22),0 3px 6px rgba(0,0,0,.25);
+          box-shadow: 0 2px 4px rgba(0,0,0,.22),0 3px 6px rgba(0,0,0,.25);
+  overflow: hidden;
+}
+
+.lib-staff--image--wrap img {
+  width: 100%;
+}
+
+.lib-staff--phone,
+.lib-staff--email {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.lib-staff--phone::before,
+.lib-staff--email::before {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+  font-family: "Font Awesome 5 Free";
+}
+
+.lib-staff--job-title {
+  font-weight: bold;
+}
+
+.lib-staff--phone::before {
+  content: "\F095";
+}
+
+.lib-staff--email::before {
+  content: "\F0E0";
+}
+
+.lib-staff {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.lib-staff:hover {
+  background-color: #fff;
+}
+
+.lib-staff .lib-staff--image--wrap {
+  height: 140px;
+  width: 140px;
+}
+
+.lib-staff .lib-staff--image--wrap img {
+  width: 100%;
+}
+
+.lib-staff--text-wrap {
+  padding-left: 180px;
+}
+
+.staff-directory-wrap {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
+}
+
+.staff-directory-wrap form {
+  grid-column: 1/-1;
+}
+
+.lib-staff-card.lib-basic-card {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+}
+
+.lib-staff-card .lib-staff--image-link::after {
+  background: transparent;
+}
+
+.lib-staff-card .lib-staff--image--wrap {
+  height: 125px;
+  width: 125px;
+  -webkit-transition: -webkit-box-shadow .3s ease;
+  transition: -webkit-box-shadow .3s ease;
+  transition: box-shadow .3s ease;
+  transition: box-shadow .3s ease, -webkit-box-shadow .3s ease;
+}
+
+.lib-staff-card .lib-staff--image--wrap:hover {
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.2),0 10px 20px rgba(0,0,0,.25);
+          box-shadow: 0 3px 6px rgba(0,0,0,.2),0 10px 20px rgba(0,0,0,.25);
+}
+
+.lib-staff-card .lib-staff--image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.lib-staff-card .lib-basic-card--text-wrap {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: auto;
+}
+
+.lib-staff-card .lib-basic-card--text-wrap .lib-staff--name {
+  color: #212121;
 }
 
 @font-face {
@@ -9881,6 +10057,11 @@ table th {
   overflow: visible;
   clip: auto;
   white-space: normal;
+}
+
+.lib-pipe {
+  background-color: #efa70b;
+  width: 2px;
 }
 
 

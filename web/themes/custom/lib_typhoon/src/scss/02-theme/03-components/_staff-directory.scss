@@ -1,0 +1,114 @@
+// *defaults
+.lib-staff--image--wrap {
+  display: inline-block;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  box-shadow: $vert-dark-2;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+}
+
+.lib-staff--phone,
+.lib-staff--email {
+  position: relative;
+  padding-left: $space-lg;
+
+  &::before {
+    @include vert_center;
+    left: 0;
+    font-family: "Font Awesome 5 Free";
+  }
+}
+
+.lib-staff--job-title {
+  font-weight: bold;
+}
+
+.lib-staff--phone::before {
+  content: '\f095';
+}
+
+.lib-staff--email::before {
+  content: '\f0e0';
+}
+
+
+// * individual staff page
+.lib-staff {
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: $white;
+  }
+
+  .lib-staff--image--wrap {
+    height: 140px;
+    width: 140px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.lib-staff--text-wrap {
+  padding-left: 180px;
+}
+
+
+// * staff list (views) page
+.staff-directory-wrap {
+  display: grid;
+  gap: $space-lg;
+  grid-template-columns: repeat(auto-fill, minmax(rem(300), 1fr));
+
+  form {
+    grid-column: 1/-1;
+  }
+}
+
+.lib-staff-card {
+  &.lib-basic-card {
+    align-items: center;
+    background-color: $white;
+  }
+
+  .lib-staff--image-link::after {
+    background: transparent;
+  }
+
+  .lib-staff--image--wrap {
+    height: 125px;
+    width: 125px;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: $vert-dark-3;
+    }
+  }
+
+  .lib-staff--image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  .lib-basic-card--text-wrap {
+    width: 100%;
+    padding-left: $space-md;
+    padding-right: $space-md;
+    flex-grow: 1;
+    height: auto;
+
+    .lib-staff--name {
+      color: $text-color;
+    }
+  }
+}
