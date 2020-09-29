@@ -58,6 +58,10 @@ input[type='button'].lib-button {
     text-decoration: none;
   }
 
+  &::after {
+    background: transparent;
+  }
+
   &:active {
     background-color: $red-700;
     box-shadow: $button-primary-box-shadow;
@@ -87,12 +91,55 @@ input[type='button'].lib-button.lib-button-icon {
 
   &::after {
     right: 1rem;
+    // * override base <a> styles
+    left: unset;
+    bottom: unset;
+    height: unset;
+    width: unset;
   }
 
   &:hover,
   &:focus {
     &::after {
       right: 0.6em;
+    }
+  }
+}
+
+a.lib-button.lib-button-icon--back,
+button.lib-button.lib-button-icon--back,
+input[type='reset'].lib-button.lib-button-icon--back,
+input[type='submit'].lib-button.lib-button-icon--back,
+input[type='button'].lib-button.lib-button-icon--back {
+  padding: 1em 2em 1em 3em;
+  position: relative;
+
+  &::before,
+  &::after {
+    @include vert_center;
+    font-family: 'Fontawesome';
+    font-size: $fs-xs;
+    content: '\f053';
+    transition: left 0.3s;
+  }
+
+  &::before {
+    left: 1.5rem;
+  }
+
+  &::after {
+    left: 2rem;
+    // * override base <a> styles
+    right: unset;
+    bottom: unset;
+    height: unset;
+    width: unset;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      left: 2em;
     }
   }
 }
