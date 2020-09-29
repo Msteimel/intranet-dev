@@ -2,28 +2,23 @@ $side-nav-main-height: $space-3xl; // nav-height in pixels
 $side-nav-links: $red-500;
 
 
+// * top level <ul> in side-nav
 .lib-side-nav {
-  // display: grid;
-  // margin: auto;
+  padding: 0;
 }
 
-.lib-side-nav--list {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  margin: 0;
-  list-style-type: none;
+// * styles for all <a> in side-nav
+.lib-side-nav--link {
+  display: block;
+  height: $side-nav-main-height;
+  padding: 0 $space-2xl;
+  line-height: $side-nav-main-height;
+  position: relative;
 }
 
+// * top level <li> in side nav structure
 .lib-side-nav--item {
-
   .lib-side-nav--link {
-    display: block;
-    height: $side-nav-main-height;
-    padding: 0 $space-2xl;
-    line-height: $side-nav-main-height;
-    // transition: background-color ease 0.3s, color ease 0.3s;
-    position: relative;
 
     &::before,
     &::after {
@@ -44,7 +39,9 @@ $side-nav-links: $red-500;
       left: 0;
     }
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &.is-active {
       color: $white;
       background-color: $red-500;
 
@@ -56,39 +53,21 @@ $side-nav-links: $red-500;
   }
 }
 
+// * nested <li> in side-nav structure
 .lib-sub-list--item {
   .lib-side-nav--link {
-    height: $side-nav-main-height;
-    line-height: $side-nav-main-height;
-    color: $text-color;
-
-    &:hover,
-    &:focus {
-      background-color: $red-500;
-      color: $white;
-
-      &::before,
-      &::after {
-        display: none;
-      }
-    }
-  }
-}
-
-
-.lib-side-nav--sub-list {
-  list-style-type: none;
-
-  .lib-side-nav--link {
-    display: block;
     overflow: hidden;
+    padding: 0 $space-xl;
+    color: $text-color;
     font-size: $fs-md;
     font-weight: 400;
+    transition: left ease 0.3s;
 
     &::after {
       @include vert_center;
       content: "\f054";
       font-family: "Fontawesome";
+      display: block;
       background-color: transparent;
       left: -1rem;
       height: auto;
@@ -96,13 +75,21 @@ $side-nav-links: $red-500;
       transition: left ease 0.3s;
     }
 
-    // &:hover {
-    //   color: $red-500;
+    &:hover,
+    &:focus,
+    &.is-active {
+      color: $red-500;
+      background-color: $white;
+      transition: left ease 0.3s;
 
-    //   &::after {
-    //     left: 0;
-    //   }
-    // }
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        left: $space-sm;
+      }
+    }
   }
 
   .is-active {
@@ -112,4 +99,9 @@ $side-nav-links: $red-500;
       left: 0;
     }
   }
+}
+
+// * nested <ul> in side-nav
+.lib-side-nav--sub-list {
+  list-style-type: none;
 }
