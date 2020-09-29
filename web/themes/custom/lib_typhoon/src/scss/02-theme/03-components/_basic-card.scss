@@ -49,11 +49,11 @@ $blue-basic-card-text-blue: $blue-700;
   }
 }
 
-.lib-basic-card {
+.lib-basic-card--wrap {
   max-width: $card-width;
 
   .lib-grid & {
-    max-width: none;
+    // max-width: none;
   }
 
   @include bp(sm) {
@@ -64,213 +64,201 @@ $blue-basic-card-text-blue: $blue-700;
   //   margin-bottom: 0;
   // }
 
-  .lib-basic-card--link {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    background-color: $white;
-    height: 100%;
-    text-decoration: none;
-    box-shadow: $basic-card-box-shadow;
-    overflow: hidden;
-    transition: background-color 0.3s ease-in, border-color 0.3s ease-in,
-      box-shadow 0.3s ease-in;
-    z-index: 1;
-
-    &::before,
-    &::after {
-      content: '';
-      width: rem(88);
-      height: rem(50);
-      position: absolute;
-      transform: rotate(45deg);
-      transition: background-color 0.3s ease-in;
-    }
-
-    &::before {
-      top: $card-width * -0.03;
-      right: $card-width * -0.08;
-      background-color: $basic-card-light-tri;
-    }
-
-    &::after {
-      top: $card-width * -0.07;
-      right: $card-width * -0.11;
-      background-color: $basic-card-dark-tri;
-    }
-
-    // Hover triggers
-    &:hover,
-    &:focus {
-      background-color: $basic-card-background-hover;
-      border-color: $basic-card-border-color-hover;
-      box-shadow: $basic-card-dark-shadow-hover;
-
-      &::before {
-        background-color: $basic-card-light-tri-hover;
-      }
-
-      &::after {
-        background-color: $basic-card-dark-tri-hover;
-      }
-
-      [class*='lib-icon-'] {
-        color: $basic-card-text-color-hover;
-      }
-
-      .lib-basic-card--text-wrap {
-        border-color: $basic-card-border-color-hover;
-      }
-
-      .lib-basic-card--category {
-        color: $basic-card-text-color-hover;
-      }
-
-      .lib-basic-card--title {
-        color: $basic-card-text-color-hover;
-      }
-
-      .lib-basic-card--desc {
-        color: $basic-card-text-color-hover;
-      }
-
-      .lib-cta {
-        color: $basic-card-text-color-hover;
-
-        &::after {
-          right: 0.6em;
-        }
-      }
-    }
-  }
-
   [class*='lib-icon-'] {
     font-size: $fs-2xl;
     color: $basic-card-text-red;
     transition: color 0.3s ease-in;
   }
+}
 
-  .lib-basic-card--text-wrap {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: $space-xl $space-lg $space-2xl $space-xl;
-    border-left: 4px solid $basic-card-border-color;
-    transition: border-color 0.3s ease-in;
+.lib-basic-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: $white;
+  height: 100%;
+  border-left: 4px solid $basic-card-border-color;
+  text-decoration: none;
+  box-shadow: $basic-card-box-shadow;
+  overflow: hidden;
+  transition: background-color 0.3s ease-in, border-color 0.3s ease-in,
+    box-shadow 0.3s ease-in;
+  z-index: 1;
+
+  &::before,
+  &::after {
+    content: '';
+    width: rem(88);
+    height: rem(50);
+    position: absolute;
+    transform: rotate(45deg);
+    transition: background-color 0.3s ease-in;
   }
 
-  .lib-basic-card--category {
-    display: block;
-    line-height: 1.5;
-    font-size: $fs-sm;
-    color: $basic-card-text-red;
-    transition: color 0.3s ease-in;
+  &::before {
+    top: $card-width * -0.03;
+    right: $card-width * -0.08;
+    background-color: $basic-card-light-tri;
   }
 
-  .lib-basic-card--title {
-    transition: color 0.3s ease-in;
+  &::after {
+    top: $card-width * -0.07;
+    right: $card-width * -0.11;
+    background-color: $basic-card-dark-tri;
   }
 
-  .lib-basic-card--desc {
-    flex-grow: 1;
-    transition: color 0.3s ease-in;
-  }
-
-  .lib-cta--wrap {
-    margin-top: auto;
-  }
-
-  .lib-cta {
-    display: inline-block;
-    position: relative;
-    text-decoration: none;
-    padding-right: $space-xl;
-    padding-bottom: 0.1rem;
-    margin: 0;
-    color: $basic-card-text-red;
-    transition: color 0.3s ease-in;
-
-    &::before,
-    &::after {
-      @include vert_center;
-      font-family: 'Fontawesome';
-      font-size: $fs-xs;
-      content: '\f054';
-      transition: right 0.3s;
-    }
+  // Hover triggers
+  &:hover,
+  &:focus {
+    background-color: $basic-card-background-hover;
+    border-color: $basic-card-border-color-hover;
+    box-shadow: $basic-card-dark-shadow-hover;
 
     &::before {
-      right: 0.5rem;
+      background-color: $basic-card-light-tri-hover;
     }
 
     &::after {
-      right: 1rem;
+      background-color: $basic-card-dark-tri-hover;
+    }
+
+    [class*='lib-icon-'] {
+      color: $basic-card-text-color-hover;
+    }
+
+    .lib-basic-card--category {
+      color: $basic-card-text-color-hover;
+    }
+
+    .lib-basic-card--title {
+      color: $basic-card-text-color-hover;
+    }
+
+    .lib-basic-card--desc {
+      color: $basic-card-text-color-hover;
+    }
+
+    .lib-cta {
+      color: $basic-card-text-color-hover;
+
+      &::after {
+        right: 0.6em;
+      }
     }
   }
 }
 
+.lib-basic-card--text-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: $space-xl $space-lg $space-2xl $space-xl;
+  transition: border-color 0.3s ease-in;
+}
+
+.lib-basic-card--category {
+  display: block;
+  line-height: 1.5;
+  font-size: $fs-sm;
+  color: $basic-card-text-red;
+  transition: color 0.3s ease-in;
+}
+
+.lib-basic-card--title {
+  transition: color 0.3s ease-in;
+}
+
+.lib-basic-card--desc {
+  flex-grow: 1;
+  transition: color 0.3s ease-in;
+}
+
+.lib-cta--wrap {
+  margin-top: auto;
+}
+
+.lib-cta {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  padding-right: $space-xl;
+  padding-bottom: 0.1rem;
+  margin: 0;
+  color: $basic-card-text-red;
+  transition: color 0.3s ease-in;
+
+  &::before,
+  &::after {
+    @include vert_center;
+    font-family: 'Fontawesome';
+    font-size: $fs-xs;
+    content: '\f054';
+    transition: right 0.3s;
+  }
+
+  &::before {
+    right: 0.5rem;
+  }
+
+  &::after {
+    right: 1rem;
+  }
+}
+
 // Yellow card
-.lib-basic-card.lib-basic-card--yellow {
-  .lib-basic-card--link {
-    box-shadow: $basic-card-box-shadow;
+.lib-basic-card--yellow {
+  box-shadow: $basic-card-box-shadow;
+  border-color: $yellow-basic-card-border-color;
+
+  &::before {
+    background-color: $yellow-basic-card-light-tri;
+  }
+
+  &::after {
+    background-color: $yellow-basic-card-dark-tri;
+  }
+
+  // Hover triggers
+  &:hover,
+  &:focus {
+    background-color: $yellow-basic-card-background-hover;
+    border-color: $yellow-basic-card-border-color-hover;
+    box-shadow: $basic-card-light-shadow-hover;
 
     &::before {
-      background-color: $yellow-basic-card-light-tri;
+      background-color: $yellow-basic-card-light-tri-hover;
     }
 
     &::after {
-      background-color: $yellow-basic-card-dark-tri;
+      background-color: $yellow-basic-card-dark-tri-hover;
     }
 
-    // Hover triggers
-    &:hover,
-    &:focus {
-      background-color: $yellow-basic-card-background-hover;
-      border-color: $yellow-basic-card-border-color-hover;
-      box-shadow: $basic-card-light-shadow-hover;
+    [class*='lib-icon-'] {
+      color: $yellow-basic-card-text-color-hover;
+    }
 
-      &::before {
-        background-color: $yellow-basic-card-light-tri-hover;
-      }
+    .lib-basic-card--category {
+      color: $yellow-basic-card-text-color-hover;
+    }
 
-      &::after {
-        background-color: $yellow-basic-card-dark-tri-hover;
-      }
+    .lib-basic-card--title {
+      color: $yellow-basic-card-text-color-hover;
+    }
 
-      [class*='lib-icon-'] {
-        color: $yellow-basic-card-text-color-hover;
-      }
+    .lib-basic-card--desc {
+      color: $yellow-basic-card-text-color-hover;
+    }
 
-      .lib-basic-card--category {
-        color: $yellow-basic-card-text-color-hover;
-      }
-
-      .lib-basic-card--text-wrap {
-        border-color: $yellow-basic-card-border-color-hover;
-      }
-
-      .lib-basic-card--title {
-        color: $yellow-basic-card-text-color-hover;
-      }
-
-      .lib-basic-card--desc {
-        color: $yellow-basic-card-text-color-hover;
-      }
-
-      .lib-cta {
-        color: $yellow-basic-card-text-color-hover;
-      }
+    .lib-cta {
+      color: $yellow-basic-card-text-color-hover;
     }
   }
+
 
   [class*='lib-icon-'] {
     font-size: $fs-2xl;
     color: $yellow-basic-card-text-yellow;
     transition: color 0.3s ease-in;
-  }
-
-  .lib-basic-card--text-wrap {
-    border-left: 4px solid $yellow-basic-card-border-color;
   }
 
   .lib-basic-card--category {
@@ -283,67 +271,59 @@ $blue-basic-card-text-blue: $blue-700;
 }
 
 // blue card
-.lib-basic-card.lib-basic-card--blue {
-  .lib-basic-card--link {
-    box-shadow: $basic-card-box-shadow;
+.lib-basic-card--blue {
+  box-shadow: $basic-card-box-shadow;
+  border-left: 4px solid $blue-basic-card-border-color;
+
+  &::before {
+    background-color: $blue-basic-card-light-tri;
+  }
+
+  &::after {
+    background-color: $blue-basic-card-dark-tri;
+  }
+
+  // Hover triggers
+  &:hover,
+  &:focus {
+    background-color: $blue-basic-card-background-hover;
+    border-color: $blue-basic-card-border-color-hover;
+    box-shadow: $basic-card-light-shadow-hover;
 
     &::before {
-      background-color: $blue-basic-card-light-tri;
+      background-color: $blue-basic-card-light-tri-hover;
     }
 
     &::after {
-      background-color: $blue-basic-card-dark-tri;
+      background-color: $blue-basic-card-dark-tri-hover;
     }
 
-    // Hover triggers
-    &:hover,
-    &:focus {
-      background-color: $blue-basic-card-background-hover;
-      border-color: $blue-basic-card-border-color-hover;
-      box-shadow: $basic-card-light-shadow-hover;
+    [class*='lib-icon-'] {
+      color: $blue-basic-card-text-color-hover;
+    }
 
-      &::before {
-        background-color: $blue-basic-card-light-tri-hover;
-      }
+    .lib-basic-card--category {
+      color: $blue-basic-card-text-color-hover;
+    }
 
-      &::after {
-        background-color: $blue-basic-card-dark-tri-hover;
-      }
+    .lib-basic-card--title {
+      color: $blue-basic-card-text-color-hover;
+    }
 
-      [class*='lib-icon-'] {
-        color: $blue-basic-card-text-color-hover;
-      }
+    .lib-basic-card--desc {
+      color: $blue-basic-card-text-color-hover;
+    }
 
-      .lib-basic-card--text-wrap {
-        border-color: $blue-basic-card-border-color-hover;
-      }
-
-      .lib-basic-card--category {
-        color: $blue-basic-card-text-color-hover;
-      }
-
-      .lib-basic-card--title {
-        color: $blue-basic-card-text-color-hover;
-      }
-
-      .lib-basic-card--desc {
-        color: $blue-basic-card-text-color-hover;
-      }
-
-      .lib-cta {
-        color: $blue-basic-card-text-color-hover;
-      }
+    .lib-cta {
+      color: $blue-basic-card-text-color-hover;
     }
   }
+
 
   [class*='lib-icon-'] {
     font-size: $fs-2xl;
     color: $blue-basic-card-text-blue;
     transition: color 0.3s ease-in;
-  }
-
-  .lib-basic-card--text-wrap {
-    border-left: 4px solid $blue-basic-card-border-color;
   }
 
   .lib-basic-card--category {
@@ -358,7 +338,8 @@ $blue-basic-card-text-blue: $blue-700;
 //
 
 .lib-basic-card--image {
-  .lib-basic-card--link {
+  .lib-basic-card {
+
     &::before,
     &::after {
       content: '';
@@ -406,30 +387,28 @@ $blue-basic-card-text-blue: $blue-700;
   }
 }
 
-.lib-basic-card.lib-basic-card--yellow.lib-basic-card--image {
-  .lib-basic-card--link {
-    .lib-basic-card--category,
-    .lib-basic-card--title {
-      color: $white;
+.lib-basic-card--yellow.lib-basic-card--image {
 
-      &:hover,
-      &:focus {
-        color: $white;
-      }
+  .lib-basic-card--category,
+  .lib-basic-card--title {
+    color: $white;
+
+    &:hover,
+    &:focus {
+      color: $white;
     }
   }
 }
 
-.lib-basic-card.lib-basic-card--blue.lib-basic-card--image {
-  .lib-basic-card--link {
-    .lib-basic-card--category,
-    .lib-basic-card--title {
-      color: $white;
+.lib-basic-card--blue.lib-basic-card--image {
 
-      &:hover,
-      &:focus {
-        color: $white;
-      }
+  .lib-basic-card--category,
+  .lib-basic-card--title {
+    color: $white;
+
+    &:hover,
+    &:focus {
+      color: $white;
     }
   }
 }
