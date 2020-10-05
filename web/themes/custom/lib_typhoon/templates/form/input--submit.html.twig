@@ -14,10 +14,11 @@
 {% if attributes.hasClass('lib-search__search-button') %}
   {# This class is added with a preprocess function in iastate_theme.theme #}
 
-  <button{{ attributes.addClass('').setAttribute('id', 'search_edit-submit').setAttribute('aria-label', 'Submit search') }}>
+  <button{{attributes.addClass('').setAttribute('id','search_edit-submit').setAttribute('aria-label','Submitsearch')}}>
     <span class="fa fa-search" aria-hidden="true"></span>
   </button>
+{% else %}
+  <input{{attributes.addClass('lib-button','lib-button-accent')}}/>
+  {{ children }}
 
 {% endif %}
-
-{# <input{{ attributes }} />{{ children }} #}

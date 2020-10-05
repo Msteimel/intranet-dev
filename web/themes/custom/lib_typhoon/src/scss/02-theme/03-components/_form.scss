@@ -2,108 +2,174 @@ $filled-color: $warm-grey-700;
 $place-holder-color: $warm-grey-500;
 $focus-text-color: $warm-grey-900;
 $focus-background-color: $warm-grey-50;
-$input-box-shadow: false;
-$input-box-shadow-value: 0 0 3px rgba(0, 0, 0, 0.2);
+$input-box-shadow: true;
+$input-box-shadow-value: $vert-light-3;
 $border-color: trasnparent;
 $form-spacing: $space-2xl;
 $fieldset-spacing: $space-lg;
 $radio-button-checked: $green-600;
 
-.front {
-  .lib-form {
-    margin-top: $form-spacing;
+
+.lib-form {
+  margin-top: $form-spacing;
+}
+
+.lib-form--fieldset {
+  @include clearfix;
+  padding: 0;
+
+  legend {
+    margin: 0 0 0 1em;
   }
+}
 
-  .lib-form--fieldset {
-    @include clearfix;
-    padding: 0;
+table {
+  margin: $space-4xl 0 $space-md;
+}
 
-    legend {
-      margin: 0 0 0 1em;
-    }
+.lib-input {
+  position: relative;
+
+  textarea+.lib-input--label {
+    top: $space-md;
+    transform: translateY(0);
   }
+}
 
-  .lib-input--wrap > * {
-  }
+.lib-input--label {
+  @include vert_center;
+  display: block;
+  // padding-left: $space-lg;
+  font-size: $fs-md;
+  color: $warm-grey-700;
+  transition: 0.3s ease-in-out;
+}
 
-  .lib-input {
-    position: relative;
-
-    textarea + .lib-input--label {
-      top: $space-md;
-      transform: translateY(0);
-    }
-  }
-
+// this is a quick fix for the page editor. It overrides styles below.
+// TODO I need to look at refactoring for a better way.
+.lib-input--textarea,
+.lib-input--vertical-tabs {
   .lib-input--label {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-left: 0;
+    transform: translateY(0);
+  }
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="search"],
+textarea,
+select {
+  @include appearance(none);
+  box-sizing: border-box;
+  position: relative;
+  margin: $space-md 0;
+  padding: $space-xs $space-lg;
+  width: 100%;
+  background-color: $warm-grey-50;
+  border: none;
+  border-bottom: 2px solid $black;
+  font-size: $fs-md;
+  color: $filled-color;
+  line-height: 1.8;
+  outline: none;
+  box-shadow: $vert-light-1;
+  transition: box-shadow 0.3s ease;
+
+  &:focus {
+    border-color: $green-600;
+    color: $focus-text-color;
+    background-color: $focus-background-color;
+
+    @if $input-box-shadow {
+      box-shadow: $input-box-shadow-value;
+    }
+
+  }
+
+  +label {
+    top: -$space-md;
+    font-size: $fs-md;
+    color: $black;
+    // padding-left: $space-lg;
+    transform: translateY(0);
+  }
+
+  // &:not(:placeholder-shown) {
+
+  // *This exction is for the FA icons and colors
+  // &:valid,
+  // &:invalid {
+  //   +label {
+  //     top: -$space-md;
+  //     font-size: $fs-sm;
+  //     // padding-left: $space-lg;
+  //     transform: translateY(0);
+
+  //     &::after {
+  //       @include vert_center;
+  //       left: $space-2xs;
+  //       font-family: "FontAwesome";
+  //       font-size: $fs-md;
+  //     }
+  //   }
+  // }
+
+  &:valid {
+    border-color: $green-600;
+
+    // +label {
+    //   color: $green-600;
+
+    // &::after {
+    //   content: "\f058";
+    // }
+    // }
+  }
+
+  &:invalid {
+    border-color: $red-400;
+
+    // +label {
+    //   color: $red-500;
+
+    // &::after {
+    //   content: "\f057";
+    // }
+    // }
+  }
+
+  // }
+}
+
+.lib-input--select {
+  &::after {
     @include vert_center;
-    display: block;
-    padding-left: $space-lg;
+    content: "\f078";
+    right: $space-xl;
     font-size: $fs-md;
-    color: $warm-grey-500;
-    transition: 0.3s ease-in-out;
+    font-family: "FontAwesome";
   }
 
-  // this is a quick fix for the page editor. It overrides styles below.
-  // I need to look at refactoring for a better way.
-  .lib-input--textarea,
-  .lib-input--vertical-tabs {
-    .lib-input--label {
-      position: relative;
-      top: 0;
-      left: 0;
-      padding-left: 0;
-      transform: translateY(0);
-    }
-  }
-
-  input[type="text"],
-  input[type="password"],
-  input[type="email"],
-  input[type="tel"],
-  input[type="number"],
-  input[type="search"],
-  textarea,
   select {
-    @include appearance(none);
-    background-color: $warm-grey-50;
-    border: none;
-    border-bottom: 2px solid $black;
-    box-sizing: border-box;
-    font-size: $fs-md;
-    color: $filled-color;
-    line-height: 1.8;
-    padding: $space-xs $space-lg;
-    outline: none;
-    width: 100%;
     position: relative;
-    box-shadow: none;
-
-    &:focus {
-      border-color: $green-600;
-      color: $focus-text-color;
-      background-color: $focus-background-color;
-
-      @if $input-box-shadow {
-        box-shadow: $input-box-shadow-value;
-      }
-
-      + label {
-        top: -$space-lg;
-        font-size: $fs-sm;
-        color: $black;
-        padding-left: $space-lg;
-        transform: translateY(0);
-      }
-    }
 
     &:not(:placeholder-shown) {
+
       &:valid,
       &:invalid {
-        + label {
-          top: -$space-lg;
+        +label {
+          position: absolute;
+          top: -$space-md;
+          left: 0;
           font-size: $fs-sm;
-          padding-left: $space-lg;
+          // padding-left: $space-lg;
           transform: translateY(0);
 
           &::after {
@@ -114,373 +180,78 @@ $radio-button-checked: $green-600;
           }
         }
       }
-
-      &:valid {
-        border-color: $green-600;
-
-        + label {
-          color: $green-600;
-
-          &::after {
-            content: "\f058";
-          }
-        }
-      }
-
-      &:invalid {
-        border-color: $red-400;
-        + label {
-          color: $red-500;
-
-          &::after {
-            content: "\f057";
-          }
-        }
-      }
     }
-  }
-
-  .lib-input--select {
-    &::after {
-      @include vert_center;
-      content: "\f078";
-      right: $space-xl;
-      font-size: $fs-md;
-      font-family: "FontAwesome";
-    }
-
-    select {
-      position: relative;
-
-      &:not(:placeholder-shown) {
-        &:valid,
-        &:invalid {
-          + label {
-            position: absolute;
-            top: -$space-lg;
-            left: 0;
-            font-size: $fs-sm;
-            padding-left: $space-lg;
-            transform: translateY(0);
-
-            &::after {
-              @include vert_center;
-              left: $space-2xs;
-              font-family: "FontAwesome";
-              font-size: $fs-md;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .lib-input--radio,
-  .lib-input--checkbox {
-    margin: $space-sm $space-2xs;
-    opacity: 0;
-    position: absolute;
-    transform: translateY(0);
-
-    + label {
-      position: relative;
-      margin: $space-sm $space-2xs 0;
-      padding: 0;
-      color: $focus-text-color;
-      display: inline-block;
-      font-size: $fs-md;
-
-      &:before {
-        cursor: pointer;
-        content: "";
-        display: inline-block;
-        position: relative;
-        vertical-align: top;
-        top: 0.2rem;
-        width: $space-md;
-        height: $space-md;
-        background: $focus-background-color;
-        border-radius: 100%;
-        border: 1px solid darken($focus-background-color, 25%);
-        margin-right: $space-xs;
-        text-align: center;
-        transition: background-color 250ms ease;
-      }
-    }
-
-    &:checked {
-      + label {
-        &:before {
-          background-color: $radio-button-checked;
-          box-shadow: inset 0 0 0 4px $focus-background-color;
-        }
-      }
-    }
-    &:focus {
-      + label {
-        &:before {
-          outline: none;
-          border-color: $radio-button-checked;
-        }
-      }
-    }
-    &:disabled {
-      + label {
-        &:before {
-          box-shadow: inset 0 0 0 4px $focus-background-color;
-          border-color: darken($focus-background-color, 25%);
-          background: darken($focus-background-color, 25%);
-        }
-      }
-    }
-    + label {
-      &:empty {
-        &:before {
-          margin-right: 0;
-        }
-      }
-    }
-  }
-
-  input:focus ~ .floating-label,
-  input:not(:focus):valid ~ .floating-label {
-    top: 8px;
-    bottom: 10px;
-    left: 20px;
-    font-size: 11px;
-    opacity: 1;
   }
 }
 
-// This is just a holding
-.admin {
-  .lib-form {
-    margin-top: $form-spacing;
-  }
+// * Custom styling for radio boxes
+// .lib-input--radio,
+// .lib-input--checkbox {
+//   margin: $space-sm $space-2xs;
+//   opacity: 0;
+//   position: absolute;
+//   transform: translateY(0);
 
-  .lib-form--fieldset {
-    @include clearfix;
-    padding: 0;
+//   +label {
+//     position: relative;
+//     margin: $space-sm $space-2xs 0;
+//     padding: 0;
+//     color: $focus-text-color;
+//     display: inline-block;
+//     font-size: $fs-md;
 
-    legend {
-      margin: 0 0 0 1em;
-    }
-  }
+//     &:before {
+//       cursor: pointer;
+//       content: "";
+//       display: inline-block;
+//       position: relative;
+//       vertical-align: top;
+//       top: 0.2rem;
+//       width: $space-md;
+//       height: $space-md;
+//       background: $focus-background-color;
+//       border-radius: 100%;
+//       border: 1px solid darken($focus-background-color, 25%);
+//       margin-right: $space-xs;
+//       text-align: center;
+//       transition: background-color 250ms ease;
+//     }
+//   }
 
-  .lib-input--wrap > * {
-  }
+//   &:checked {
+//     +label {
+//       &:before {
+//         background-color: $radio-button-checked;
+//         box-shadow: inset 0 0 0 4px $focus-background-color;
+//       }
+//     }
+//   }
 
-  .lib-input {
-    position: relative;
+//   &:focus {
+//     +label {
+//       &:before {
+//         outline: none;
+//         border-color: $radio-button-checked;
+//       }
+//     }
+//   }
 
-    .lib-input--label {
-      // @include vert_center;
-      display: block;
-      padding-left: $space-lg;
-      font-size: $fs-md;
-      color: $warm-grey-500;
-      transition: 0.3s ease-in-out;
-    }
+//   &:disabled {
+//     +label {
+//       &:before {
+//         box-shadow: inset 0 0 0 4px $focus-background-color;
+//         border-color: darken($focus-background-color, 25%);
+//         background: darken($focus-background-color, 25%);
+//       }
+//     }
+//   }
 
-    textarea + .lib-input--label {
-      top: $space-md;
-      transform: translateY(0);
-    }
-  }
-
-  label + input[type="text"] {
-  }
-
-  input[type="text"],
-  input[type="password"],
-  input[type="email"],
-  input[type="tel"],
-  input[type="number"],
-  textarea,
-  select {
-    @include appearance(none);
-    background-color: $warm-grey-50;
-    border: none;
-    border-bottom: 2px solid $black;
-    box-sizing: border-box;
-    font-size: $fs-md;
-    color: $filled-color;
-    line-height: 1.8;
-    padding: $space-xs $space-lg;
-    outline: none;
-    width: 100%;
-    position: relative;
-    box-shadow: none;
-
-    &:focus {
-      border-color: $green-600;
-      color: $focus-text-color;
-      background-color: $focus-background-color;
-
-      @if $input-box-shadow {
-        box-shadow: $input-box-shadow-value;
-      }
-
-      + label {
-        top: -$space-lg;
-        font-size: $fs-sm;
-        color: $black;
-        padding-left: $space-lg;
-        transform: translateY(0);
-      }
-    }
-
-    &:not(:placeholder-shown) {
-      &:valid,
-      &:invalid {
-        + label {
-          top: -$space-lg;
-          font-size: $fs-sm;
-          padding-left: $space-lg;
-          transform: translateY(0);
-
-          &::after {
-            @include vert_center;
-            left: $space-2xs;
-            font-family: "FontAwesome";
-            font-size: $fs-md;
-          }
-        }
-      }
-
-      &:valid {
-        border-color: $green-600;
-
-        + label {
-          color: $green-600;
-
-          &::after {
-            content: "\f058";
-          }
-        }
-      }
-
-      &:invalid {
-        border-color: $red-400;
-        + label {
-          color: $red-500;
-
-          &::after {
-            content: "\f057";
-          }
-        }
-      }
-    }
-  }
-
-  .lib-input--select {
-    &::after {
-      @include vert_center;
-      content: "\f078";
-      right: $space-xl;
-      font-size: $fs-md;
-      font-family: "FontAwesome";
-    }
-
-    select {
-      position: relative;
-
-      &:not(:placeholder-shown) {
-        &:valid,
-        &:invalid {
-          + label {
-            position: absolute;
-            top: -$space-lg;
-            left: 0;
-            font-size: $fs-sm;
-            padding-left: $space-lg;
-            transform: translateY(0);
-
-            &::after {
-              @include vert_center;
-              left: $space-2xs;
-              font-family: "FontAwesome";
-              font-size: $fs-md;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .lib-input--radio,
-  .lib-input--checkbox {
-    margin: $space-sm $space-2xs;
-    // opacity: 0;
-    position: absolute;
-    transform: translateY(0);
-
-    + label {
-      position: relative;
-      margin: $space-sm $space-2xs 0;
-      padding: 0;
-      color: $focus-text-color;
-      display: inline-block;
-      font-size: $fs-md;
-
-      &:before {
-        cursor: pointer;
-        content: "";
-        display: inline-block;
-        position: relative;
-        vertical-align: top;
-        top: 0.2rem;
-        width: $space-md;
-        height: $space-md;
-        background: $focus-background-color;
-        border-radius: 100%;
-        border: 1px solid darken($focus-background-color, 25%);
-        margin-right: $space-xs;
-        text-align: center;
-        transition: background-color 250ms ease;
-      }
-    }
-
-    &:checked {
-      + label {
-        &:before {
-          background-color: $radio-button-checked;
-          box-shadow: inset 0 0 0 4px $focus-background-color;
-        }
-      }
-    }
-    &:focus {
-      + label {
-        &:before {
-          outline: none;
-          border-color: $radio-button-checked;
-        }
-      }
-    }
-    &:disabled {
-      + label {
-        &:before {
-          box-shadow: inset 0 0 0 4px $focus-background-color;
-          border-color: darken($focus-background-color, 25%);
-          background: darken($focus-background-color, 25%);
-        }
-      }
-    }
-    + label {
-      &:empty {
-        &:before {
-          margin-right: 0;
-        }
-      }
-    }
-  }
-
-  input:focus ~ .floating-label,
-  input:not(:focus):valid ~ .floating-label {
-    top: 8px;
-    bottom: 10px;
-    left: 20px;
-    font-size: 11px;
-    opacity: 1;
-  }
-}
+//   +label {
+//     &:empty {
+//       &:before {
+//         margin-right: 0;
+//       }
+//     }
+//   }
+// }
+// }
