@@ -1,11 +1,35 @@
 // This is a general css edits for the admin that will need to be parsed out further.
 
-.views-exposed-form {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(rem(200), 1fr));
-  gap: $space-sm;
+.admin-page {
+
+  form {
+    padding-top: $space-md;
+    padding-bottom: $space-lg;
+  }
+
+  table {
+
+    thead {
+      background-color: $red-100;
+    }
+
+    th {
+      border-top: none;
+    }
+  }
+
 }
 
-.form-item {
-  margin-bottom: $space-lg;
+.views-exposed-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(rem(250), 1fr));
+  gap: $space-sm;
+  align-items: center;
+  // display: flex;
+  // flex-wrap: wrap;
+
+  .lib-button {
+    // min-width: rem(200);
+    width: 100%;
+  }
 }

@@ -24,6 +24,7 @@
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1rem;
     width: 100%;
     max-width: rem(1500);
 
@@ -33,11 +34,15 @@
     }
 
     main {
-      grid-column: 1 / 9;
+      grid-column: 1 / 10;
+
+      .admin-page & {
+        grid-column: 1 / -1;
+      }
     }
 
     .layout-sidebar-first {
-      grid-column: 9 / 12
+      grid-column: 10 / 13
     }
   }
 }
