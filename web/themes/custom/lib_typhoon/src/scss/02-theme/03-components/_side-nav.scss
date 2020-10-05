@@ -44,6 +44,7 @@ $side-nav-links: $red-500;
     &.is-active {
       color: $white;
       background-color: $red-500;
+      box-shadow: $vert-light-1;
 
       &::before,
       &::after {
@@ -52,6 +53,14 @@ $side-nav-links: $red-500;
     }
   }
 }
+
+// .lib-side-nav--item_active-trail {
+//   transition: box-shadow 0.3s ease;
+
+//   &:hover {
+//     box-shadow: $vert-light-2;
+//   }
+// }
 
 // * nested <li> in side-nav structure
 .lib-sub-list--item {
@@ -81,6 +90,7 @@ $side-nav-links: $red-500;
       color: $red-500;
       background-color: $white;
       transition: left ease 0.3s;
+      box-shadow: none;
 
       &::before {
         display: none;

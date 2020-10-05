@@ -64,11 +64,12 @@
 // * staff list (views) page
 .staff-directory-wrap {
   display: grid;
-  gap: $space-lg;
-  grid-template-columns: repeat(auto-fill, minmax(rem(300), 1fr));
+  gap: $space-sm;
+  grid-template-columns: repeat(auto-fill, minmax(rem(325), 1fr));
 
   form {
     grid-column: 1/-1;
+    padding-bottom: $space-xl;
   }
 }
 

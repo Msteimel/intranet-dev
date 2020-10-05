@@ -88,7 +88,6 @@
 {% set staff_card_class = [
   'lib-staff-card',
   'lib-basic-card',
-  'lib-basic-card--yellow',
   'lib-mx-sm',
   'lib-pt-3xl', 
   'lib-pb-2xl'
@@ -114,40 +113,39 @@
 
   <div class="lib-basic-card--text-wrap">
     {{ title_prefix }}
-    <h3 class="lib-basic-card--title lib-staff--name lib-mb-xs lib-text-center">
+    <h3 class="lib-basic-card--title lib-staff--name lib-text-center">
       {{employee_name}}
     </h3>
     {{ title_suffix }}
 
     <div class="lib-staff-info">
       <div class="lib-flex justify-content-center lib-mb-xs">
-        <span class="lib-mr-sm">
+        <span class="lib-mr-sm text-align-center">
           {{employee_department}}
         </span>
         <span class="lib-pipe"></span>
-        <span class="lib-staff--job-title lib-ml-sm">
+        <span class="lib-staff--job-title lib-ml-sm text-align-center">
           {{employee_job}}
         </span>
       </div>
 
       <div class="lib-flex justify-content-center">
         {% if node.field_employee_phone is not empty %}
-          <a class="lib-staff--phone lib-mr-sm" href="tel:{{employee_phone}}">
+          <a class="lib-staff--phone lib-mr-sm text-align-center" href="tel:{{employee_phone}}">
             {{employee_phone}}
           </a>
         {% endif %}
         {% if node.field_employee_email is not empty %}
           <span class="lib-pipe"></span>
-          <a class="lib-staff--email lib-ml-sm" href="mailto:{{employee_email}}">
+          <a class="lib-staff--email lib-ml-sm text-align-center" href="mailto:{{employee_email}}">
             Email
           </a>
         {% endif %}
       </div>
     </div>
   </div>
-  <a href="{{ url }}" rel="bookmark" class="lib-button lib-button-secondary">
-
-    Learn More about
+  <a href="{{ url }}" rel="bookmark" class="lib-button">
+    More about
     {{employee_name}}
   </a>
   {# </div> #}

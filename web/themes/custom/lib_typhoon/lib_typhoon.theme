@@ -15,6 +15,13 @@ function lib_typhoon_form_alter(array &$form, FormStateInterface $form_state, $f
     $form['keys']['#attributes']['placeholder'][] = 'Search Terms';
     $form['actions']['submit']['#attributes']['class'][] = 'lib-search__search-button';
   }
+
+  if( $form_id == 'views-exposed-form-staff-directory-page-1') {
+    $form['#attributes']['class'][] = 'lib-search__staff-form';
+    // $form['keys']['#attributes']['class'][] = 'lib-staff__staff-input';
+    // $form['keys']['#attributes']['placeholder'][] = 'staff Terms';
+    // $form['actions']['submit']['#attributes']['class'][] = 'lib-staff__staff-button';
+  }
 }
 
 /*
