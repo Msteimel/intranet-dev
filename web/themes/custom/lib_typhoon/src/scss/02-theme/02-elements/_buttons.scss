@@ -10,7 +10,7 @@ $button-primary_border-radius: 2px;
 $button-primary-text: $white;
 $button-primary-box-shadow: $vert-dark-1;
 $button-primary_hover-background-color: $red-400;
-$button-primary_hover-box-shadow: $vert-dark-3;
+$button-primary_hover-box-shadow: $vert-dark-2;
 
 // secondary button variables
 $button-secondary-background-color: $secondary-color;
@@ -18,7 +18,7 @@ $button-secondary-border-color: transparent;
 $button-secondary-text: $warm-grey-900;
 $button-secondary-box-shadow: $vert-light-1;
 $button-secondary_hover-background-color: $yellow-400;
-$button-secondary_hover-box-shadow: $vert-light-3;
+$button-secondary_hover-box-shadow: $vert-light-2;
 
 // accent button variables
 $button-accent-background-color: $accent-color;
@@ -26,7 +26,7 @@ $button-accent-border-color: transparent;
 $button-accent-text: $white;
 $button-accent-box-shadow: $vert-dark-1;
 $button-accent_hover-background-color: $blue-400;
-$button-accent_hover-box-shadow: $vert-dark-3;
+$button-accent_hover-box-shadow: $vert-dark-2;
 
 a.lib-button,
 button.lib-button,
@@ -177,7 +177,8 @@ input[type='button'].lib-button-secondary {
   border-color: $button-secondary-border-color;
   color: $button-secondary-text;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $button-secondary-text;
     background-color: $button-secondary_hover-background-color;
     box-shadow: $button-secondary_hover-box-shadow;
@@ -198,7 +199,8 @@ input[type='button'].lib-button-accent {
   border-color: $button-accent-border-color;
   color: $button-accent-text;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $button-accent-text;
     background-color: $button-accent_hover-background-color;
     box-shadow: $button-accent_hover-box-shadow;
