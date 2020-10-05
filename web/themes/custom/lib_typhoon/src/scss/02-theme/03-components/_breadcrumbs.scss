@@ -1,0 +1,11 @@
+.lib-breadcrumbs {
+  li {
+    position: relative;
+
+    &::after {
+      @include vert_center;
+      content: '>';
+      right: 0;
+    }
+  }
+}
