@@ -13,6 +13,7 @@ $header-content-max-width: 1400px;
 .lib-util-nav--wrap {
   position: relative;
   overflow: hidden;
+  box-shadow: $vert-light-1;
 
   .triangles {
     position: absolute;
@@ -97,6 +98,7 @@ $header-content-max-width: 1400px;
   form {
     display: flex;
     padding: $space-sm $space-md;
+    margin: 0;
     height: $nav-utils-height;
 
     .form-item {
@@ -122,6 +124,7 @@ $header-content-max-width: 1400px;
     border-radius: $br2;
     background: $red-100;
     padding-left: $space-md;
+    margin: 0;
     box-shadow: $dark-inset;
   }
 
