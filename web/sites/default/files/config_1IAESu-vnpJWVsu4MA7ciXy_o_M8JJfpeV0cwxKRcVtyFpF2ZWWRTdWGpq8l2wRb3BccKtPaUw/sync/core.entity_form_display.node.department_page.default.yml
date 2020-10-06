@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.department_page.body
-    - field.field.node.department_page.field_staff
+    - field.field.node.department_page.field_department_staff
     - node.type.department_page
   module:
     - path
@@ -30,7 +30,7 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_staff:
+  field_department_staff:
     weight: 122
     settings:
       match_operator: CONTAINS

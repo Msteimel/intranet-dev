@@ -383,7 +383,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: staff-directory
+      path: staff/staff-directory
       filters:
         status:
           value: '1'
@@ -518,8 +518,8 @@ display:
             remember: true
             multiple: true
             remember_roles:
-              anonymous: anonymous
               authenticated: authenticated
+              anonymous: anonymous
               administrator: administrator
             reduce: false
           is_grouped: false
@@ -535,7 +535,7 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: select
+          type: textfield
           limit: true
           vid: taxonomy_departments
           hierarchy: false
@@ -554,8 +554,8 @@ display:
           exposed: true
           expose:
             operator_id: field_employee_name_value_op
-            label: 'Employee Name (field_employee_name)'
-            description: 'Search Staff memeber name'
+            label: 'Employee Name '
+            description: ''
             use_operator: false
             operator: field_employee_name_value_op
             operator_limit_selection: false
