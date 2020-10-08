@@ -12,7 +12,7 @@
   }
 }
 
-.lib-staff--phone,
+.lib-staff--phone a,
 .lib-staff--email {
   position: relative;
   padding-left: $space-lg;
@@ -28,7 +28,7 @@
   font-weight: bold;
 }
 
-.lib-staff--phone::before {
+.lib-staff--phone a::before {
   content: '\f095';
 }
 
@@ -62,9 +62,9 @@
 
 
 // * staff list (views) page
-.staff-directory-wrap {
+.admin--staff-directory--wrap {
   display: grid;
-  gap: $space-sm;
+  gap: $space-2xl $space-sm;
   grid-template-columns: repeat(auto-fill, minmax(rem(325), 1fr));
 
   form {

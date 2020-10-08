@@ -79,7 +79,7 @@
 {% set employee_department = content.field_employee_department|field_value %}
 {% set employee_job = content.field_employee_job_title|field_value %}
 {% set employee_phone = content.field_employee_phone|field_value %}
-{% set employee_email = content.field_employee_phone|field_value %}
+{% set employee_email = content.field_employee_email|field_value %}
 
 
 {% set staff_card_class = [
@@ -114,9 +114,10 @@
 
         <div class="lib-flex justify-content-start">
           {% if node.field_employee_phone is not empty %}
-            <a class="lib-staff--phone lib-mr-sm" href="tel:{{employee_phone}}">
+            <span class="lib-staff--phone lib-mr-sm">
               {{employee_phone}}
-            </a>
+            </span>
+
           {% endif %}
           {% if node.field_employee_email is not empty %}
             <span class="lib-pipe"></span>
@@ -132,7 +133,7 @@
     <div class="lib-pb-md">
       {{content.field_employee_bio}}
     </div>
-    <a href="/staff-directory" class="lib-button lib-button-icon--back lib-px-2xl">
+    <a href="/staff/staff-directory" class="lib-button lib-button-icon--back lib-px-2xl">
       Return
     </a>
   </div>

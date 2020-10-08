@@ -273,7 +273,7 @@ display:
         operator: AND
         groups:
           1: AND
-      css_class: staff-directory-wrap
+      css_class: admin--staff-directory--wrap
     cache_metadata:
       max-age: -1
       contexts:

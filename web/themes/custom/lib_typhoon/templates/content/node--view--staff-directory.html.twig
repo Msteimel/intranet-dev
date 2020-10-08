@@ -82,7 +82,7 @@
 {% set employee_department = content.field_employee_department|field_value %}
 {% set employee_job = content.field_employee_job_title|field_value %}
 {% set employee_phone = content.field_employee_phone|field_value %}
-{% set employee_email = content.field_employee_phone|field_value %}
+{% set employee_email = content.field_employee_email|field_value %}
 
 
 {% set staff_card_class = [
@@ -113,27 +113,28 @@
 
   <div class="lib-basic-card--text-wrap">
     {{ title_prefix }}
-    <h3 class="lib-basic-card--title lib-staff--name lib-text-center">
+    <h3 class="lib-basic-card--title lib-staff--name lib-mb-sm lib-text-center">
       {{employee_name}}
     </h3>
     {{ title_suffix }}
 
     <div class="lib-staff-info">
-      <div class="lib-flex justify-content-center lib-mb-xs">
-        <span class="lib-mr-sm text-align-center">
+      <div class="lib-flex flex-column justify-content-center lib-mb-xs">
+        <span class="text-align-center lib-mb-2xs">
           {{employee_department}}
         </span>
         <span class="lib-pipe"></span>
-        <span class="lib-staff--job-title lib-ml-sm text-align-center">
+        <span class="lib-staff--job-title text-align-center">
           {{employee_job}}
         </span>
       </div>
 
       <div class="lib-flex justify-content-center">
         {% if node.field_employee_phone is not empty %}
-          <a class="lib-staff--phone lib-mr-sm text-align-center" href="tel:{{employee_phone}}">
+          <span class="lib-staff--phone lib-mr-sm">
             {{employee_phone}}
-          </a>
+          </span>
+
         {% endif %}
         {% if node.field_employee_email is not empty %}
           <span class="lib-pipe"></span>
