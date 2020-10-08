@@ -1971,11 +1971,7 @@ select:invalid {
 .lib-grid .lib-basic-card--wrap {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(23.4375rem, 1fr));
-}
-
-.lib-basic-card--wrap {
-  max-width: 23.4375rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
 
 @media (max-width: 768px) {
@@ -2118,6 +2114,7 @@ select:invalid {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  font-weight: 400;
   -webkit-transition: color .3s ease-in;
   transition: color .3s ease-in;
 }
@@ -3074,13 +3071,13 @@ select:invalid {
   width: 100%;
 }
 
-.lib-staff--phone,
+.lib-staff--phone a,
 .lib-staff--email {
   position: relative;
   padding-left: 1.5rem;
 }
 
-.lib-staff--phone::before,
+.lib-staff--phone a::before,
 .lib-staff--email::before {
   position: absolute;
   top: 50%;
@@ -3094,7 +3091,7 @@ select:invalid {
   font-weight: bold;
 }
 
-.lib-staff--phone::before {
+.lib-staff--phone a::before {
   content: "\F095";
 }
 
@@ -3128,13 +3125,13 @@ select:invalid {
   padding-left: 180px;
 }
 
-.staff-directory-wrap {
+.admin--staff-directory--wrap {
   display: grid;
-  gap: .75rem;
+  gap: 2.5rem .75rem;
   grid-template-columns: repeat(auto-fill, minmax(20.3125rem, 1fr));
 }
 
-.staff-directory-wrap form {
+.admin--staff-directory--wrap form {
   grid-column: 1/-1;
   padding-bottom: 2rem;
 }

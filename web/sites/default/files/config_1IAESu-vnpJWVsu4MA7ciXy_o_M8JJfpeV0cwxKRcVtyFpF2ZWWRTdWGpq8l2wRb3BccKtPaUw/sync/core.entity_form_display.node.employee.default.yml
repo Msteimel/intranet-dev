@@ -16,6 +16,7 @@ dependencies:
   module:
     - image
     - path
+    - telephone
     - text
 id: node.employee.default
 targetEntityType: node
@@ -36,7 +37,7 @@ content:
     type: boolean_checkbox
     region: content
   field_employee_bio:
-    weight: 26
+    weight: 14
     settings:
       rows: 5
       placeholder: ''
@@ -54,7 +55,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_employee_email:
-    weight: 9
+    weight: 8
     settings:
       size: 60
       placeholder: ''
@@ -86,12 +87,11 @@ content:
     type: string_textfield
     region: content
   field_employee_phone:
-    weight: 8
+    weight: 9
     settings:
-      size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
+    type: telephone_default
     region: content
   path:
     type: path

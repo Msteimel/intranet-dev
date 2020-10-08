@@ -14,6 +14,7 @@ dependencies:
     - node.type.employee
   module:
     - image
+    - telephone
     - text
     - user
 id: node.employee.default
@@ -22,7 +23,7 @@ bundle: employee
 mode: default
 content:
   field_employee_admin_cabinet:
-    weight: 107
+    weight: 7
     label: hidden
     settings:
       format: default
@@ -32,14 +33,14 @@ content:
     type: boolean
     region: content
   field_employee_bio:
-    weight: 108
+    weight: 8
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_employee_department:
-    weight: 106
+    weight: 6
     label: hidden
     settings:
       link: true
@@ -47,14 +48,14 @@ content:
     type: entity_reference_label
     region: content
   field_employee_email:
-    weight: 103
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_employee_image:
-    weight: 104
+    weight: 4
     label: hidden
     settings:
       image_style: ''
@@ -63,7 +64,7 @@ content:
     type: image
     region: content
   field_employee_job_title:
-    weight: 105
+    weight: 5
     label: hidden
     settings:
       link_to_entity: false
@@ -71,7 +72,7 @@ content:
     type: string
     region: content
   field_employee_name:
-    weight: 101
+    weight: 1
     label: hidden
     settings:
       link_to_entity: false
@@ -79,15 +80,15 @@ content:
     type: string
     region: content
   field_employee_phone:
-    weight: 102
+    weight: 3
     label: hidden
     settings:
-      link_to_entity: false
+      title: ''
     third_party_settings: {  }
-    type: string
+    type: telephone_link
     region: content
   links:
-    weight: 100
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }

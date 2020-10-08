@@ -5,8 +5,11 @@ dependencies:
   config:
     - field.field.node.department_page.body
     - field.field.node.department_page.field_department_staff
+    - field.field.node.department_page.field_general_content_blocks
+    - field.field.node.department_page.field_specialty_content
     - node.type.department_page
   module:
+    - entity_reference_revisions
     - text
     - user
 id: node.department_page.default
@@ -23,15 +26,33 @@ content:
     region: content
   field_department_staff:
     weight: 102
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  links:
-    weight: 100
-    settings: {  }
+  field_general_content_blocks:
+    type: entity_reference_revisions_entity_view
+    weight: 104
+    label: above
+    settings:
+      view_mode: default
+      link: ''
     third_party_settings: {  }
     region: content
+  field_specialty_content:
+    type: entity_reference_revisions_entity_view
+    weight: 103
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }

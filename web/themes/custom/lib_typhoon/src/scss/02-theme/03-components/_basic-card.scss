@@ -45,12 +45,12 @@ $blue-basic-card-text-blue: $blue-700;
   .lib-grid & {
     display: grid;
     gap: $space-lg;
-    grid-template-columns: repeat(auto-fit, minmax(rem(375), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(rem(320), 1fr));
   }
 }
 
 .lib-basic-card--wrap {
-  max-width: $card-width;
+  // max-width: $card-width;
 
   .lib-grid & {
     // max-width: none;
@@ -170,6 +170,7 @@ $blue-basic-card-text-blue: $blue-700;
 
 .lib-basic-card--desc {
   flex-grow: 1;
+  font-weight: 400;
   transition: color 0.3s ease-in;
 }
 
