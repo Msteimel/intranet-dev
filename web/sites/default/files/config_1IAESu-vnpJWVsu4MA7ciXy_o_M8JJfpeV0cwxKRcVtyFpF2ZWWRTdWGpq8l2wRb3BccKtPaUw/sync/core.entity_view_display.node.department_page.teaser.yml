@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.department_page.body
-    - field.field.node.department_page.field_department_staff
     - field.field.node.department_page.field_general_content_blocks
     - field.field.node.department_page.field_specialty_content
     - node.type.department_page
@@ -31,6 +30,5 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_department_staff: true
   field_general_content_blocks: true
   field_specialty_content: true

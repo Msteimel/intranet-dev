@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.department_page.body
-    - field.field.node.department_page.field_department_staff
     - field.field.node.department_page.field_general_content_blocks
     - field.field.node.department_page.field_specialty_content
     - node.type.department_page
@@ -23,14 +22,6 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
-    region: content
-  field_department_staff:
-    weight: 102
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
     region: content
   field_general_content_blocks:
     type: entity_reference_revisions_entity_view

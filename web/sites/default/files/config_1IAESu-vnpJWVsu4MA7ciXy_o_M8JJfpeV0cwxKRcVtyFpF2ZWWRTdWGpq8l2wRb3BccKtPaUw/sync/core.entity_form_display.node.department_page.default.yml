@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.department_page.body
-    - field.field.node.department_page.field_department_staff
     - field.field.node.department_page.field_general_content_blocks
     - field.field.node.department_page.field_specialty_content
     - node.type.department_page
@@ -33,16 +32,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_department_staff:
-    weight: 122
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_general_content_blocks:
     type: entity_reference_paragraphs
     weight: 124
