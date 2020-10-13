@@ -36,7 +36,9 @@ export const accordionAnimation = showItems.forEach(item => {
   const contentEl = item.querySelector('.lib-show--content');
   const contentNum = contentEl.dataset.box;
   const contentHeight = anime.get(contentEl, 'height', 'px');
-  anime.set(contentEl, { height: 0 });
+  anime.set(contentEl, {
+    height: 0
+  });
 
   showAccordionAnimations[contentNum] = anime({
     targets: contentEl,
