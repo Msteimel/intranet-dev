@@ -40,20 +40,16 @@
 #}
 {%
   set classes = [
-  'lib-basic-card--wrap',
-  'lib-basic-card-image--wrap',
-  'lib-mt-2xl', 
-  'lib-mr-2xl',
-  'lib-mb-2xl', 
-  'sm:lib-mr-0',
-  'xs:lib-mr-0',
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
   ]
 %}
-
-<div {{attributes.addClass(classes)}}>
-  {% block paragraph %}
-    {% for item in items %}
-      {{item.content}}
-    {% endfor %}
-  {% endblock paragraph %}
-</div>
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
+{% endblock paragraph %}
