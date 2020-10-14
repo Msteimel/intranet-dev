@@ -40,42 +40,18 @@
 #}
 {%
   set classes = [
-
+  'lib-basic-card--wrap',
+  'lib-mt-2xl',
+  'lib-mr-2xl',
+  'lib-mb-2xl',
+  'sm:lib-mr-0',
+  'xs:lib-mr-0',
   ]
 %}
 
-<div class="lib-basic-card--wrap lib-mt-2xl lib-mr-2xl lib-mb-2xl sm:lib-mr-0 xs:lib-mr-0">
+<div {{attributes.addclass(classes) }}>
   {% block paragraph %}
     {% for item in items %}
-      {# 
-                        {% set cardColor = item.content['#paragraph'].field_basic_card_color.value %}
-                        {% set cardTitle = item.content['#paragraph'].field_basic_card_title.value %}
-                        {% set cardText = item.content['#paragraph'].field_basic_card_text.value %}
-                        {% set cardLinkText = item.content['#paragraph'].field_basic_card_link.title %}
-                        {% set cardLink = item.content['#paragraph'].field_basic_card_link.0.url %}
-                  
-                        <a role="Link" href="{{ cardLink }}" class="lib-basic-card--link">
-                          <div {{attributes.addClass(classes, cardColor)}}>
-                            <span class="lib-aria-text">
-                              {{ cardTitle }}
-                              link
-                            </span>
-                            <div class="lib-basic-card--text-wrap">
-                              <h3 class="lib-basic-card--title">
-                                {{ cardTitle }}
-                              </h3>
-                              <p class="lib-basic-card--desc">
-                                {{ cardText}}
-                              </p>
-                              <div class="lib-cta--wrap">
-                                <div class="lib-cta">
-                                  {{ cardLinkText }}
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </a> #}
-
       {{item.content}}
     {% endfor %}
   {% endblock paragraph %}
