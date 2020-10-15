@@ -1,5 +1,5 @@
 const sourceDir = "./web/themes/custom/lib_typhoon/src";
-const destinationDir = "/web/themes/custom/lib_typhoon";
+const destinationDir = "./web/themes/custom/lib_typhoon";
 
 const mix = require("laravel-mix");
 
@@ -15,8 +15,7 @@ require("laravel-mix-purgecss");
 // source ==> production
 mix.js(`${sourceDir}/js/global.js`, `${destinationDir}/js/global.js`);
 
-mix
-  .sass(`${sourceDir}/scss/global.scss`, `${destinationDir}/css/global.css`, {
+mix.sass(`${sourceDir}/scss/global.scss`, `${destinationDir}/css/global.css`, {
     sassOptions: {
       outputStyle: "compressed"
     }
