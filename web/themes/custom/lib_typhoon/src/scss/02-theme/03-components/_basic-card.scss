@@ -173,38 +173,6 @@ $blue-basic-card-text-blue: $blue-700;
   transition: color 0.3s ease-in;
 }
 
-.lib-cta--wrap {
-  margin-top: auto;
-}
-
-.lib-cta {
-  display: inline-block;
-  position: relative;
-  text-decoration: none;
-  padding-right: $space-xl;
-  padding-bottom: 0.1rem;
-  margin: 0;
-  color: $basic-card-text-red;
-  transition: color 0.3s ease-in;
-
-  &::before,
-  &::after {
-    @include vert_center;
-    font-family: 'Fontawesome';
-    font-size: $fs-xs;
-    content: '\f054';
-    transition: right 0.3s;
-  }
-
-  &::before {
-    right: 0.5rem;
-  }
-
-  &::after {
-    right: 1rem;
-  }
-}
-
 // Yellow card
 .lib-basic-card--yellow {
   box-shadow: $basic-card-box-shadow;
