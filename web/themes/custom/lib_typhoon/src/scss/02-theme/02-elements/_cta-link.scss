@@ -1,0 +1,44 @@
+.lib-cta--wrap {
+  margin-top: auto;
+}
+
+.lib-cta {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  padding-right: $space-xl;
+  padding-bottom: 0.1rem;
+  margin: 0;
+  color: $link-color;
+  transition: color 0.3s ease-in;
+
+  &::before,
+  &::after {
+    @include vert_center;
+    content: '\f054';
+    font-family: 'Fontawesome';
+    font-size: $fs-xs;
+    transition: right 0.3s ease;
+    width: unset;
+    height: unset;
+    background-color: transparent;
+    bottom: unset;
+    left: unset;
+  }
+
+  &::before {
+    right: 0.5rem;
+  }
+
+  &::after {
+    right: 1rem;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      right: 0.5rem;
+      width: unset;
+    }
+  }
+}
