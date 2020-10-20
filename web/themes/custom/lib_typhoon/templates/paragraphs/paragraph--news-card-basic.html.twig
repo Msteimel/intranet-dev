@@ -41,8 +41,6 @@
 {%
   set classes = [
     'lib-news-card--basic',
-    'lib-br4',
-    'lib-mb-lg',
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
@@ -61,16 +59,19 @@
 
 {% block paragraph %}
   {% block content %}
-    <div {{attributes.addClass(classes)}}>
-      <span class="lib-aria-text">
-        Link to
-        {{ cardTitle }}
-      </span>
-      <a href="{{cardLink}}" class="lib-news-card--link">
+    <div
+      {{attributes.addClass(classes)}}>
+      {# <span class="lib-aria-text">
+                    Link to
+                    {{ cardTitle }}
+                  </span> #}
+      <div class="lib-news-card--content">
         <div class="lib-news-card--image-wrap lib-mr-sm xs:lib-mb-md">
-          <figure>
-            <img src="{{ cardImgSrc }}" alt="{{cardImgAlt}}"/>
-          </figure>
+          <a href="{{cardLink}}">
+            <figure class="lib-br4">
+              <img src="{{ cardImgSrc }}" alt="{{cardImgAlt}}"/>
+            </figure>
+          </a>
         </div>
         <div class="lib-news-card--text">
           {% if cardCategory %}
@@ -78,21 +79,27 @@
               {{ cardCatergory }}
             </span>
           {% endif %}
-          <h3 class="lib-news-card--title lib-mt-2xs lib-mb-md lib-text-lg">
-            {{ cardTitle }}
+          <h3 title="{{cardTitle}}" class="lib-news-card--title lib-mt-2xs lib-mb-md lib-text-lg">
+            <a href="{{cardLink}}">
+              {{ cardTitle }}
+            </a>
           </h3>
           <div class="lib-news-card--desc">
             <p class="lib-news-card--info lib-text-sm">
               {{ cardText}}
             </p>
             <div class="lib-cta--wrap">
-              <p class="lib-cta">
-                {{ cardLinkText }}
-              </p>
+              <a href="{{cardLink}}" class="lib-cta">
+                Read More
+                <span class="lib-aria-text">
+                  About
+                  {{cardTitle}}
+                </span>
+              </a>
             </div>
           </div>
         </div>
-      </a>
+      </div>
     </div>
   {% endblock %}
 {% endblock paragraph %}
