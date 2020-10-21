@@ -1438,13 +1438,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "accordionAnimation", function() { return accordionAnimation; });
 /* harmony import */ var animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! animejs/lib/anime.es.js */ "./node_modules/animejs/lib/anime.es.js");
 
-var showItems = document.querySelectorAll('.lib-show--item');
+var showItems = document.querySelectorAll('.show--item');
 var showAccordionAnimations = [];
 var hideAccordionAnimations = [];
 function handleAccordionClick(e) {
   var showItem = e.currentTarget;
-  var button = showItem.querySelector('.lib-show--title');
-  var content = showItem.querySelector('.lib-show--content');
+  var button = showItem.querySelector('.show--title');
+  var content = showItem.querySelector('.show--content');
   var ariaValue = button.getAttribute('aria-selected');
   var contentNum = content.dataset.box;
 
@@ -1469,7 +1469,7 @@ function handleAccordionClick(e) {
   }
 }
 var accordionAnimation = showItems.forEach(function (item) {
-  var contentEl = item.querySelector('.lib-show--content');
+  var contentEl = item.querySelector('.show--content');
   var contentNum = contentEl.dataset.box;
   var contentHeight = animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__["default"].get(contentEl, 'height', 'px');
   animejs_lib_anime_es_js__WEBPACK_IMPORTED_MODULE_0__["default"].set(contentEl, {
@@ -1549,16 +1549,16 @@ var initialOccupants = new XMLHttpRequest();
 function occupantsAlert(count) {
   var full = count >= 1000;
   var crowded = count > 500 && count < 1000;
-  densityEl.classList.remove('lib-alert--red', 'lib-alert--yellow', 'lib-alert--green');
+  densityEl.classList.remove('alert--red', 'alert--yellow', 'alert--green');
 
   if (full) {
-    densityEl.classList.add('lib-alert--red');
+    densityEl.classList.add('alert--red');
     densityMessageEl.innerHTML = 'Unlikely';
   } else if (crowded) {
-    densityEl.classList.add('lib-alert--yellow');
+    densityEl.classList.add('alert--yellow');
     densityMessageEl.innerHTML = 'Likely';
   } else {
-    densityEl.classList.add('lib-alert--green');
+    densityEl.classList.add('alert--green');
     densityMessageEl.innerHTML = 'Available';
   }
 }

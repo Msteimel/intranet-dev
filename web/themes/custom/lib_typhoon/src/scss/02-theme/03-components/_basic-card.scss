@@ -38,17 +38,17 @@ $blue-basic-card-dark-tri-hover: $blue-700;
 $blue-basic-card-text-color-hover: $white;
 $blue-basic-card-text-blue: $blue-700;
 
-.lib-basic-card--wrap {
+.basic-card--wrap {
   display: flex;
   flex-wrap: wrap;
 
-  .lib-grid & {
+  .grid & {
     display: grid;
     gap: $space-lg;
     grid-template-columns: repeat(auto-fill, minmax(rem(320), 1fr));
 
     // makes basic-card-image wider
-    &.lib-basic-card-image--wrap {
+    &.basic-card-image--wrap {
       grid-template-columns: repeat(auto-fit, minmax(rem(350), 1fr));
     }
   }
@@ -58,14 +58,14 @@ $blue-basic-card-text-blue: $blue-700;
     width: $card-width-mobile;
   }
 
-  [class*='lib-icon-'] {
+  [class*='icon-'] {
     font-size: $fs-2xl;
     color: $basic-card-text-red;
     transition: color 0.3s ease-in;
   }
 }
 
-.lib-basic-card {
+.basic-card {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -116,27 +116,27 @@ $blue-basic-card-text-blue: $blue-700;
       background-color: $basic-card-dark-tri-hover;
     }
 
-    [class*='lib-icon-'] {
+    [class*='icon-'] {
       color: $basic-card-text-color-hover;
     }
 
-    .lib-basic-card--image-wrap img {
+    .basic-card--image-wrap img {
       transform: translate(-50%, -50%) scale(1.05);
     }
 
-    .lib-basic-card--category {
+    .basic-card--category {
       color: $basic-card-text-color-hover;
     }
 
-    .lib-basic-card--title {
+    .basic-card--title {
       color: $basic-card-text-color-hover;
     }
 
-    .lib-basic-card--desc {
+    .basic-card--desc {
       color: $basic-card-text-color-hover;
     }
 
-    .lib-cta {
+    .cta {
       color: $basic-card-text-color-hover;
 
       &::after {
@@ -146,7 +146,7 @@ $blue-basic-card-text-blue: $blue-700;
   }
 }
 
-.lib-basic-card--text-wrap {
+.basic-card--text-wrap {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -154,7 +154,7 @@ $blue-basic-card-text-blue: $blue-700;
   transition: border-color 0.3s ease-in;
 }
 
-.lib-basic-card--category {
+.basic-card--category {
   display: block;
   line-height: 1.5;
   font-size: $fs-sm;
@@ -163,18 +163,18 @@ $blue-basic-card-text-blue: $blue-700;
   transition: color 0.3s ease-in;
 }
 
-.lib-basic-card--title {
+.basic-card--title {
   transition: color 0.3s ease-in;
 }
 
-.lib-basic-card--desc {
+.basic-card--desc {
   flex-grow: 1;
   font-weight: 400;
   transition: color 0.3s ease-in;
 }
 
 // Yellow card
-.lib-basic-card--yellow {
+.basic-card--yellow {
   box-shadow: $basic-card-box-shadow;
   border-color: $yellow-basic-card-border-color;
 
@@ -201,45 +201,45 @@ $blue-basic-card-text-blue: $blue-700;
       background-color: $yellow-basic-card-dark-tri-hover;
     }
 
-    [class*='lib-icon-'] {
+    [class*='icon-'] {
       color: $yellow-basic-card-text-color-hover;
     }
 
-    .lib-basic-card--category {
+    .basic-card--category {
       color: $yellow-basic-card-text-color-hover;
     }
 
-    .lib-basic-card--title {
+    .basic-card--title {
       color: $yellow-basic-card-text-color-hover;
     }
 
-    .lib-basic-card--desc {
+    .basic-card--desc {
       color: $yellow-basic-card-text-color-hover;
     }
 
-    .lib-cta {
+    .cta {
       color: $yellow-basic-card-text-color-hover;
     }
   }
 
 
-  [class*='lib-icon-'] {
+  [class*='icon-'] {
     font-size: $fs-2xl;
     color: $yellow-basic-card-text-yellow;
     transition: color 0.3s ease-in;
   }
 
-  .lib-basic-card--category {
+  .basic-card--category {
     color: $yellow-basic-card-text-yellow;
   }
 
-  .lib-cta {
+  .cta {
     color: $yellow-basic-card-text-yellow;
   }
 }
 
 // blue card
-.lib-basic-card--blue {
+.basic-card--blue {
   box-shadow: $basic-card-box-shadow;
   border-left: 4px solid $blue-basic-card-border-color;
 
@@ -266,47 +266,47 @@ $blue-basic-card-text-blue: $blue-700;
       background-color: $blue-basic-card-dark-tri-hover;
     }
 
-    [class*='lib-icon-'] {
+    [class*='icon-'] {
       color: $blue-basic-card-text-color-hover;
     }
 
-    .lib-basic-card--category {
+    .basic-card--category {
       color: $blue-basic-card-text-color-hover;
     }
 
-    .lib-basic-card--title {
+    .basic-card--title {
       color: $blue-basic-card-text-color-hover;
     }
 
-    .lib-basic-card--desc {
+    .basic-card--desc {
       color: $blue-basic-card-text-color-hover;
     }
 
-    .lib-cta {
+    .cta {
       color: $blue-basic-card-text-color-hover;
     }
   }
 
 
-  [class*='lib-icon-'] {
+  [class*='icon-'] {
     font-size: $fs-2xl;
     color: $blue-basic-card-text-blue;
     transition: color 0.3s ease-in;
   }
 
-  .lib-basic-card--category {
+  .basic-card--category {
     color: $blue-basic-card-text-blue;
   }
 
-  .lib-cta {
+  .cta {
     color: $blue-basic-card-text-blue;
   }
 }
 
 //
 
-.lib-basic-card--image {
-  &.lib-basic-card {
+.basic-card--image {
+  &.basic-card {
 
     &::before,
     &::after {
@@ -318,10 +318,10 @@ $blue-basic-card-text-blue: $blue-700;
     }
   }
 
-  .lib-basic-card--image-wrap {
+  .basic-card--image-wrap {
     position: relative;
 
-    .lib-basic-card--text-wrap {
+    .basic-card--text-wrap {
       position: absolute;
       bottom: 0;
       left: 0;
@@ -346,21 +346,21 @@ $blue-basic-card-text-blue: $blue-700;
     }
   }
 
-  .lib-basic-card--text-wrap {
+  .basic-card--text-wrap {
     position: relative;
     padding-top: $space-md;
   }
 
-  .lib-basic-card--category,
-  .lib-basic-card--title {
+  .basic-card--category,
+  .basic-card--title {
     color: $white;
   }
 }
 
-.lib-basic-card--yellow.lib-basic-card--image {
+.basic-card--yellow.basic-card--image {
 
-  .lib-basic-card--category,
-  .lib-basic-card--title {
+  .basic-card--category,
+  .basic-card--title {
     color: $white;
 
     &:hover,
@@ -370,10 +370,10 @@ $blue-basic-card-text-blue: $blue-700;
   }
 }
 
-.lib-basic-card--blue.lib-basic-card--image {
+.basic-card--blue.basic-card--image {
 
-  .lib-basic-card--category,
-  .lib-basic-card--title {
+  .basic-card--category,
+  .basic-card--title {
     color: $white;
 
     &:hover,

@@ -3,10 +3,9 @@
 ==================================================*/
 // bw == border width
 
-// creates classes like `.lib-bw4`
+// creates classes like `.bw4`
 
-$bw-list: (
-  'bw0': $bw0,
+$bw-list: ('bw0': $bw0,
   'bw1': $bw1,
   'bw2': $bw2,
   'bw4': $bw4,
@@ -14,8 +13,9 @@ $bw-list: (
   'bw10': $bw10,
 );
 
-@each $bw, $width in $bw-list {
-  .lib-#{$bw} {
+@each $bw,
+$width in $bw-list {
+  .#{$bw} {
     border-width: $width;
   }
 }
@@ -25,10 +25,9 @@ $bw-list: (
 ==================================================*/
 // br == border-radius
 
-// creates classes like `.lib-br4`
+// creates classes like `.br4`
 
-$br-list: (
-  'br0': $br0,
+$br-list: ('br0': $br0,
   'br2': $br2,
   'br4': $br4,
   'br6': $br6,
@@ -38,8 +37,9 @@ $br-list: (
   'br14': $br14,
 );
 
-@each $br, $radius in $br-list {
-  .lib-#{$br} {
+@each $br,
+$radius in $br-list {
+  .#{$br} {
     border-radius: $radius;
   }
 }

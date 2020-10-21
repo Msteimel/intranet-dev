@@ -1,8 +1,8 @@
-.lib-alert--wrap {
+.alert--wrap {
   flex-wrap: wrap;
 }
 
-.lib-alert {
+.alert {
   position: relative;
   // min-width: 300px;
   // max-width: 450px;
@@ -11,18 +11,18 @@
   box-shadow: $vert-light-2;
   display: flex;
 
-  .lib-alert--icon-block {
+  .alert--icon-block {
     width: $space-4xl;
   }
 
-  i {   
+  i {
     @include vert_center;
     left: -$space-xl;
     font-size: 82px;
   }
 }
 
-.lib-alert--text {
+.alert--text {
   span {
     display: block;
   }
@@ -32,8 +32,8 @@
   }
 }
 
-.lib-alert--red {
-  .lib-alert--icon-block {
+.alert--red {
+  .alert--icon-block {
     background-color: $red-600;
   }
 
@@ -46,8 +46,8 @@
   }
 }
 
-.lib-alert--yellow {
-  .lib-alert--icon-block {
+.alert--yellow {
+  .alert--icon-block {
     background-color: $yellow-600;
   }
 
@@ -60,8 +60,8 @@
   }
 }
 
-.lib-alert--green {
-  .lib-alert--icon-block {
+.alert--green {
+  .alert--icon-block {
     background-color: $green-600;
   }
 
@@ -74,8 +74,8 @@
   }
 }
 
-.lib-alert--blue {
-  .lib-alert--icon-block {
+.alert--blue {
+  .alert--icon-block {
     background-color: $blue-600;
   }
 

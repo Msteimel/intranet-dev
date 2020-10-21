@@ -40,7 +40,7 @@
 #}
 {%
   set classes = [
-    'lib-news-card--basic',
+    'news-card--basic',
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
@@ -61,37 +61,37 @@
   {% block content %}
     <div
       {{attributes.addClass(classes)}}>
-      {# <span class="lib-aria-text">
-                    Link to
-                    {{ cardTitle }}
-                  </span> #}
-      <div class="lib-news-card--content">
-        <div class="lib-news-card--image-wrap lib-mr-sm xs:lib-mb-md">
+      {# <span class="aria-text">
+                          Link to
+                          {{ cardTitle }}
+                        </span> #}
+      <div class="news-card--content">
+        <div class="news-card--image-wrap mr-sm xs:mb-md">
           <a href="{{cardLink}}">
-            <figure class="lib-br4">
+            <figure class="br4">
               <img src="{{ cardImgSrc }}" alt="{{cardImgAlt}}"/>
             </figure>
           </a>
         </div>
-        <div class="lib-news-card--text">
+        <div class="news-card--text">
           {% if cardCategory %}
-            <span class="lib-news-card--category">
+            <span class="news-card--category">
               {{ cardCatergory }}
             </span>
           {% endif %}
-          <h3 title="{{cardTitle}}" class="lib-news-card--title lib-mt-2xs lib-mb-md lib-text-lg">
+          <h3 title="{{cardTitle}}" class="news-card--title mt-2xs mb-md text-lg">
             <a href="{{cardLink}}">
               {{ cardTitle }}
             </a>
           </h3>
-          <div class="lib-news-card--desc">
-            <p class="lib-news-card--info lib-text-sm">
+          <div class="news-card--desc">
+            <p class="news-card--info text-sm">
               {{ cardText}}
             </p>
-            <div class="lib-cta--wrap">
-              <a href="{{cardLink}}" class="lib-cta">
+            <div class="cta--wrap">
+              <a href="{{cardLink}}" class="cta">
                 Read More
-                <span class="lib-aria-text">
+                <span class="aria-text">
                   About
                   {{cardTitle}}
                 </span>

@@ -1,10 +1,9 @@
 /*================================================
 			Display type utility classes
 ==================================================*/
-// creates classes like `.lib-fs16`
+// creates classes like `.fs16`
 
-$display-list: (
-  'grid': grid,
+$display-list: ('grid': grid,
   'flex': flex,
   'inline': inline,
   'inline-block': inline-block,
@@ -12,8 +11,9 @@ $display-list: (
   'none': none,
 );
 
-@each $display, $value in $display-list {
-  .lib-#{$display} {
+@each $display,
+$value in $display-list {
+  .#{$display} {
     display: $value;
   }
 }

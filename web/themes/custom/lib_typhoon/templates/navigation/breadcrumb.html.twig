@@ -8,13 +8,13 @@
  */
 #}
 {% if breadcrumb %}
-  <nav role="navigation" aria-labelledby="system-breadcrumb" class="lib-my-sm">
+  <nav role="navigation" aria-labelledby="system-breadcrumb" class="my-sm">
     <h2 id="system-breadcrumb" class="visually-hidden">
       {{ 'Breadcrumb'|t }}
     </h2>
-    <ul class="lib-breadcrumbs lib-flex lib-pl-0">
+    <ul class="breadcrumbs flex pl-0">
       {% for item in breadcrumb %}
-        <li class="lib-pr-md lib-pl-xs">
+        <li class="pr-md pl-xs">
           {% if item.url %}
             <a href="{{ item.url }}">
               {{ item.text }}

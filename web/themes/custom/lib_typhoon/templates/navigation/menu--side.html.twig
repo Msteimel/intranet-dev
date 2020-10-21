@@ -35,15 +35,15 @@
     {% if menu_level == 0 %}
       {{ items.title }}
 
-      <ul{{attributes.addClass('lib-side-nav')}}>
+      <ul{{attributes.addClass('side-nav')}}>
       {% else %}
-        <ul class="lib-side-nav--sub-list">
+        <ul class="side-nav--sub-list">
         {% endif %}
         {% for item in items %}
           {# Assign classes based on if the item is an open parent, closed parent, active, or a has a submenu. #}
           {% set classes = [
-            menu_level ? 'lib-sub-list--item' : 'lib-side-nav--item',
-            item.in_active_trail ? 'lib-side-nav--item_active-trail',
+            menu_level ? 'sub-list--item' : 'side-nav--item',
+            item.in_active_trail ? 'side-nav--item_active-trail',
           ]%}
 
           {% if item.below %}
@@ -58,13 +58,13 @@
 
               {# Assign classes based on if the link is a parent or not, and if it is active or not #}
               {% set active_link_class = [
-                'lib-side-nav--link',
+                'side-nav--link',
                   item.in_active_trail ? 'is-active',
               ]%}
 
               {# If the item is a parent, it acts as a toggle to open the menu. #}
               {% set link_class = [
-                'lib-side-nav--link', 
+                'side-nav--link', 
               ]%}
 
               {% if item.below %}

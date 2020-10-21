@@ -33,9 +33,9 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul{{attributes.addClass('lib-main-nav--list')}}>
+      <ul{{attributes.addClass('main-nav--list')}}>
       {% else %}
-        <ul class="lib-main-nav--dropdown">
+        <ul class="main-nav--dropdown">
         {% endif %}
         {% for item in items %}
           {# Assign classes based on if the item is an open parent, closed parent, active, or a has a submenu. #}
@@ -45,7 +45,7 @@
             item.is_expanded ? 'main-nav--item_expanded',
             item.is_collapsed ? 'main-nav--item_collapsed',
             item.in_active_trail ? 'main-nav--item_active-trail',
-            item.below ? 'lib-dropdown-menu ',
+            item.below ? 'dropdown-menu ',
           ]
         %}
 
@@ -68,7 +68,7 @@
               {% 
           set toggle_classes = [
            'main-nav--link', 
-           'lib-dropdown-toggle'
+           'dropdown-toggle'
           ]
         %}
 

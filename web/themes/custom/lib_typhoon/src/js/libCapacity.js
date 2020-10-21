@@ -17,19 +17,19 @@ function occupantsAlert(count) {
   var full = count >= 1000;
   var crowded = count > 500 && count < 1000;
   densityEl.classList.remove(
-    'lib-alert--red',
-    'lib-alert--yellow',
-    'lib-alert--green'
+    'alert--red',
+    'alert--yellow',
+    'alert--green'
   );
 
   if (full) {
-    densityEl.classList.add('lib-alert--red');
+    densityEl.classList.add('alert--red');
     densityMessageEl.innerHTML = 'Unlikely';
   } else if (crowded) {
-    densityEl.classList.add('lib-alert--yellow');
+    densityEl.classList.add('alert--yellow');
     densityMessageEl.innerHTML = 'Likely';
   } else {
-    densityEl.classList.add('lib-alert--green');
+    densityEl.classList.add('alert--green');
     densityMessageEl.innerHTML = 'Available';
   }
 }

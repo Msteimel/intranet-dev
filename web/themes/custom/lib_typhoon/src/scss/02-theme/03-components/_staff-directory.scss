@@ -1,5 +1,5 @@
 // *defaults
-.lib-staff--image--wrap {
+.staff--image--wrap {
   display: inline-block;
   border-radius: 50%;
   height: 150px;
@@ -12,8 +12,8 @@
   }
 }
 
-.lib-staff--phone a,
-.lib-staff--email {
+.staff--phone a,
+.staff--email {
   position: relative;
   padding-left: $space-lg;
 
@@ -24,21 +24,21 @@
   }
 }
 
-.lib-staff--job-title {
+.staff--job-title {
   font-weight: bold;
 }
 
-.lib-staff--phone a::before {
+.staff--phone a::before {
   content: '\f095';
 }
 
-.lib-staff--email::before {
+.staff--email::before {
   content: '\f0e0';
 }
 
 
 // * individual staff page
-.lib-staff {
+.staff {
   display: flex;
   align-items: center;
 
@@ -46,7 +46,7 @@
     background-color: $white;
   }
 
-  .lib-staff--image--wrap {
+  .staff--image--wrap {
     height: 140px;
     width: 140px;
 
@@ -56,7 +56,7 @@
   }
 }
 
-.lib-staff--text-wrap {
+.staff--text-wrap {
   padding-left: 180px;
 }
 
@@ -73,17 +73,17 @@
   }
 }
 
-.lib-staff-card {
-  &.lib-basic-card {
+.staff-card {
+  &.basic-card {
     align-items: center;
     background-color: $white;
   }
 
-  .lib-staff--image-link::after {
+  .staff--image-link::after {
     background: transparent;
   }
 
-  .lib-staff--image--wrap {
+  .staff--image--wrap {
     height: 125px;
     width: 125px;
     transition: box-shadow 0.3s ease;
@@ -93,7 +93,7 @@
     }
   }
 
-  .lib-staff--image {
+  .staff--image {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -101,14 +101,14 @@
     width: 100%;
   }
 
-  .lib-basic-card--text-wrap {
+  .basic-card--text-wrap {
     width: 100%;
     padding-left: $space-md;
     padding-right: $space-md;
     flex-grow: 1;
     height: auto;
 
-    .lib-staff--name {
+    .staff--name {
       color: $text-color;
     }
   }

@@ -40,8 +40,8 @@
 #}
 {%
   set classes = [
-    'lib-gen-con--block',
-    'lib-quote-block',
+    'gen-con--block',
+    'quote-block',
     paragraph.field_gc_quote_type.value,
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
@@ -52,11 +52,11 @@
 {% block paragraph %}
 
   <div{{attributes.addClass(classes)}}>
-    <div class="lib-quote--marks">
+    <div class="quote--marks">
       <i class="fas fa-quote-left" aria-hidden="true"></i>
     </div>
     {% block content %}
-      <blockquote class="lib-quote">
+      <blockquote class="quote">
         {{ content.field_gc_quote_quote }}
 
         <cite>

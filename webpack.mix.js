@@ -24,7 +24,7 @@ mix.sass(`${sourceDir}/scss/global.scss`, `${destinationDir}/css/global.css`, {
     content: [`public/*/**.html`],
     css: [`${destinationDir}/css/global.css`],
     whitelistPatterns: [/js-/],
-    whitelistPatternsChildren: [/lib-link-list--item/]
+    whitelistPatternsChildren: [/link-list--item/]
   });
 
 // Only cache bust if production

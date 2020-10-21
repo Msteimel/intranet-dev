@@ -2,6 +2,7 @@ $header-special-fs: $space-4xl;
 
 @mixin angledSlashes($font-size) {
   font-size: $font-size;
+
   &::before,
   &::after {
     width: 0.125 * $font-size;
@@ -9,14 +10,14 @@ $header-special-fs: $space-4xl;
   }
 }
 
-.lib-header-special {
+.header-special {
   position: relative;
   display: inline-block;
   margin: 0 auto;
   z-index: 1;
 }
 
-.lib-header-special--text {
+.header-special--text {
   display: inline-block;
   position: relative;
   margin: 0 auto;
@@ -52,7 +53,7 @@ $header-special-fs: $space-4xl;
   }
 }
 
-.lib-header-special--sub {
+.header-special--sub {
   display: block;
   max-width: 100%;
   padding-left: $space-xs;

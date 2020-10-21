@@ -43,14 +43,14 @@
  * @see html.html.twig
  */
 #}
-<div class="layout-container lib-grid">
+<div class="layout-container grid">
 
-  <header role="banner" class="lib-header">
+  <header role="banner" class="header">
     {{ page.header }}
     {% include "@lib_typhoon/navigation/nav.html.twig" %}
   </header>
 
-  <div class="lib-body lib-mx-auto lib-px-2xl">
+  <div class="body mx-auto px-2xl">
 
     {{ page.breadcrumb }}
     {{ page.highlighted }}
@@ -70,10 +70,10 @@
       </aside>
     {% endif %}
     {# {% if page.sidebar_second %}
-                    <aside class="layout-sidebar-second" role="complementary">
-                      {{ page.sidebar_second }}
-                    </aside>
-                  {% endif %} #}
+                        <aside class="layout-sidebar-second" role="complementary">
+                          {{ page.sidebar_second }}
+                        </aside>
+                      {% endif %} #}
   </div>
   {% if page.footer %}
     <footer role="contentinfo">

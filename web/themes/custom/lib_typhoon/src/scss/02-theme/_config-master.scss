@@ -32,9 +32,10 @@ $enable-pointer-cursor-for-buttons: true;
 $heading-font: $merriweather_stack;
 $body-font: $nimbus-sans_stack;
 
-@if ($debug == true) {
+@if ($debug==true) {
   @include screen-width;
 }
+
 // to override a variable, it needs to be stated and called in a css element
 html {
   line-height: 1.5;
@@ -63,14 +64,14 @@ body {
   font-size: $font-size-base;
 }
 
-$shorcut-colors: (
-  'primary': $primary-color,
+$shorcut-colors: ('primary': $primary-color,
   'secondary': $secondary-color,
   'accent': $accent-color,
 );
 
-@each $color, $colors in $shorcut-colors {
-  .lib-#{$color} {
+@each $color,
+$colors in $shorcut-colors {
+  .#{$color} {
     color: $colors;
   }
 }

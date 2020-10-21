@@ -40,8 +40,8 @@
 #}
 {%
   set classes = [
-    'lib-news-card--lead',
-    'lib-br4',
+    'news-card--lead',
+    'br4',
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
@@ -62,26 +62,26 @@
 {% block paragraph %}
   {% block content %}
     <div title="{{cardTitle}}" {{attributes.addClass(classes)}}>
-      <span class="lib-aria-text">
+      <span class="aria-text">
         Link to
         {{ cardTitle }}
       </span>
-      <a href="{{cardLink}}" class="lib-news-card--link lib-br4" style="background-image: url('{{cardImgSrc}}');">
-        <div class="lib-news-card--text-wrap lib-pr-xl lib-pl-lg lib-pt-2xl lib-pb-lg lib-text-white">
+      <a href="{{cardLink}}" class="news-card--link br4" style="background-image: url('{{cardImgSrc}}');">
+        <div class="news-card--text-wrap pr-xl pl-lg pt-2xl pb-lg text-white">
           {% if cardCatergory %}
-            <span class="lib-news-card--category lib-text-white">
+            <span class="news-card--category text-white">
               {{ cardCatergory }}
             </span>
           {% endif %}
-          <h3 class="lib-news-card--title lib-mb-0 lib-fs-lg lib-text-white">
+          <h3 class="news-card--title mb-0 fs-lg text-white">
             {{ cardTitle }}
           </h3>
-          <div class="lib-news-card--text">
-            <p class="lib-text-white">
+          <div class="news-card--text">
+            <p class="text-white">
               {{ cardText }}
             </p>
-            <div class="lib-cta--wrap">
-              <span class="lib-cta lib-text-white">
+            <div class="cta--wrap">
+              <span class="cta text-white">
                 {{ cardLinkText }}
               </span>
             </div>

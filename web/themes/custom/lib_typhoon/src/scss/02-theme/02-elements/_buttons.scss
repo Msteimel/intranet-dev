@@ -28,11 +28,11 @@ $button-accent-box-shadow: $vert-dark-1;
 $button-accent_hover-background-color: $blue-400;
 $button-accent_hover-box-shadow: $vert-dark-2;
 
-a.lib-button,
-button.lib-button,
-input[type='reset'].lib-button,
-input[type='submit'].lib-button,
-input[type='button'].lib-button {
+a.button,
+button.button,
+input[type='reset'].button,
+input[type='submit'].button,
+input[type='button'].button {
   // @include responsive-text(14px, 20px);
   background-color: $button-primary-background-color;
   border: 1px solid $button-primary-border-color;
@@ -68,11 +68,11 @@ input[type='button'].lib-button {
   }
 }
 
-a.lib-button.lib-button-icon,
-button.lib-button.lib-button-icon,
-input[type='reset'].lib-button.lib-button-icon,
-input[type='submit'].lib-button.lib-button-icon,
-input[type='button'].lib-button.lib-button-icon {
+a.button.button-icon,
+button.button.button-icon,
+input[type='reset'].button.button-icon,
+input[type='submit'].button.button-icon,
+input[type='button'].button.button-icon {
   padding: 1em 2em 1em 1em;
   position: relative;
 
@@ -106,11 +106,11 @@ input[type='button'].lib-button.lib-button-icon {
   }
 }
 
-a.lib-button.lib-button-icon--back,
-button.lib-button.lib-button-icon--back,
-input[type='reset'].lib-button.lib-button-icon--back,
-input[type='submit'].lib-button.lib-button-icon--back,
-input[type='button'].lib-button.lib-button-icon--back {
+a.button.button-icon--back,
+button.button.button-icon--back,
+input[type='reset'].button.button-icon--back,
+input[type='submit'].button.button-icon--back,
+input[type='button'].button.button-icon--back {
   padding: 1em 2em 1em 3em;
   position: relative;
 
@@ -144,21 +144,21 @@ input[type='button'].lib-button.lib-button-icon--back {
   }
 }
 
-.lib-button-full {
+.button-full {
   width: 100%;
 }
 
-.lib-button-large {
+.button-large {
   // @include responsive-text(16px, 24px);
   padding: 1.2em 1.5em;
 }
 
-.lib-button-small {
+.button-small {
   // @include responsive-text(10px, 16px);
   padding: 0.8em 1em;
 }
 
-.lib-button.lib-button-ghost {
+.button.button-ghost {
   background-color: transparent;
   border-color: $red-600;
   color: $red-600;
@@ -168,11 +168,11 @@ input[type='button'].lib-button.lib-button-icon--back {
   }
 }
 
-a.lib-button.lib-button-secondary,
-button.lib-button.lib-button-secondary,
-input[type='reset'].lib-button-secondary,
-input[type='submit'].lib-button-secondary,
-input[type='button'].lib-button-secondary {
+a.button.button-secondary,
+button.button.button-secondary,
+input[type='reset'].button-secondary,
+input[type='submit'].button-secondary,
+input[type='button'].button-secondary {
   background-color: $button-secondary-background-color;
   border-color: $button-secondary-border-color;
   color: $button-secondary-text;
@@ -190,11 +190,11 @@ input[type='button'].lib-button-secondary {
   }
 }
 
-a.lib-button.lib-button-accent,
-button.lib-button.lib-button-accent,
-input[type='reset'].lib-button-accent,
-input[type='submit'].lib-button-accent,
-input[type='button'].lib-button-accent {
+a.button.button-accent,
+button.button.button-accent,
+input[type='reset'].button-accent,
+input[type='submit'].button-accent,
+input[type='button'].button-accent {
   background-color: $button-accent-background-color;
   border-color: $button-accent-border-color;
   color: $button-accent-text;

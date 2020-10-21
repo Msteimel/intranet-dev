@@ -1,13 +1,12 @@
 /*================================================
 			color classes
 ==================================================*/
-// creates classes like `.lib-bg_red-500`
-// creates classes like `.lib-red-500`
+// creates classes like `.bg_red-500`
+// creates classes like `.red-500`
 
 // Primary Colors
-$colors: (
-  // primary
-    'red-50': $red-50,
+$colors: ( // primary
+  'red-50': $red-50,
   'red-100': $red-100,
   'red-200': $red-200,
   'red-300': $red-300,
@@ -18,7 +17,7 @@ $colors: (
   'red-800': $red-800,
   'red-900': $red-900,
   // secondary
-    'yellow-50': $yellow-50,
+  'yellow-50': $yellow-50,
   'yellow-100': $yellow-100,
   'yellow-200': $yellow-200,
   'yellow-300': $yellow-300,
@@ -29,7 +28,7 @@ $colors: (
   'yellow-800': $yellow-800,
   'yellow-900': $yellow-900,
   // neutral
-    'warm-grey-50': $warm-grey-50,
+  'warm-grey-50': $warm-grey-50,
   'warm-grey-100': $warm-grey-100,
   'warm-grey-200': $warm-grey-200,
   'warm-grey-300': $warm-grey-300,
@@ -50,7 +49,7 @@ $colors: (
   'grey-800': $grey-800,
   'grey-900': $grey-900,
   // accent
-    'blue-50': $blue-50,
+  'blue-50': $blue-50,
   'blue-100': $blue-100,
   'blue-200': $blue-200,
   'blue-300': $blue-300,
@@ -71,25 +70,25 @@ $colors: (
   'green-800': $green-800,
   'green-900': $green-900,
   // defaults
-    'white': $white,
+  'white': $white,
   'black': $black,
   'primary': $primary-color,
   'secondary': $secondary-color,
   'accent': $accent-color,
   'link': $link-color,
-  'text': $text-color
-);
+  'text': $text-color);
 
-@each $color, $colors in $colors {
-  .lib-bg-#{$color} {
+@each $color,
+$colors in $colors {
+  .bg-#{$color} {
     background-color: $colors;
   }
 
-  .lib-text-#{$color} {
+  .text-#{$color} {
     color: $colors;
   }
 
-  // .lib-bc-#{$color} {
+  // .bc-#{$color} {
   //   border-color: $colors;
   // }
 }

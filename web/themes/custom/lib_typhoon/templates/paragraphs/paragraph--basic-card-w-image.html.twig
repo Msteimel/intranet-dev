@@ -41,8 +41,8 @@
 
 {% 
   set classes = [
-  'lib-basic-card', 
-  'lib-basic-card--image',
+  'basic-card', 
+  'basic-card--image',
   paragraph.field_basic_card_image_color.value,
   'paragraph',
   'paragraph--type--' ~ paragraph.bundle|clean_class,
@@ -61,33 +61,33 @@
 
 {% block paragraph %}
   {% block content %}
-    <a role="Link" href="{{cardLinkUrl}}" class="lib-basic-card--link">
+    <a role="Link" href="{{cardLinkUrl}}" class="basic-card--link">
       <div {{attributes.addClass(classes)}}>
-        <div class="lib-basic-card--image-wrap">
+        <div class="basic-card--image-wrap">
           <figure>
             <img src="{{ cardImgSrc }}" alt="alt"/>
             <div class="image-overlay"></div>
           </figure>
-          <div class="lib-basic-card--text-wrap">
+          <div class="basic-card--text-wrap">
             {% if cardCategory %}
-              <span class="lib-basic-card--category lib-mb-xs">
+              <span class="basic-card--category mb-xs">
                 {{ cardCategory }}
               </span>
             {% endif %}
-            <h3 class="lib-basic-card--title">
+            <h3 class="basic-card--title">
               {{ cardTitle }}
             </h3>
           </div>
         </div>
-        <span class="lib-aria-text">
+        <span class="aria-text">
           {{ cardTitle }}
         </span>
-        <div class="lib-basic-card--text-wrap">
-          <p class="lib-basic-card--desc">
+        <div class="basic-card--text-wrap">
+          <p class="basic-card--desc">
             {{ cardText}}
           </p>
-          <div class="lib-cta--wrap">
-            <div class="lib-cta">
+          <div class="cta--wrap">
+            <div class="cta">
               {{ cardLinkText }}
             </div>
           </div>

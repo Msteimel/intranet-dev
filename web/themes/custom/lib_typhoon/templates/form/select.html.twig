@@ -11,11 +11,11 @@
  */
 #}
 {% set select_classes = [
-  'lib-input--select',
+  'input--select',
 ] %}
 
 {% apply spaceless %}
-{# <div class="lib-input--select"> #}
+{# <div class="input--select"> #}
 <select{{attributes}}>
   {% for option in options %}
     {% if option.type == 'optgroup' %}

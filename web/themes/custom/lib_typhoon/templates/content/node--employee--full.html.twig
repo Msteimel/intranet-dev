@@ -83,45 +83,45 @@
 
 
 {% set staff_card_class = [
-  'lib-staff--page',
+  'staff--page',
 ] %}
 
 <article{{attributes.addClass(staff_card_class)}}>
 
-  <div {{content_attributes.addClass('lib-staff')}}>
+  <div {{content_attributes.addClass('staff')}}>
 
-    <div class="lib-staff--image--wrap">
+    <div class="staff--image--wrap">
       <img src="{{ImgSrc}}" alt="{{ImgAlt}}">
     </div>
 
-    <div class="lib-staff-info lib-pl-2xl">
+    <div class="staff-info pl-2xl">
       {{ title_prefix }}
-      <h1 class="lib-staff--name lib-mb-md lib-text-3xl">
+      <h1 class="staff--name mb-md text-3xl">
         {{employee_name}}
       </h1>
       {{ title_suffix }}
 
-      <div class="lib-staff-info">
-        <div class="lib-flex justify-content-start lib-pb-xs">
-          <span class="lib-staff--job-title lib-mr-sm">
+      <div class="staff-info">
+        <div class="flex justify-content-start pb-xs">
+          <span class="staff--job-title mr-sm">
             {{employee_job}}
           </span>
-          <span class="lib-pipe"></span>
-          <span class="lib-ml-sm">
+          <span class="pipe"></span>
+          <span class="ml-sm">
             {{employee_department}}
           </span>
         </div>
 
-        <div class="lib-flex justify-content-start">
+        <div class="flex justify-content-start">
           {% if node.field_employee_phone is not empty %}
-            <span class="lib-staff--phone lib-mr-sm">
+            <span class="staff--phone mr-sm">
               {{employee_phone}}
             </span>
 
           {% endif %}
           {% if node.field_employee_email is not empty %}
-            <span class="lib-pipe"></span>
-            <a class="lib-staff--email lib-ml-sm" href="mailto:{{employee_email}}">
+            <span class="pipe"></span>
+            <a class="staff--email ml-sm" href="mailto:{{employee_email}}">
               Email
             </a>
           {% endif %}
@@ -129,11 +129,11 @@
       </div>
     </div>
   </div>
-  <div class="lib-staff--text-wrap">
-    <div class="lib-pb-md">
+  <div class="staff--text-wrap">
+    <div class="pb-md">
       {{content.field_employee_bio}}
     </div>
-    <a href="/staff/staff-directory" class="lib-button lib-button-icon--back lib-px-2xl">
+    <a href="/staff/staff-directory" class="button button-icon--back px-2xl">
       Return
     </a>
   </div>

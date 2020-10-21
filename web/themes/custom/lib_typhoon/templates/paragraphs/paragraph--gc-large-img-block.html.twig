@@ -40,9 +40,9 @@
 #}
 {%
   set classes = [
-    'lib-gen-con--block',
-    'lib-img-block',
-    'lib-block--lg-img',
+    'gen-con--block',
+    'img-block',
+    'block--lg-img',
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
@@ -57,7 +57,7 @@
 
   <div{{attributes.addClass(classes)}}>
     {% block content %}
-      <div class="lib-gen-con--img-wrap">
+      <div class="gen-con--img-wrap">
         <figure>
           {# <div> #}
           <img

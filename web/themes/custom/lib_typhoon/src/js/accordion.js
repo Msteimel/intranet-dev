@@ -1,13 +1,13 @@
 import anime from 'animejs/lib/anime.es.js';
 
-const showItems = document.querySelectorAll('.lib-show--item');
+const showItems = document.querySelectorAll('.show--item');
 let showAccordionAnimations = [];
 let hideAccordionAnimations = [];
 
 export function handleAccordionClick(e) {
   const showItem = e.currentTarget;
-  const button = showItem.querySelector('.lib-show--title');
-  const content = showItem.querySelector('.lib-show--content');
+  const button = showItem.querySelector('.show--title');
+  const content = showItem.querySelector('.show--content');
   const ariaValue = button.getAttribute('aria-selected');
   const contentNum = content.dataset.box;
 
@@ -33,7 +33,7 @@ export function handleAccordionClick(e) {
 }
 
 export const accordionAnimation = showItems.forEach(item => {
-  const contentEl = item.querySelector('.lib-show--content');
+  const contentEl = item.querySelector('.show--content');
   const contentNum = contentEl.dataset.box;
   const contentHeight = anime.get(contentEl, 'height', 'px');
   anime.set(contentEl, {

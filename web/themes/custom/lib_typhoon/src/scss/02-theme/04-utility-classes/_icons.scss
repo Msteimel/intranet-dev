@@ -4,15 +4,14 @@
   src: url('/src/fonts/library-icons#iefix') format('embedded-opentype'),
     url('/src/fonts/library-icons/library-icons.ttf?5458qa') format('truetype'),
     url('/src/fonts/library-icons/library-icons.woff?5458qa') format('woff'),
-    url('/src/fonts/library-icons/library-icons.svg?5458qa#library-icons')
-      format('svg');
+    url('/src/fonts/library-icons/library-icons.svg?5458qa#library-icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^='lib-icon-'],
-[class*=' lib-icon-'] {
+[class^='icon-'],
+[class*=' icon-'] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'library-icons' !important;
   speak: never;
@@ -29,8 +28,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-$icon-list: (
-  'calendar': \e900,
+$icon-list: ('calendar': \e900,
   'letter': \e901,
   'documents': \e902,
   'art': \e903,
@@ -81,8 +79,9 @@ $icon-list: (
   'professor': \e930,
 );
 
-@each $icon-key, $icon-value in $icon-list {
-  .lib-icon-#{$icon-key}::before {
+@each $icon-key,
+$icon-value in $icon-list {
+  .icon-#{$icon-key}::before {
     content: '#{$icon-value}';
   }
 }

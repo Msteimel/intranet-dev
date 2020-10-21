@@ -40,8 +40,8 @@
 #}
 {%
   set classes = [
-    'lib-gen-con--block',
-    'lib-img-block',
+    'gen-con--block',
+    'img-block',
     paragraph.field_gc_text_img_side.value,
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
@@ -59,7 +59,7 @@
 
   <div{{attributes.addClass(classes)}}>
     {% block content %}
-      <div class="lib-gen-con--img-wrap {{imgSize}}">
+      <div class="gen-con--img-wrap {{imgSize}}">
         <figure>
           <img src="{{ imgSrc }}" alt="{{ imgAlt }}"/>
           <figcaption>

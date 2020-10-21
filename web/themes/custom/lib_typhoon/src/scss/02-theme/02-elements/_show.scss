@@ -1,7 +1,6 @@
-.lib-show {
-}
+.show {}
 
-.lib-show--item {
+.show--item {
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -21,7 +20,7 @@
   }
 }
 
-.lib-show--title {
+.show--title {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -51,7 +50,7 @@
   }
 }
 
-.lib-show--content {
+.show--content {
   overflow: hidden;
   text-align: left;
   transition: height 0.3s;

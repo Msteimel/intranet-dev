@@ -40,7 +40,7 @@
 #}
 {%
   set classes = [
-  'lib-show--item',
+  'show--item',
   'js-open',
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
@@ -55,13 +55,13 @@
 
     <div{{attributes.addClass(classes)}}>
       {% block content %}
-        <button class="lib-show--title" data-box-toggle="{{paragraph.id()}}" role="tab" aria-selected="false"> <h4>
+        <button class="show--title" data-box-toggle="{{paragraph.id()}}" role="tab" aria-selected="false"> <h4>
           {{content.field_accordion_headline|field_value}}
         </h4>
         <span class="icon"></span>
       </button>
 
-      <div class="lib-show--content" role="tabpanel" aria-expanded="false" data-box="{{paragraph.id()}}">
+      <div class="show--content" role="tabpanel" aria-expanded="false" data-box="{{paragraph.id()}}">
         {{content.field_accordion_body|field_value}}
       </div>
     {% endblock %}

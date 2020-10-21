@@ -10,11 +10,11 @@ $fieldset-spacing: $space-lg;
 $radio-button-checked: $green-600;
 
 
-.lib-form {
+.form {
   margin-top: $form-spacing;
 }
 
-.lib-form--fieldset {
+.form--fieldset {
   @include clearfix;
   padding: 0;
 
@@ -27,16 +27,16 @@ table {
   margin: $space-4xl 0 $space-md;
 }
 
-.lib-input {
+.input {
   position: relative;
 
-  textarea+.lib-input--label {
+  textarea+.input--label {
     top: $space-md;
     transform: translateY(0);
   }
 }
 
-.lib-input--label {
+.input--label {
   @include vert_center;
   display: block;
   // padding-left: $space-lg;
@@ -47,9 +47,9 @@ table {
 
 // this is a quick fix for the page editor. It overrides styles below.
 // TODO I need to look at refactoring for a better way.
-.lib-input--textarea,
-.lib-input--vertical-tabs {
-  .lib-input--label {
+.input--textarea,
+.input--vertical-tabs {
+  .input--label {
     position: relative;
     top: 0;
     left: 0;
@@ -148,7 +148,7 @@ select {
   // }
 }
 
-.lib-input--select {
+.input--select {
   &::after {
     @include vert_center;
     content: "\f078";
@@ -185,8 +185,8 @@ select {
 }
 
 // * Custom styling for radio boxes
-// .lib-input--radio,
-// .lib-input--checkbox {
+// .input--radio,
+// .input--checkbox {
 //   margin: $space-sm $space-2xs;
 //   opacity: 0;
 //   position: absolute;

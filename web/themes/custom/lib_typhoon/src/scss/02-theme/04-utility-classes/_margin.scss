@@ -1,10 +1,9 @@
 /*================================================
 			margin classes
 ==================================================*/
-// creates classes like `.lib-mt-med`
+// creates classes like `.mt-med`
 
-$margin-list: (
-  '7xl': $space-7xl,
+$margin-list: ('7xl': $space-7xl,
   '6xl': $space-6xl,
   '5xl': $space-5xl,
   '4xl': $space-4xl,
@@ -20,202 +19,209 @@ $margin-list: (
   'auto': auto,
 );
 
-@each $space, $spacing in $margin-list {
-  .lib-m-#{$space} {
+@each $space,
+$spacing in $margin-list {
+  .m-#{$space} {
     margin: $spacing;
   }
 
-  .lib-mx-#{$space} {
+  .mx-#{$space} {
     margin-left: $spacing;
     margin-right: $spacing;
   }
 
-  .lib-my-#{$space} {
+  .my-#{$space} {
     margin-top: $spacing;
     margin-bottom: $spacing;
   }
 
-  .lib-mt-#{$space} {
+  .mt-#{$space} {
     margin-top: $spacing;
   }
 
-  .lib-mr-#{$space} {
+  .mr-#{$space} {
     margin-right: $spacing;
   }
 
-  .lib-mb-#{$space} {
+  .mb-#{$space} {
     margin-bottom: $spacing;
   }
 
-  .lib-ml-#{$space} {
+  .ml-#{$space} {
     margin-left: $spacing;
   }
 }
 
-@each $space, $spacing in $margin-list {
+@each $space,
+$spacing in $margin-list {
   @include bp(xl) {
-    .xl\:lib-m-#{$space} {
+    .xl\:m-#{$space} {
       margin: $spacing;
     }
-    .xl\:lib-mx-#{$space} {
+
+    .xl\:mx-#{$space} {
       margin-left: $spacing;
       margin-right: $spacing;
     }
 
-    .xl\:lib-my-#{$space} {
+    .xl\:my-#{$space} {
       margin-top: $spacing;
       margin-bottom: $spacing;
     }
 
-    .xl\:lib-mt-#{$space} {
+    .xl\:mt-#{$space} {
       margin-top: $spacing;
     }
 
-    .xl\:lib-mr-#{$space} {
+    .xl\:mr-#{$space} {
       margin-right: $spacing;
     }
 
-    .xl\:lib-mb-#{$space} {
+    .xl\:mb-#{$space} {
       margin-bottom: $spacing;
     }
 
-    .xl\:lib-ml-#{$space} {
+    .xl\:ml-#{$space} {
       margin-left: $spacing;
     }
   }
 }
 
-@each $space, $spacing in $margin-list {
+@each $space,
+$spacing in $margin-list {
   @include bp(lg) {
-    .lg\:lib-m-#{$space} {
+    .lg\:m-#{$space} {
       margin: $spacing;
     }
 
-    .lg\:lib-mx-#{$space} {
+    .lg\:mx-#{$space} {
       margin-left: $spacing;
       margin-right: $spacing;
     }
 
-    .lg\:lib-my-#{$space} {
+    .lg\:my-#{$space} {
       margin-top: $spacing;
       margin-bottom: $spacing;
     }
 
-    .lg\:lib-mt-#{$space} {
+    .lg\:mt-#{$space} {
       margin-top: $spacing;
     }
 
-    .lg\:lib-mr-#{$space} {
+    .lg\:mr-#{$space} {
       margin-right: $spacing;
     }
 
-    .lg\:lib-mb-#{$space} {
+    .lg\:mb-#{$space} {
       margin-bottom: $spacing;
     }
 
-    .lg\:lib-ml-#{$space} {
+    .lg\:ml-#{$space} {
       margin-left: $spacing;
     }
   }
 }
 
-@each $space, $spacing in $margin-list {
+@each $space,
+$spacing in $margin-list {
   @include bp(md) {
-    .md\:lib-m-#{$space} {
+    .md\:m-#{$space} {
       margin: $spacing;
     }
 
-    .md\:lib-mx-#{$space} {
+    .md\:mx-#{$space} {
       margin-left: $spacing;
       margin-right: $spacing;
     }
 
-    .md\:lib-my-#{$space} {
+    .md\:my-#{$space} {
       margin-top: $spacing;
       margin-bottom: $spacing;
     }
 
-    .md\:lib-mt-#{$space} {
+    .md\:mt-#{$space} {
       margin-top: $spacing;
     }
 
-    .md\:lib-mr-#{$space} {
+    .md\:mr-#{$space} {
       margin-right: $spacing;
     }
 
-    .md\:lib-mb-#{$space} {
+    .md\:mb-#{$space} {
       margin-bottom: $spacing;
     }
 
-    .md\:lib-ml-#{$space} {
+    .md\:ml-#{$space} {
       margin-left: $spacing;
     }
   }
 }
 
-@each $space, $spacing in $margin-list {
+@each $space,
+$spacing in $margin-list {
   @include bp(sm) {
-    .sm\:lib-m-#{$space} {
+    .sm\:m-#{$space} {
       margin: $spacing;
     }
 
-    .sm\:lib-mx-#{$space} {
+    .sm\:mx-#{$space} {
       margin-left: $spacing;
       margin-right: $spacing;
     }
 
-    .sm\:lib-my-#{$space} {
+    .sm\:my-#{$space} {
       margin-top: $spacing;
       margin-bottom: $spacing;
     }
 
-    .sm\:lib-mt-#{$space} {
+    .sm\:mt-#{$space} {
       margin-top: $spacing;
     }
 
-    .sm\:lib-mr-#{$space} {
+    .sm\:mr-#{$space} {
       margin-right: $spacing;
     }
 
-    .sm\:lib-mb-#{$space} {
+    .sm\:mb-#{$space} {
       margin-bottom: $spacing;
     }
 
-    .sm\:lib-ml-#{$space} {
+    .sm\:ml-#{$space} {
       margin-left: $spacing;
     }
   }
 }
 
-@each $space, $spacing in $margin-list {
+@each $space,
+$spacing in $margin-list {
   @include bp(xs) {
-    .xs\:lib-m-#{$space} {
+    .xs\:m-#{$space} {
       margin: $spacing;
     }
 
-    .xs\:lib-mx-#{$space} {
+    .xs\:mx-#{$space} {
       margin-left: $spacing;
       margin-right: $spacing;
     }
 
-    .xs\:lib-my-#{$space} {
+    .xs\:my-#{$space} {
       margin-top: $spacing;
       margin-bottom: $spacing;
     }
 
-    .xs\:lib-mt-#{$space} {
+    .xs\:mt-#{$space} {
       margin-top: $spacing;
     }
 
-    .xs\:lib-mr-#{$space} {
+    .xs\:mr-#{$space} {
       margin-right: $spacing;
     }
 
-    .xs\:lib-mb-#{$space} {
+    .xs\:mb-#{$space} {
       margin-bottom: $spacing;
     }
 
-    .xs\:lib-ml-#{$space} {
+    .xs\:ml-#{$space} {
       margin-left: $spacing;
     }
   }
