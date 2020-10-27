@@ -21,7 +21,7 @@
  * @param $form_state
  *   A keyed array containing the current state of the form.
  */
-function lib_typhoon_form_system_theme_settings_alter(&$form, &$form_state) { 
+function typhoon_form_system_theme_settings_alter(&$form, &$form_state) { 
 
   // Create a section for util nav link
   $form['lib_util_nav_links'] = array(
