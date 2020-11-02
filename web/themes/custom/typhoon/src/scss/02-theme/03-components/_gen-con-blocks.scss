@@ -16,7 +16,7 @@
 // }
 
 .gen-con--block {
-  margin-bottom: $space-4xl;
+  margin-bottom: $space-2xl;
 
   .block-title {
     display: inline-block;
@@ -72,11 +72,11 @@
 
   figure {
     position: relative;
+    text-align: center;
   }
 
   img {
     max-width: 100%;
-    width: 100%;
     height: auto;
     box-shadow: $vert-dark-2;
   }
@@ -121,6 +121,8 @@
 
     figure {
       position: relative;
+      max-height: rem(478);
+      // overflow: hidden;
       // padding-top: percentage(9/16);
     }
   }
@@ -170,7 +172,7 @@
   .link-list {
     display: flex;
     flex-wrap: wrap;
-    margin: $space-2xl 0 0 0;
+    margin: $space-lg 0 0 0;
 
     @include bp(xs) {
       margin: $space-lg 0 0 $space-md;

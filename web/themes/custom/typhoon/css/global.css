@@ -1178,7 +1178,7 @@ table th {
 }
 
 .gen-con--block {
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
 }
 
 .gen-con--block .block-title {
@@ -1245,11 +1245,11 @@ table th {
 
 .gen-con--img-wrap figure {
   position: relative;
+  text-align: center;
 }
 
 .gen-con--img-wrap img {
   max-width: 100%;
-  width: 100%;
   height: auto;
   -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.22),0 3px 6px rgba(0,0,0,.25);
           box-shadow: 0 2px 4px rgba(0,0,0,.22),0 3px 6px rgba(0,0,0,.25);
@@ -1294,6 +1294,7 @@ table th {
 
 .block--lg-img .gen-con--img-wrap figure {
   position: relative;
+  max-height: 29.875rem;
 }
 
 .block--two-img .gen-con--img-wrap {
@@ -1353,7 +1354,7 @@ table th {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 2.5rem 0 0 0;
+  margin: 1.5rem 0 0 0;
 }
 
 @media (max-width: 576px) {

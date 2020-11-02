@@ -47,7 +47,7 @@
 
   <header role="banner" class="header">
     {{ page.header }}
-    {% include "@lib_typhoon/navigation/nav.html.twig" %}
+    {% include "@typhoon/navigation/nav.html.twig" %}
   </header>
 
   <div class="body mx-auto px-2xl">
@@ -66,14 +66,14 @@
     </main>
     {% if page.sidebar_first %}
       <aside class="layout-sidebar-first" role="complementary">
-        {% include "@lib_typhoon/navigation/side-nav.html.twig" %}
+        {% include "@typhoon/navigation/side-nav.html.twig" %}
       </aside>
     {% endif %}
     {# {% if page.sidebar_second %}
-                        <aside class="layout-sidebar-second" role="complementary">
-                          {{ page.sidebar_second }}
-                        </aside>
-                      {% endif %} #}
+                            <aside class="layout-sidebar-second" role="complementary">
+                              {{ page.sidebar_second }}
+                            </aside>
+                          {% endif %} #}
   </div>
   {% if page.footer %}
     <footer role="contentinfo">
