@@ -1,0 +1,30 @@
+uuid: 3d99c2f1-f9a8-4211-9a61-3260202da276
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.department_staff
+  module:
+    - system
+    - views
+  theme:
+    - lib_typhoon
+id: views_block__department_staff_block_1
+theme: lib_typhoon
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:department_staff-block_1'
+settings:
+  id: 'views_block:department_staff-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/departments/*'
+    negate: false

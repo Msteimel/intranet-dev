@@ -1,0 +1,22 @@
+uuid: 9c045eca-ee67-4aa5-8864-04b1c5e98670
+langcode: en
+status: true
+dependencies:
+  theme:
+    - lib_typhoon
+_core:
+  default_config_hash: QeZBeCilQfeET3GeW6ZtJkEiwROADTZktFgKWwPieD4
+id: lib_typhoon_secondary_local_tasks
+theme: lib_typhoon
+region: secondary_menu
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  provider: core
+  label_display: '0'
+  primary: false
+  secondary: true
+visibility: {  }

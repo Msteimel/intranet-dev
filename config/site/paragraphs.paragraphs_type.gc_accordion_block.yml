@@ -1,0 +1,10 @@
+uuid: 6030ef45-2694-43b2-b7c1-cdd2ca713ff8
+langcode: en
+status: true
+dependencies: {  }
+id: gc_accordion_block
+label: 'GC Accordion Block'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

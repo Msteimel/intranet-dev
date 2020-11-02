@@ -1,0 +1,10 @@
+uuid: 38ae506a-ec3d-4738-bf9a-dfe1dac034b5
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: yoNVreoTdTZTY7GuE8fI9Jmxqdz8vlo4ZJKixMNSosw
+name: 'Staff News'
+vid: tags
+description: 'Use tags to group articles on similar topics into categories.'
+weight: 0

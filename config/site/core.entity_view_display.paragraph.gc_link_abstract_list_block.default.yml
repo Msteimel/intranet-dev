@@ -1,0 +1,33 @@
+uuid: b3273e50-eaa7-439e-b765-dae05b4dbe2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.gc_link_abstract_list_block.field_link_abstract_list_link
+    - field.field.paragraph.gc_link_abstract_list_block.field_link_abstract_list_text
+    - paragraphs.paragraphs_type.gc_link_abstract_list_block
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.gc_link_abstract_list_block.default
+targetEntityType: paragraph
+bundle: gc_link_abstract_list_block
+mode: default
+content:
+  field_link_abstract_list_link:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_link_abstract_list_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

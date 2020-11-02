@@ -1,0 +1,23 @@
+uuid: 17459772-b50e-4756-bf71-989838f16311
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gc_text_lead
+    - paragraphs.paragraphs_type.gc_text_block
+id: paragraph.gc_text_block.field_gc_text_lead
+field_name: field_gc_text_lead
+entity_type: paragraph
+bundle: gc_text_block
+label: gc_text_lead
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

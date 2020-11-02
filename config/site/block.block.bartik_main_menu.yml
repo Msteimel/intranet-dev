@@ -1,4 +1,4 @@
-uuid: 8a396f97-ccec-4bd5-a7b9-419fa8a11ee6
+uuid: 21a03655-d3a6-432a-a282-12bc22fd8377
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,13 @@ dependencies:
   module:
     - system
   theme:
-    - typhoon
-id: typhoon_mainnavigation
-theme: typhoon
+    - bartik
+_core:
+  default_config_hash: ChCx7DYNUrPTt5uiRdQAPDKJQMc-_SyAQTrZh8H0o-c
+id: bartik_main_menu
+theme: bartik
 region: primary_menu
-weight: -4
+weight: 0
 provider: null
 plugin: 'system_menu_block:main'
 settings:
@@ -20,6 +22,6 @@ settings:
   provider: system
   label_display: '0'
   level: 1
-  depth: 0
+  depth: 1
   expand_all_items: false
 visibility: {  }

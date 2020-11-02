@@ -1,0 +1,22 @@
+uuid: 1215ede6-68ba-4825-aec5-48c44f27d673
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: staff_news
+label: 'Staff News URL'
+type: 'canonical_entities:node'
+pattern: '[node:content-type]/[node:field_staff_news_category]/[node:title]'
+selection_criteria:
+  ba936a31-169c-4a73-bc9f-cbcabf7e1924:
+    id: node_type
+    bundles:
+      staff_news: staff_news
+    negate: false
+    context_mapping:
+      node: node
+    uuid: ba936a31-169c-4a73-bc9f-cbcabf7e1924
+selection_logic: and
+weight: -5
+relationships: {  }

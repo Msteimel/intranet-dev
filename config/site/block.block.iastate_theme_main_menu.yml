@@ -1,4 +1,4 @@
-uuid: 8a396f97-ccec-4bd5-a7b9-419fa8a11ee6
+uuid: ce5c5895-bc9b-4cd0-a29b-8c8783d6a3d4
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,13 @@ dependencies:
   module:
     - system
   theme:
-    - typhoon
-id: typhoon_mainnavigation
-theme: typhoon
-region: primary_menu
-weight: -4
+    - iastate_theme
+_core:
+  default_config_hash: CA6X-QuYZaRoyJ2EcjFDJhV-V0jbMri17Q_2qX7d3s0
+id: iastate_theme_main_menu
+theme: iastate_theme
+region: menu_navbar
+weight: -6
 provider: null
 plugin: 'system_menu_block:main'
 settings:
@@ -20,6 +22,6 @@ settings:
   provider: system
   label_display: '0'
   level: 1
-  depth: 0
-  expand_all_items: false
+  depth: 2
+  expand_all_items: true
 visibility: {  }

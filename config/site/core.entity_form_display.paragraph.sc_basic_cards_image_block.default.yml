@@ -1,0 +1,29 @@
+uuid: 5f06e773-befb-4274-92ac-66d7c0ac7625
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sc_basic_cards_image_block.field_basic_card_image
+    - paragraphs.paragraphs_type.sc_basic_cards_image_block
+  module:
+    - paragraphs
+id: paragraph.sc_basic_cards_image_block.default
+targetEntityType: paragraph
+bundle: sc_basic_cards_image_block
+mode: default
+content:
+  field_basic_card_image:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

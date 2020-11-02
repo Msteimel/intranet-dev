@@ -1,0 +1,35 @@
+uuid: 800ccc0e-d72e-4b45-83e4-795058f31b64
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.gc_two_image_block.field_gc_two_img_img_left
+    - field.field.paragraph.gc_two_image_block.field_gc_two_img_img_right
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.gc_two_image_block
+  module:
+    - image
+id: paragraph.gc_two_image_block.default
+targetEntityType: paragraph
+bundle: gc_two_image_block
+mode: default
+content:
+  field_gc_two_img_img_left:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_gc_two_img_img_right:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+hidden:
+  created: true
+  status: true

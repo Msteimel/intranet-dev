@@ -1,0 +1,10 @@
+uuid: 9a9bd9f2-a028-4c13-b3b5-40a65ca9fec9
+langcode: en
+status: true
+dependencies: {  }
+id: link_abstract_link_list
+label: 'Link Abstract Link List'
+icon_uuid: null
+icon_default: null
+description: 'Provide a brief abstract for link provided'
+behavior_plugins: {  }

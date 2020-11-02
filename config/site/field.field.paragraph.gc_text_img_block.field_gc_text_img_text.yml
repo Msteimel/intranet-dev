@@ -1,0 +1,21 @@
+uuid: f7603dcc-0671-44ec-9e79-7687cb3a1cd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gc_text_img_text
+    - paragraphs.paragraphs_type.gc_text_img_block
+  module:
+    - text
+id: paragraph.gc_text_img_block.field_gc_text_img_text
+field_name: field_gc_text_img_text
+entity_type: paragraph
+bundle: gc_text_img_block
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

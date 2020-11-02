@@ -1,0 +1,23 @@
+uuid: a3838b07-b9d7-4250-96ca-5c98bd86e8a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gc_text_img_size
+    - paragraphs.paragraphs_type.gc_text_img_block
+  module:
+    - options
+id: paragraph.gc_text_img_block.field_gc_text_img_size
+field_name: field_gc_text_img_size
+entity_type: paragraph
+bundle: gc_text_img_block
+label: 'Image Size'
+description: "Set the width of the image.\r\nLarge is 400px wide\r\nMedium is 300px Wide\r\nSmall is 200px wide"
+required: true
+translatable: false
+default_value:
+  -
+    value: medium
+default_value_callback: ''
+settings: {  }
+field_type: list_string

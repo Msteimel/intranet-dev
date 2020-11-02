@@ -1,0 +1,34 @@
+uuid: 1b4489c8-dd19-4497-b8cd-c7335f0108e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.gc_two_image_block.field_gc_two_img_img_left
+    - field.field.paragraph.gc_two_image_block.field_gc_two_img_img_right
+    - paragraphs.paragraphs_type.gc_two_image_block
+  module:
+    - image
+id: paragraph.gc_two_image_block.default
+targetEntityType: paragraph
+bundle: gc_two_image_block
+mode: default
+content:
+  field_gc_two_img_img_left:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_gc_two_img_img_right:
+    weight: 3
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden: {  }

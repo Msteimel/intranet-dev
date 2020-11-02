@@ -1,0 +1,22 @@
+uuid: 374ed558-0519-4bc8-a8a9-1b5819c4cf40
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - typhoon
+_core:
+  default_config_hash: WWu2OQswgCztl9OeXjD1stexIEMZsSgPMYIdC-JHx9c
+id: typhoon_breadcrumbs
+theme: typhoon
+region: sidebar_first
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,95 @@
+uuid: c19c3444-baa9-4ea6-97d1-a583447ce0ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.employee.field_employee_admin_cabinet
+    - field.field.node.employee.field_employee_bio
+    - field.field.node.employee.field_employee_department
+    - field.field.node.employee.field_employee_email
+    - field.field.node.employee.field_employee_image
+    - field.field.node.employee.field_employee_job_title
+    - field.field.node.employee.field_employee_name
+    - field.field.node.employee.field_employee_phone
+    - node.type.employee
+  module:
+    - image
+    - telephone
+    - text
+    - user
+id: node.employee.default
+targetEntityType: node
+bundle: employee
+mode: default
+content:
+  field_employee_admin_cabinet:
+    weight: 7
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_employee_bio:
+    weight: 8
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_employee_department:
+    weight: 6
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_employee_email:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_employee_image:
+    weight: 4
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_employee_job_title:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_employee_name:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_employee_phone:
+    weight: 3
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

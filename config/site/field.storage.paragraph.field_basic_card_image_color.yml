@@ -1,0 +1,30 @@
+uuid: 7827aede-99ec-461f-969b-5be8307f1983
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_basic_card_image_color
+field_name: field_basic_card_image_color
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: lib-basic-card--image
+      label: Red
+    -
+      value: 'lib-basic-card--image lib-basic-card--yellow'
+      label: Yellow
+    -
+      value: 'lib-basic-card--image lib-basic-card--blue'
+      label: Blue
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

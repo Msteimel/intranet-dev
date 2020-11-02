@@ -1,0 +1,23 @@
+uuid: 1cfafe90-1f57-441c-b8b8-c23bdb2ac094
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gc_quote_type
+    - paragraphs.paragraphs_type.gc_quote_block
+  module:
+    - options
+id: paragraph.gc_quote_block.field_gc_quote_type
+field_name: field_gc_quote_type
+entity_type: paragraph
+bundle: gc_quote_block
+label: gc_quote_type
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: lib-block--quote
+default_value_callback: ''
+settings: {  }
+field_type: list_string

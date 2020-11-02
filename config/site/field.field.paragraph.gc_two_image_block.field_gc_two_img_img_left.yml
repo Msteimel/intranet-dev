@@ -1,0 +1,38 @@
+uuid: dff4bdd1-99b9-4dfa-bffb-7c9dad8ac9c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gc_two_img_img_left
+    - paragraphs.paragraphs_type.gc_two_image_block
+  module:
+    - image
+id: paragraph.gc_two_image_block.field_gc_two_img_img_left
+field_name: field_gc_two_img_img_left
+entity_type: paragraph
+bundle: gc_two_image_block
+label: gc_two_img_img_left
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: '10 mb'
+  max_resolution: 1200x1200
+  min_resolution: 400x400
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

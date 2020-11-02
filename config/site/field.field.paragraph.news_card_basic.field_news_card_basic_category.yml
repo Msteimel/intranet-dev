@@ -1,0 +1,31 @@
+uuid: d2b9ca3f-a9ea-440c-9e0c-92f5821f167f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_news_card_basic_category
+    - paragraphs.paragraphs_type.news_card_basic
+    - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.taxonomy_departments
+id: paragraph.news_card_basic.field_news_card_basic_category
+field_name: field_news_card_basic_category
+entity_type: paragraph
+bundle: news_card_basic
+label: 'Card Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      taxonomy_departments: taxonomy_departments
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: taxonomy_departments
+field_type: entity_reference

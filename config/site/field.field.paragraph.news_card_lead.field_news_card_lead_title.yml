@@ -1,0 +1,19 @@
+uuid: 40b45855-3b38-47cc-b9ab-f4927a6552e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_news_card_lead_title
+    - paragraphs.paragraphs_type.news_card_lead
+id: paragraph.news_card_lead.field_news_card_lead_title
+field_name: field_news_card_lead_title
+entity_type: paragraph
+bundle: news_card_lead
+label: 'News Card Title'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

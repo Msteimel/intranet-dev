@@ -1,0 +1,29 @@
+uuid: 2aaab3b5-1f5e-435f-b8d2-5fe052fc1bba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_staff_update_category
+    - node.type.staff_updates
+    - taxonomy.vocabulary.tags
+id: node.staff_updates.field_staff_update_category
+field_name: field_staff_update_category
+entity_type: node
+bundle: staff_updates
+label: 'Staff Update Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

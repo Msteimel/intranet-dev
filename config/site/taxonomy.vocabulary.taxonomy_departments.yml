@@ -1,0 +1,8 @@
+uuid: 5bd8357d-29cf-49e3-b2b8-db3b28dcb6d2
+langcode: en
+status: true
+dependencies: {  }
+name: Departments
+vid: taxonomy_departments
+description: 'Library Departments'
+weight: 0

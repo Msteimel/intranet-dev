@@ -1,0 +1,10 @@
+uuid: 57cb2503-f7bc-4ef3-b539-02d3c3693552
+langcode: en
+status: true
+dependencies: {  }
+id: sc_basic_cards_image_block
+label: 'SC Basic Cards Image Block'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

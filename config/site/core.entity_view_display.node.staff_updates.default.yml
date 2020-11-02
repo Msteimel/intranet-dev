@@ -1,0 +1,39 @@
+uuid: 8e54d62f-7b26-4003-8630-bfdd36cb15a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.staff_updates.field_staff_update_category
+    - field.field.node.staff_updates.field_staff_updates_content
+    - node.type.staff_updates
+  module:
+    - entity_reference_revisions
+    - user
+id: node.staff_updates.default
+targetEntityType: node
+bundle: staff_updates
+mode: default
+content:
+  field_staff_update_category:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_staff_updates_content:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

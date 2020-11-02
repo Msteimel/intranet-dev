@@ -1,0 +1,21 @@
+uuid: 590e91d5-4728-4899-850f-89f5ccb609a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gc_text_text
+    - paragraphs.paragraphs_type.gc_text_block
+  module:
+    - text
+id: paragraph.gc_text_block.field_gc_text_text
+field_name: field_gc_text_text
+entity_type: paragraph
+bundle: gc_text_block
+label: gc_text_text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

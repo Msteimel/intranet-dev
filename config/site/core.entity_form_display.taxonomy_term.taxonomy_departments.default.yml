@@ -1,0 +1,63 @@
+uuid: 3b6fb5c3-530e-4df4-9e12-dbc5b0fb891c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.taxonomy_departments.field_gc_blocks
+    - field.field.taxonomy_term.taxonomy_departments.field_specialty_content
+    - taxonomy.vocabulary.taxonomy_departments
+  module:
+    - paragraphs
+    - path
+id: taxonomy_term.taxonomy_departments.default
+targetEntityType: taxonomy_term
+bundle: taxonomy_departments
+mode: default
+content:
+  field_gc_blocks:
+    type: entity_reference_paragraphs
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_specialty_content:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+hidden:
+  description: true

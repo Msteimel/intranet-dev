@@ -1,0 +1,40 @@
+uuid: 366ae91d-0180-4e1b-9670-5fdf8a3ab661
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use text format basic_html'
+  - 'view paragraph content accordion_group'
+  - 'view paragraph content basic_card_w_image'
+  - 'view paragraph content from_library'
+  - 'view paragraph content gc_accordion_block'
+  - 'view paragraph content gc_large_img_block'
+  - 'view paragraph content gc_link_abstract_list_block'
+  - 'view paragraph content gc_link_list_block'
+  - 'view paragraph content gc_quote_block'
+  - 'view paragraph content gc_text_block'
+  - 'view paragraph content gc_text_img_block'
+  - 'view paragraph content gc_three_image_block'
+  - 'view paragraph content gc_two_image_block'
+  - 'view paragraph content link_abstract_link_list'
+  - 'view paragraph content link_list_link'
+  - 'view paragraph content news_card_basic'
+  - 'view paragraph content news_card_lead'
+  - 'view paragraph content sc_basic_card'
+  - 'view paragraph content sc_basic_cards_block'
+  - 'view paragraph content sc_basic_cards_image_block'
+  - 'view paragraph content sc_news_basic_card_block'
+  - 'view paragraph content sc_news_lead_card_block'

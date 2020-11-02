@@ -1,0 +1,20 @@
+uuid: 9eb1f374-c9dd-4d38-90fb-83b22f62855b
+langcode: en
+status: false
+dependencies:
+  theme:
+    - typhoon
+_core:
+  default_config_hash: HHryZVJbeKi9WnuBGC8FOhBZmBnk2G1H6KxFuy-rC9A
+id: typhoon_local_actions
+theme: typhoon
+region: sidebar_first
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

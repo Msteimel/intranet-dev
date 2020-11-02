@@ -1,0 +1,20 @@
+uuid: da3b4007-d2d8-426f-a3e1-e1cf41068771
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - lib_typhoon
+id: breadcrumbs
+theme: lib_typhoon
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,10 @@
+uuid: b1a918ab-b7cf-4a6d-abfd-dad70166f127
+langcode: en
+status: true
+dependencies: {  }
+id: sc_news_basic_card_block
+label: 'SC News Basic Card Block'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

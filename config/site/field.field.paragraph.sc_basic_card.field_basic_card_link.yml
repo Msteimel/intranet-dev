@@ -1,0 +1,23 @@
+uuid: d78bd2a1-b76d-4ad0-a30e-6d04cd470305
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_basic_card_link
+    - paragraphs.paragraphs_type.sc_basic_card
+  module:
+    - link
+id: paragraph.sc_basic_card.field_basic_card_link
+field_name: field_basic_card_link
+entity_type: paragraph
+bundle: sc_basic_card
+label: 'basic card link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

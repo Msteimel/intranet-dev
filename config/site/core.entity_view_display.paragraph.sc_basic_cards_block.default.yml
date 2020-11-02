@@ -1,0 +1,24 @@
+uuid: a9ed2e59-8e2f-4d2f-8aa2-194640326a1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sc_basic_cards_block.field_basic_card
+    - paragraphs.paragraphs_type.sc_basic_cards_block
+  module:
+    - entity_reference_revisions
+id: paragraph.sc_basic_cards_block.default
+targetEntityType: paragraph
+bundle: sc_basic_cards_block
+mode: default
+content:
+  field_basic_card:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

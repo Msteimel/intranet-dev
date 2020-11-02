@@ -1,0 +1,52 @@
+uuid: 8244fdda-51a0-417a-a3bd-bc35420cbcd0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_list_links
+    - paragraphs.paragraphs_type.gc_link_list_block
+    - paragraphs.paragraphs_type.link_list_link
+  module:
+    - entity_reference_revisions
+id: paragraph.gc_link_list_block.field_link_list_links
+field_name: field_link_list_links
+entity_type: paragraph
+bundle: gc_link_list_block
+label: Link_list_links
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      link_list_link: link_list_link
+    target_bundles_drag_drop:
+      from_library:
+        weight: 9
+        enabled: false
+      gc_large_img_block:
+        weight: 10
+        enabled: false
+      gc_link_list_block:
+        weight: 11
+        enabled: false
+      gc_text_block:
+        weight: 12
+        enabled: false
+      gc_text_img_block:
+        weight: 13
+        enabled: false
+      gc_three_image_block:
+        weight: 14
+        enabled: false
+      gc_two_image_block:
+        weight: 15
+        enabled: false
+      link_list_link:
+        enabled: true
+        weight: 16
+field_type: entity_reference_revisions

@@ -1,0 +1,19 @@
+uuid: 2fdebc8e-11d2-4e03-8382-28c7a79beec0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_news_card_lead_text
+    - paragraphs.paragraphs_type.news_card_lead
+id: paragraph.news_card_lead.field_news_card_lead_text
+field_name: field_news_card_lead_text
+entity_type: paragraph
+bundle: news_card_lead
+label: 'Card Text'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

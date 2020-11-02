@@ -1,0 +1,73 @@
+uuid: 9879b237-d07b-4422-894f-e73f64bc0a65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_specialty_content
+    - paragraphs.paragraphs_type.sc_basic_cards_block
+    - taxonomy.vocabulary.taxonomy_departments
+  module:
+    - entity_reference_revisions
+id: taxonomy_term.taxonomy_departments.field_specialty_content
+field_name: field_specialty_content
+entity_type: taxonomy_term
+bundle: taxonomy_departments
+label: 'Specialty content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      sc_basic_cards_block: sc_basic_cards_block
+    target_bundles_drag_drop:
+      accordion_group:
+        weight: 16
+        enabled: false
+      from_library:
+        weight: 17
+        enabled: false
+      gc_accordion_block:
+        weight: 18
+        enabled: false
+      gc_large_img_block:
+        weight: 19
+        enabled: false
+      gc_link_abstract_list_block:
+        weight: 20
+        enabled: false
+      gc_link_list_block:
+        weight: 21
+        enabled: false
+      gc_quote_block:
+        weight: 22
+        enabled: false
+      gc_text_block:
+        weight: 23
+        enabled: false
+      gc_text_img_block:
+        weight: 24
+        enabled: false
+      gc_three_image_block:
+        weight: 25
+        enabled: false
+      gc_two_image_block:
+        weight: 26
+        enabled: false
+      link_abstract_link_list:
+        weight: 27
+        enabled: false
+      link_list_link:
+        weight: 28
+        enabled: false
+      sc_basic_card:
+        weight: 29
+        enabled: false
+      sc_basic_cards_block:
+        enabled: true
+        weight: 30
+field_type: entity_reference_revisions

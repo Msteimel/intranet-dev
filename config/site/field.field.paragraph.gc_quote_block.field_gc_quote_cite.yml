@@ -1,0 +1,21 @@
+uuid: 8a609e40-685e-4f20-8f5c-1dca497f37a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gc_quote_cite
+    - paragraphs.paragraphs_type.gc_quote_block
+  module:
+    - text
+id: paragraph.gc_quote_block.field_gc_quote_cite
+field_name: field_gc_quote_cite
+entity_type: paragraph
+bundle: gc_quote_block
+label: gc_quote_cite
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

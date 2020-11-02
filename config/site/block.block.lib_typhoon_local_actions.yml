@@ -1,0 +1,20 @@
+uuid: e3987be9-35cb-4e22-9e65-81382336992e
+langcode: en
+status: false
+dependencies:
+  theme:
+    - lib_typhoon
+_core:
+  default_config_hash: HHryZVJbeKi9WnuBGC8FOhBZmBnk2G1H6KxFuy-rC9A
+id: lib_typhoon_local_actions
+theme: lib_typhoon
+region: sidebar_first
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

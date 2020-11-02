@@ -1,0 +1,10 @@
+uuid: 3caa1463-65c2-4f6e-94ed-91b56ad59176
+langcode: en
+status: true
+dependencies: {  }
+id: basic_card_w_image
+label: 'Basic Card w/ Image'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

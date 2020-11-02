@@ -1,0 +1,10 @@
+uuid: 180f663b-9668-48e8-ac06-c7e9ba11a049
+langcode: en
+status: true
+dependencies: {  }
+id: gc_large_img_block
+label: 'GC Large Image'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

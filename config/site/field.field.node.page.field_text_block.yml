@@ -1,0 +1,83 @@
+uuid: 04f0d885-8707-4f9d-8c37-bc3df056f3d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_text_block
+    - node.type.page
+    - paragraphs.paragraphs_type.gc_accordion_block
+    - paragraphs.paragraphs_type.gc_large_img_block
+    - paragraphs.paragraphs_type.gc_link_abstract_list_block
+    - paragraphs.paragraphs_type.gc_link_list_block
+    - paragraphs.paragraphs_type.gc_quote_block
+    - paragraphs.paragraphs_type.gc_text_block
+    - paragraphs.paragraphs_type.gc_text_img_block
+    - paragraphs.paragraphs_type.gc_three_image_block
+    - paragraphs.paragraphs_type.gc_two_image_block
+  module:
+    - entity_reference_revisions
+id: node.page.field_text_block
+field_name: field_text_block
+entity_type: node
+bundle: page
+label: 'GC Blocks'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      gc_large_img_block: gc_large_img_block
+      gc_text_block: gc_text_block
+      gc_text_img_block: gc_text_img_block
+      gc_two_image_block: gc_two_image_block
+      gc_link_list_block: gc_link_list_block
+      gc_three_image_block: gc_three_image_block
+      gc_quote_block: gc_quote_block
+      gc_link_abstract_list_block: gc_link_abstract_list_block
+      gc_accordion_block: gc_accordion_block
+    target_bundles_drag_drop:
+      accordion_group:
+        weight: 14
+        enabled: false
+      from_library:
+        weight: 3
+        enabled: false
+      gc_accordion_block:
+        enabled: true
+        weight: 16
+      gc_large_img_block:
+        enabled: true
+        weight: 5
+      gc_link_abstract_list_block:
+        enabled: true
+        weight: 13
+      gc_link_list_block:
+        enabled: true
+        weight: 11
+      gc_quote_block:
+        enabled: true
+        weight: 12
+      gc_text_block:
+        enabled: true
+        weight: 5
+      gc_text_img_block:
+        enabled: true
+        weight: 6
+      gc_three_image_block:
+        enabled: true
+        weight: 11
+      gc_two_image_block:
+        enabled: true
+        weight: 10
+      link_abstract_link_list:
+        weight: 19
+        enabled: false
+      link_list_link:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,10 @@
+uuid: 29702597-5119-4bf4-8431-8630d6b94132
+langcode: en
+status: true
+dependencies: {  }
+id: gc_two_image_block
+label: 'GC Two Images'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,49 @@
+uuid: e58672f3-5c3c-44fe-9d2e-0c9d3e4a23a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.department_page.body
+    - field.field.node.department_page.field_general_content_blocks
+    - field.field.node.department_page.field_specialty_content
+    - node.type.department_page
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.department_page.default
+targetEntityType: node
+bundle: department_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_general_content_blocks:
+    type: entity_reference_revisions_entity_view
+    weight: 104
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_specialty_content:
+    type: entity_reference_revisions_entity_view
+    weight: 103
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

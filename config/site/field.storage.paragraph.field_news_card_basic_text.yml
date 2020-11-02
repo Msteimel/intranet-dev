@@ -1,0 +1,19 @@
+uuid: dd53e20e-1d02-4915-bf0d-6feae36ab16c
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_news_card_basic_text
+field_name: field_news_card_basic_text
+entity_type: paragraph
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

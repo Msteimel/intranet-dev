@@ -1,0 +1,10 @@
+uuid: 6c562e0e-5585-4567-9225-1168ce384858
+langcode: en
+status: true
+dependencies: {  }
+id: gc_quote_block
+label: 'GC Quote Block'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

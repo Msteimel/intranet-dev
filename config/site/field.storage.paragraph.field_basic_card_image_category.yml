@@ -1,0 +1,20 @@
+uuid: f596e91c-251a-41f6-b18a-ec496ea6c3f2
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+id: paragraph.field_basic_card_image_category
+field_name: field_basic_card_image_category
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

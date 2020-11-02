@@ -1,0 +1,31 @@
+uuid: edda7899-cb68-4510-9803-d27594536339
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_news_card_lead_category
+    - paragraphs.paragraphs_type.news_card_lead
+    - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.taxonomy_departments
+id: paragraph.news_card_lead.field_news_card_lead_category
+field_name: field_news_card_lead_category
+entity_type: paragraph
+bundle: news_card_lead
+label: 'News Card Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      taxonomy_departments: taxonomy_departments
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: taxonomy_departments
+field_type: entity_reference

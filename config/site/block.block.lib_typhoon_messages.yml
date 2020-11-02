@@ -1,0 +1,22 @@
+uuid: 0d426a1a-d7e3-41a5-a72e-caffdae9b5c4
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - lib_typhoon
+_core:
+  default_config_hash: XJqWwLt1LDCnazcEN6QkJmCLjk4R0__-8s0OO9xeNjg
+id: lib_typhoon_messages
+theme: lib_typhoon
+region: sidebar_first
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

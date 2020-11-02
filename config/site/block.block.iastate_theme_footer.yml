@@ -1,0 +1,27 @@
+uuid: de43b333-39fa-4b3f-9ca9-042cfeba1299
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - iastate_theme
+_core:
+  default_config_hash: SdEeXYqcIWZZuf4HInyKnULE3cLVc9NjU2pDfOSWZ6c
+id: iastate_theme_footer
+theme: iastate_theme
+region: sign_off
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Footer
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

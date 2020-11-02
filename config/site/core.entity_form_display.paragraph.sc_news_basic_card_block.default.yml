@@ -1,0 +1,29 @@
+uuid: a81f158a-50e8-45e5-b9c6-7c733c8c6bcd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sc_news_basic_card_block.field_news_card_basic_block
+    - paragraphs.paragraphs_type.sc_news_basic_card_block
+  module:
+    - paragraphs
+id: paragraph.sc_news_basic_card_block.default
+targetEntityType: paragraph
+bundle: sc_news_basic_card_block
+mode: default
+content:
+  field_news_card_basic_block:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

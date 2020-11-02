@@ -1,0 +1,22 @@
+uuid: 9dfa2102-9603-463f-8a89-fdb000db0a29
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - typhoon
+_core:
+  default_config_hash: YRY68JWkaUiGeZlWMv1nzeIgDm0ZZwXYgpqUpLFzwAY
+id: typhoon_content
+theme: typhoon
+region: sidebar_first
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

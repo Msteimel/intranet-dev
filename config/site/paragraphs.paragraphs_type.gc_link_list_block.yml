@@ -1,0 +1,10 @@
+uuid: 279ccf33-5d04-4544-b09a-b0874b99861f
+langcode: en
+status: true
+dependencies: {  }
+id: gc_link_list_block
+label: 'GC Link List Block'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

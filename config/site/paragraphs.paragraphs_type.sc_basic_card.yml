@@ -1,0 +1,10 @@
+uuid: 48d7af4b-bfe1-4eb6-b247-cc35ca5c6b63
+langcode: en
+status: true
+dependencies: {  }
+id: sc_basic_card
+label: 'Basic card'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

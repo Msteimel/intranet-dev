@@ -1,0 +1,97 @@
+uuid: 01f8f9d8-e874-4b87-adde-6295fd807e50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_specialty_content
+    - node.type.department_page
+    - paragraphs.paragraphs_type.sc_basic_cards_block
+    - paragraphs.paragraphs_type.sc_basic_cards_image_block
+    - paragraphs.paragraphs_type.sc_news_basic_card_block
+    - paragraphs.paragraphs_type.sc_news_lead_card_block
+  module:
+    - entity_reference_revisions
+id: node.department_page.field_specialty_content
+field_name: field_specialty_content
+entity_type: node
+bundle: department_page
+label: 'Specialty content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      sc_basic_cards_image_block: sc_basic_cards_image_block
+      sc_basic_cards_block: sc_basic_cards_block
+      sc_news_lead_card_block: sc_news_lead_card_block
+      sc_news_basic_card_block: sc_news_basic_card_block
+    target_bundles_drag_drop:
+      accordion_group:
+        weight: -42
+        enabled: false
+      basic_card_w_image:
+        weight: -39
+        enabled: false
+      from_library:
+        weight: -41
+        enabled: false
+      gc_accordion_block:
+        weight: -36
+        enabled: false
+      gc_large_img_block:
+        weight: -35
+        enabled: false
+      gc_link_abstract_list_block:
+        weight: -34
+        enabled: false
+      gc_link_list_block:
+        weight: -33
+        enabled: false
+      gc_quote_block:
+        weight: -32
+        enabled: false
+      gc_text_block:
+        weight: -31
+        enabled: false
+      gc_text_img_block:
+        weight: -30
+        enabled: false
+      gc_three_image_block:
+        weight: -29
+        enabled: false
+      gc_two_image_block:
+        weight: -28
+        enabled: false
+      link_abstract_link_list:
+        weight: -27
+        enabled: false
+      link_list_link:
+        weight: -40
+        enabled: false
+      news_card_basic:
+        weight: -37
+        enabled: false
+      news_card_lead:
+        weight: -38
+        enabled: false
+      sc_basic_card:
+        weight: -43
+        enabled: false
+      sc_basic_cards_block:
+        enabled: true
+        weight: -25
+      sc_basic_cards_image_block:
+        enabled: true
+        weight: -26
+      sc_news_basic_card_block:
+        enabled: true
+        weight: -23
+      sc_news_lead_card_block:
+        enabled: true
+        weight: -24
+field_type: entity_reference_revisions

@@ -1,0 +1,10 @@
+uuid: e98b6b74-bedd-4920-a66b-d475b4ade3d4
+langcode: en
+status: true
+dependencies: {  }
+id: gc_text_block
+label: 'GC Text Block'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

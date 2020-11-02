@@ -1,0 +1,22 @@
+uuid: fed33ef4-3af1-468d-b6ab-7c89d6328df6
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - typhoon
+_core:
+  default_config_hash: XJqWwLt1LDCnazcEN6QkJmCLjk4R0__-8s0OO9xeNjg
+id: typhoon_messages
+theme: typhoon
+region: sidebar_first
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

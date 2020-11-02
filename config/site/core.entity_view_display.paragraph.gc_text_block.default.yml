@@ -1,0 +1,33 @@
+uuid: f563cfde-61ba-41e7-b429-2c06e5c18e3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.gc_text_block.field_gc_text_lead
+    - field.field.paragraph.gc_text_block.field_gc_text_text
+    - paragraphs.paragraphs_type.gc_text_block
+  module:
+    - text
+id: paragraph.gc_text_block.default
+targetEntityType: paragraph
+bundle: gc_text_block
+mode: default
+content:
+  field_gc_text_lead:
+    weight: 4
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_gc_text_text:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

@@ -1,0 +1,20 @@
+features:
+  node_user_picture: 1
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+logo:
+  use_default: 0
+  path: themes/custom/typhoon/logo.svg
+favicon:
+  use_default: 1
+lib_util_nav1_text: 'Staff Directory'
+lib_util_nav1_url: 'http://drupalvm.test/staff/staff-directory'
+lib_util_nav2_text: 'Words here'
+lib_util_nav2_url: 'http://drupalvm.test/'
+lib_util_nav3_text: ''
+lib_util_nav3_url: ''
+lib_util_nav4_text: ''
+lib_util_nav4_url: ''
+lib_util_nav5_text: ''
+lib_util_nav5_url: ''

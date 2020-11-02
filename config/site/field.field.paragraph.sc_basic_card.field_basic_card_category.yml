@@ -1,0 +1,31 @@
+uuid: 8da64472-0b93-43e2-8f3e-721db84c7870
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_basic_card_category
+    - paragraphs.paragraphs_type.sc_basic_card
+    - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.taxonomy_departments
+id: paragraph.sc_basic_card.field_basic_card_category
+field_name: field_basic_card_category
+entity_type: paragraph
+bundle: sc_basic_card
+label: 'Card Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      taxonomy_departments: taxonomy_departments
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: taxonomy_departments
+field_type: entity_reference

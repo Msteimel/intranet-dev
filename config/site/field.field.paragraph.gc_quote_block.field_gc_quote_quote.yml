@@ -1,0 +1,21 @@
+uuid: e3bfac27-907c-4b40-bc31-f0882464a383
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gc_quote_quote
+    - paragraphs.paragraphs_type.gc_quote_block
+  module:
+    - text
+id: paragraph.gc_quote_block.field_gc_quote_quote
+field_name: field_gc_quote_quote
+entity_type: paragraph
+bundle: gc_quote_block
+label: gc_quote_quote
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,21 @@
+uuid: 98192ed2-4beb-41cf-8ffd-9495ecbbd23c
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_basic_card_image_title
+field_name: field_basic_card_image_title
+entity_type: paragraph
+type: string
+settings:
+  max_length: 500
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,42 @@
+uuid: 34981884-0f83-4104-a4c7-a75a6801e71b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.taxonomy_departments.field_gc_blocks
+    - field.field.taxonomy_term.taxonomy_departments.field_specialty_content
+    - taxonomy.vocabulary.taxonomy_departments
+  module:
+    - entity_reference_revisions
+    - text
+id: taxonomy_term.taxonomy_departments.default
+targetEntityType: taxonomy_term
+bundle: taxonomy_departments
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_gc_blocks:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_specialty_content:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

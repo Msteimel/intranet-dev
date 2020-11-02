@@ -1,0 +1,21 @@
+uuid: ebec03d2-cacd-4f65-9309-4b0dfb6e3ac5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_accordion_body
+    - paragraphs.paragraphs_type.accordion_group
+  module:
+    - text
+id: paragraph.accordion_group.field_accordion_body
+field_name: field_accordion_body
+entity_type: paragraph
+bundle: accordion_group
+label: 'Accordion body'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

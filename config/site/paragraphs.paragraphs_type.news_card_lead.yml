@@ -1,0 +1,10 @@
+uuid: 96d95e2e-9fb9-45f0-9dfd-9e489aaebbe2
+langcode: en
+status: true
+dependencies: {  }
+id: news_card_lead
+label: 'News Card Lead'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

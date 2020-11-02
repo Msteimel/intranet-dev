@@ -1,0 +1,19 @@
+uuid: 77eb3885-01a8-4d44-b210-0062e1a37ad5
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_gc_text_img_text
+field_name: field_gc_text_img_text
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

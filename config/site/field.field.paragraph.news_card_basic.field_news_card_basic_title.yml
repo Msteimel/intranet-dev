@@ -1,0 +1,19 @@
+uuid: 6f227e5f-ea7b-4b81-8923-c06ba8e3be2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_news_card_basic_title
+    - paragraphs.paragraphs_type.news_card_basic
+id: paragraph.news_card_basic.field_news_card_basic_title
+field_name: field_news_card_basic_title
+entity_type: paragraph
+bundle: news_card_basic
+label: 'Card Title'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

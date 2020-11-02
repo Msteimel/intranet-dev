@@ -1,0 +1,23 @@
+uuid: ea6af751-c939-4ee6-89c5-7fe8a936e6b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gc_text_img_side
+    - paragraphs.paragraphs_type.gc_text_img_block
+  module:
+    - options
+id: paragraph.gc_text_img_block.field_gc_text_img_side
+field_name: field_gc_text_img_side
+entity_type: paragraph
+bundle: gc_text_img_block
+label: 'Image Side'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: text-img--right
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,19 @@
+uuid: 8693b54e-9ce4-4655-88a1-e40000829a90
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_accordion_headline
+    - paragraphs.paragraphs_type.accordion_group
+id: paragraph.accordion_group.field_accordion_headline
+field_name: field_accordion_headline
+entity_type: paragraph
+bundle: accordion_group
+label: 'Accordion Headline'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

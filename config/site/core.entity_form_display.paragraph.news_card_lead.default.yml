@@ -1,0 +1,65 @@
+uuid: feeb1f16-33a7-45dd-b79b-e7f812880419
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.news_card_lead.field_news_card_lead_category
+    - field.field.paragraph.news_card_lead.field_news_card_lead_image
+    - field.field.paragraph.news_card_lead.field_news_card_lead_link
+    - field.field.paragraph.news_card_lead.field_news_card_lead_text
+    - field.field.paragraph.news_card_lead.field_news_card_lead_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.news_card_lead
+  module:
+    - image
+    - link
+id: paragraph.news_card_lead.default
+targetEntityType: paragraph
+bundle: news_card_lead
+mode: default
+content:
+  field_news_card_lead_category:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_news_card_lead_image:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_news_card_lead_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_news_card_lead_text:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_news_card_lead_title:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+hidden:
+  created: true
+  status: true

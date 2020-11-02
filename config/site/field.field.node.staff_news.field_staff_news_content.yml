@@ -1,0 +1,75 @@
+uuid: 4d5b0430-9dbf-4982-b101-f8baae06c006
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_staff_news_content
+    - node.type.staff_news
+    - paragraphs.paragraphs_type.gc_large_img_block
+    - paragraphs.paragraphs_type.gc_link_abstract_list_block
+    - paragraphs.paragraphs_type.gc_link_list_block
+    - paragraphs.paragraphs_type.gc_quote_block
+    - paragraphs.paragraphs_type.gc_text_block
+    - paragraphs.paragraphs_type.gc_text_img_block
+    - paragraphs.paragraphs_type.gc_three_image_block
+    - paragraphs.paragraphs_type.gc_two_image_block
+  module:
+    - entity_reference_revisions
+id: node.staff_news.field_staff_news_content
+field_name: field_staff_news_content
+entity_type: node
+bundle: staff_news
+label: 'Staff News content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      gc_large_img_block: gc_large_img_block
+      gc_link_abstract_list_block: gc_link_abstract_list_block
+      gc_link_list_block: gc_link_list_block
+      gc_quote_block: gc_quote_block
+      gc_text_block: gc_text_block
+      gc_text_img_block: gc_text_img_block
+      gc_three_image_block: gc_three_image_block
+      gc_two_image_block: gc_two_image_block
+    target_bundles_drag_drop:
+      from_library:
+        weight: 12
+        enabled: false
+      gc_large_img_block:
+        enabled: true
+        weight: 13
+      gc_link_abstract_list_block:
+        enabled: true
+        weight: 14
+      gc_link_list_block:
+        enabled: true
+        weight: 15
+      gc_quote_block:
+        enabled: true
+        weight: 16
+      gc_text_block:
+        enabled: true
+        weight: 17
+      gc_text_img_block:
+        enabled: true
+        weight: 18
+      gc_three_image_block:
+        enabled: true
+        weight: 19
+      gc_two_image_block:
+        enabled: true
+        weight: 20
+      link_abstract_link_list:
+        weight: 21
+        enabled: false
+      link_list_link:
+        weight: 22
+        enabled: false
+field_type: entity_reference_revisions

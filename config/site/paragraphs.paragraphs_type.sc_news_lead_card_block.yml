@@ -1,0 +1,10 @@
+uuid: df2d8c5d-e3cd-47fa-a275-09a8ba297c3f
+langcode: en
+status: true
+dependencies: {  }
+id: sc_news_lead_card_block
+label: 'SC News Lead Card Block'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,10 @@
+uuid: 90a73501-f663-4e00-8945-e1303d330556
+langcode: en
+status: true
+dependencies: {  }
+id: gc_text_img_block
+label: 'GC Text Image Block'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

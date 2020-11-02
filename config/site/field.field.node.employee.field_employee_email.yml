@@ -1,0 +1,19 @@
+uuid: a99f5cca-03fc-46a2-975f-506c49865340
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_employee_email
+    - node.type.employee
+id: node.employee.field_employee_email
+field_name: field_employee_email
+entity_type: node
+bundle: employee
+label: 'Employee Email'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

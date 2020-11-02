@@ -1,0 +1,10 @@
+uuid: 6e9e4f0f-17d5-4f0a-820d-667aade1d1eb
+langcode: en
+status: true
+dependencies: {  }
+id: gc_link_abstract_list_block
+label: 'GC Link Abstract List Block'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,23 @@
+uuid: e4d56727-20f7-45ac-b303-7ebacc349427
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_news_card_lead_link
+    - paragraphs.paragraphs_type.news_card_lead
+  module:
+    - link
+id: paragraph.news_card_lead.field_news_card_lead_link
+field_name: field_news_card_lead_link
+entity_type: paragraph
+bundle: news_card_lead
+label: 'News Card Link'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

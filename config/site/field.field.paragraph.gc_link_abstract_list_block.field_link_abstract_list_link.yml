@@ -1,0 +1,58 @@
+uuid: 50df0d89-2cda-4107-84e5-c6a73393b3dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_abstract_list_link
+    - paragraphs.paragraphs_type.gc_link_abstract_list_block
+    - paragraphs.paragraphs_type.link_abstract_link_list
+  module:
+    - entity_reference_revisions
+id: paragraph.gc_link_abstract_list_block.field_link_abstract_list_link
+field_name: field_link_abstract_list_link
+entity_type: paragraph
+bundle: gc_link_abstract_list_block
+label: 'link abstract list link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      link_abstract_link_list: link_abstract_link_list
+    target_bundles_drag_drop:
+      from_library:
+        weight: 11
+        enabled: false
+      gc_large_img_block:
+        weight: 12
+        enabled: false
+      gc_link_abstract_list_block:
+        weight: 13
+        enabled: false
+      gc_link_list_block:
+        weight: 14
+        enabled: false
+      gc_text_block:
+        weight: 15
+        enabled: false
+      gc_text_img_block:
+        weight: 16
+        enabled: false
+      gc_three_image_block:
+        weight: 17
+        enabled: false
+      gc_two_image_block:
+        weight: 18
+        enabled: false
+      link_abstract_link_list:
+        enabled: true
+        weight: 19
+      link_list_link:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

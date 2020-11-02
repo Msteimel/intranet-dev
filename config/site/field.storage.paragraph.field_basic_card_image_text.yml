@@ -1,0 +1,19 @@
+uuid: f1ffed82-f328-4fae-bf7e-6fb30dd971ff
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_basic_card_image_text
+field_name: field_basic_card_image_text
+entity_type: paragraph
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: a5b6c8ac-f612-497d-8f28-cb160c811505
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_abstract_list_text
+    - paragraphs.paragraphs_type.gc_link_abstract_list_block
+  module:
+    - text
+id: paragraph.gc_link_abstract_list_block.field_link_abstract_list_text
+field_name: field_link_abstract_list_text
+entity_type: paragraph
+bundle: gc_link_abstract_list_block
+label: 'Link abstract list text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

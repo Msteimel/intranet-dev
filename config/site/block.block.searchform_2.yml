@@ -1,0 +1,21 @@
+uuid: 9d3c8879-c2dc-4226-961b-0ecf3f582436
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - typhoon
+id: searchform_2
+theme: typhoon
+region: utility_menu
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  provider: search
+  label_display: '0'
+  page_id: ''
+visibility: {  }

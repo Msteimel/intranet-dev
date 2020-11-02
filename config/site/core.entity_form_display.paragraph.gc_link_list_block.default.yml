@@ -1,0 +1,39 @@
+uuid: fb587001-8acf-464f-85ab-3a0455240f43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.gc_link_list_block.field_link_list_links
+    - field.field.paragraph.gc_link_list_block.field_link_list_text
+    - paragraphs.paragraphs_type.gc_link_list_block
+  module:
+    - paragraphs
+    - text
+id: paragraph.gc_link_list_block.default
+targetEntityType: paragraph
+bundle: gc_link_list_block
+mode: default
+content:
+  field_link_list_links:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_link_list_text:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true

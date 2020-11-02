@@ -1,0 +1,20 @@
+uuid: 5e6680be-96e2-42cb-8d01-43c697978cf8
+langcode: en
+status: true
+dependencies:
+  theme:
+    - typhoon
+_core:
+  default_config_hash: ZSpc3IoSaLd0PkB02nxjVPBMztIdsTdHek9SiGaqZ_c
+id: typhoon_page_title
+theme: typhoon
+region: content
+weight: -4
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

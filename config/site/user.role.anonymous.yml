@@ -1,0 +1,37 @@
+uuid: db9a3756-bc07-44c5-a393-36d6b3083f9e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: pq_mEIu_B4widZN7Ap81iCJSjShFFdcL0jEiCi8VrDk
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'search content'
+  - 'use text format restricted_html'
+  - 'view paragraph content accordion_group'
+  - 'view paragraph content basic_card_w_image'
+  - 'view paragraph content from_library'
+  - 'view paragraph content gc_accordion_block'
+  - 'view paragraph content gc_large_img_block'
+  - 'view paragraph content gc_link_abstract_list_block'
+  - 'view paragraph content gc_link_list_block'
+  - 'view paragraph content gc_quote_block'
+  - 'view paragraph content gc_text_block'
+  - 'view paragraph content gc_text_img_block'
+  - 'view paragraph content gc_three_image_block'
+  - 'view paragraph content gc_two_image_block'
+  - 'view paragraph content link_abstract_link_list'
+  - 'view paragraph content link_list_link'
+  - 'view paragraph content news_card_basic'
+  - 'view paragraph content news_card_lead'
+  - 'view paragraph content sc_basic_card'
+  - 'view paragraph content sc_basic_cards_block'
+  - 'view paragraph content sc_basic_cards_image_block'
+  - 'view paragraph content sc_news_basic_card_block'
+  - 'view paragraph content sc_news_lead_card_block'

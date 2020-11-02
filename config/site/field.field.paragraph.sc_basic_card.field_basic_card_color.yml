@@ -1,0 +1,21 @@
+uuid: 9c76336a-08a2-4d9e-82b9-d301c0e1c0d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_basic_card_color
+    - paragraphs.paragraphs_type.sc_basic_card
+  module:
+    - options
+id: paragraph.sc_basic_card.field_basic_card_color
+field_name: field_basic_card_color
+entity_type: paragraph
+bundle: sc_basic_card
+label: 'Card Color'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

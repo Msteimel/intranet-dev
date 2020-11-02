@@ -1,0 +1,26 @@
+uuid: 6b0412c2-e52c-4ae9-8c9a-e35d6427900c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.gc_large_img_block.field_gc_large_image_image
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.gc_large_img_block
+  module:
+    - image
+id: paragraph.gc_large_img_block.default
+targetEntityType: paragraph
+bundle: gc_large_img_block
+mode: default
+content:
+  field_gc_large_image_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+hidden:
+  created: true
+  status: true

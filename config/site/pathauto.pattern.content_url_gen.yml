@@ -1,0 +1,26 @@
+uuid: 12f33abd-8df8-401d-aa3a-f87dbba01485
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: content_url_gen
+label: 'content URL Gen'
+type: 'canonical_entities:node'
+pattern: '[node:content-type]/[node:title]'
+selection_criteria:
+  694946aa-17be-43af-a08f-ceae69512ca6:
+    id: node_type
+    bundles:
+      article: article
+      department_page: department_page
+      employee: employee
+      page: page
+      staff_updates: staff_updates
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 694946aa-17be-43af-a08f-ceae69512ca6
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,23 @@
+uuid: 969eaec2-664a-4489-b89c-d0a5c69fcd55
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_basic_card_image_link
+    - paragraphs.paragraphs_type.basic_card_w_image
+  module:
+    - link
+id: paragraph.basic_card_w_image.field_basic_card_image_link
+field_name: field_basic_card_image_link
+entity_type: paragraph
+bundle: basic_card_w_image
+label: 'Card Link'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

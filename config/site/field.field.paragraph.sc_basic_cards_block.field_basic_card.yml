@@ -1,0 +1,73 @@
+uuid: b9788aab-50ca-4396-af46-9dd43be3f9d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_basic_card
+    - paragraphs.paragraphs_type.sc_basic_card
+    - paragraphs.paragraphs_type.sc_basic_cards_block
+  module:
+    - entity_reference_revisions
+id: paragraph.sc_basic_cards_block.field_basic_card
+field_name: field_basic_card
+entity_type: paragraph
+bundle: sc_basic_cards_block
+label: 'Basic Card'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      sc_basic_card: sc_basic_card
+    target_bundles_drag_drop:
+      accordion_group:
+        weight: 17
+        enabled: false
+      from_library:
+        weight: 18
+        enabled: false
+      gc_accordion_block:
+        weight: 19
+        enabled: false
+      gc_large_img_block:
+        weight: 20
+        enabled: false
+      gc_link_abstract_list_block:
+        weight: 21
+        enabled: false
+      gc_link_list_block:
+        weight: 22
+        enabled: false
+      gc_quote_block:
+        weight: 23
+        enabled: false
+      gc_text_block:
+        weight: 24
+        enabled: false
+      gc_text_img_block:
+        weight: 25
+        enabled: false
+      gc_three_image_block:
+        weight: 26
+        enabled: false
+      gc_two_image_block:
+        weight: 27
+        enabled: false
+      link_abstract_link_list:
+        weight: 28
+        enabled: false
+      link_list_link:
+        weight: 29
+        enabled: false
+      sc_basic_card:
+        enabled: true
+        weight: 30
+      sc_basic_cards_block:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

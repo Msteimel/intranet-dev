@@ -1,0 +1,61 @@
+uuid: b7e448b5-8943-46f3-bc14-630a414093a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sc_basic_card.field_basic_card_category
+    - field.field.paragraph.sc_basic_card.field_basic_card_color
+    - field.field.paragraph.sc_basic_card.field_basic_card_link
+    - field.field.paragraph.sc_basic_card.field_basic_card_text
+    - field.field.paragraph.sc_basic_card.field_basic_card_title
+    - paragraphs.paragraphs_type.sc_basic_card
+  module:
+    - link
+id: paragraph.sc_basic_card.default
+targetEntityType: paragraph
+bundle: sc_basic_card
+mode: default
+content:
+  field_basic_card_category:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_basic_card_color:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_basic_card_link:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_basic_card_text:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_basic_card_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

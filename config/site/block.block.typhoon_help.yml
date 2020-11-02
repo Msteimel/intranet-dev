@@ -1,0 +1,22 @@
+uuid: 3b265a0c-85c1-411f-8af2-7df577007f8c
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - typhoon
+_core:
+  default_config_hash: NU5A_49mwLHfs5xFzMFrZ850w9pgUolxMS9NNF3vv4c
+id: typhoon_help
+theme: typhoon
+region: sidebar_first
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

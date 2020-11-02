@@ -1,0 +1,91 @@
+uuid: 1e1f05b3-8f4a-4bd9-a661-9e26056ae9c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_news_card_basic_block
+    - paragraphs.paragraphs_type.news_card_basic
+    - paragraphs.paragraphs_type.sc_news_basic_card_block
+  module:
+    - entity_reference_revisions
+id: paragraph.sc_news_basic_card_block.field_news_card_basic_block
+field_name: field_news_card_basic_block
+entity_type: paragraph
+bundle: sc_news_basic_card_block
+label: 'News card Basic Block'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      news_card_basic: news_card_basic
+    target_bundles_drag_drop:
+      accordion_group:
+        weight: 22
+        enabled: false
+      basic_card_w_image:
+        weight: 23
+        enabled: false
+      from_library:
+        weight: 24
+        enabled: false
+      gc_accordion_block:
+        weight: 25
+        enabled: false
+      gc_large_img_block:
+        weight: 26
+        enabled: false
+      gc_link_abstract_list_block:
+        weight: 27
+        enabled: false
+      gc_link_list_block:
+        weight: 28
+        enabled: false
+      gc_quote_block:
+        weight: 29
+        enabled: false
+      gc_text_block:
+        weight: 30
+        enabled: false
+      gc_text_img_block:
+        weight: 31
+        enabled: false
+      gc_three_image_block:
+        weight: 32
+        enabled: false
+      gc_two_image_block:
+        weight: 33
+        enabled: false
+      link_abstract_link_list:
+        weight: 34
+        enabled: false
+      link_list_link:
+        weight: 35
+        enabled: false
+      news_card_basic:
+        enabled: true
+        weight: 36
+      news_card_lead:
+        weight: 37
+        enabled: false
+      sc_basic_card:
+        weight: 38
+        enabled: false
+      sc_basic_cards_block:
+        weight: 39
+        enabled: false
+      sc_basic_cards_image_block:
+        weight: 40
+        enabled: false
+      sc_news_basic_card_block:
+        weight: 41
+        enabled: false
+      sc_news_lead_card_block:
+        weight: 42
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,20 @@
+uuid: 6054bd77-3c77-4339-9ac7-66d4413f140a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - iastate_theme
+_core:
+  default_config_hash: qo4pIILL6hW36NYeNMVaG4FP55jtVsDjRmOC3-0Fq54
+id: iastate_theme_local_actions
+theme: iastate_theme
+region: content
+weight: -3
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 83401375-84ea-4da2-8092-8f919d7b03e3
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - lib_typhoon
+_core:
+  default_config_hash: NU5A_49mwLHfs5xFzMFrZ850w9pgUolxMS9NNF3vv4c
+id: lib_typhoon_help
+theme: lib_typhoon
+region: sidebar_first
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: 04ec9da3-ce79-462c-8c99-21481f38e53c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_basic_card_image_color
+    - paragraphs.paragraphs_type.basic_card_w_image
+  module:
+    - options
+id: paragraph.basic_card_w_image.field_basic_card_image_color
+field_name: field_basic_card_image_color
+entity_type: paragraph
+bundle: basic_card_w_image
+label: 'Card Color'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: lib-basic-card--image
+default_value_callback: ''
+settings: {  }
+field_type: list_string

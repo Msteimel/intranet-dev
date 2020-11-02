@@ -1,0 +1,19 @@
+uuid: 28e5ffe3-e366-4042-8d01-3819936928e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_basic_card_title
+    - paragraphs.paragraphs_type.sc_basic_card
+id: paragraph.sc_basic_card.field_basic_card_title
+field_name: field_basic_card_title
+entity_type: paragraph
+bundle: sc_basic_card
+label: 'basic card title'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

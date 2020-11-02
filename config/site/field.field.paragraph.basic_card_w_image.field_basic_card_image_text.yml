@@ -1,0 +1,19 @@
+uuid: 06651ec8-3310-4c46-86ed-a4419bfcad95
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_basic_card_image_text
+    - paragraphs.paragraphs_type.basic_card_w_image
+id: paragraph.basic_card_w_image.field_basic_card_image_text
+field_name: field_basic_card_image_text
+entity_type: paragraph
+bundle: basic_card_w_image
+label: 'Card Text'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,89 @@
+uuid: cf6acc1a-3a30-4d4c-a188-82c6fc80cd5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_general_content_blocks
+    - node.type.department_page
+    - paragraphs.paragraphs_type.gc_accordion_block
+    - paragraphs.paragraphs_type.gc_large_img_block
+    - paragraphs.paragraphs_type.gc_link_abstract_list_block
+    - paragraphs.paragraphs_type.gc_link_list_block
+    - paragraphs.paragraphs_type.gc_quote_block
+    - paragraphs.paragraphs_type.gc_text_block
+    - paragraphs.paragraphs_type.gc_text_img_block
+    - paragraphs.paragraphs_type.gc_three_image_block
+    - paragraphs.paragraphs_type.gc_two_image_block
+  module:
+    - entity_reference_revisions
+id: node.department_page.field_general_content_blocks
+field_name: field_general_content_blocks
+entity_type: node
+bundle: department_page
+label: 'General Content Blocks'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      gc_accordion_block: gc_accordion_block
+      gc_large_img_block: gc_large_img_block
+      gc_link_abstract_list_block: gc_link_abstract_list_block
+      gc_link_list_block: gc_link_list_block
+      gc_quote_block: gc_quote_block
+      gc_text_block: gc_text_block
+      gc_text_img_block: gc_text_img_block
+      gc_three_image_block: gc_three_image_block
+      gc_two_image_block: gc_two_image_block
+    target_bundles_drag_drop:
+      accordion_group:
+        weight: 16
+        enabled: false
+      from_library:
+        weight: 17
+        enabled: false
+      gc_accordion_block:
+        enabled: true
+        weight: 18
+      gc_large_img_block:
+        enabled: true
+        weight: 19
+      gc_link_abstract_list_block:
+        enabled: true
+        weight: 20
+      gc_link_list_block:
+        enabled: true
+        weight: 21
+      gc_quote_block:
+        enabled: true
+        weight: 22
+      gc_text_block:
+        enabled: true
+        weight: 23
+      gc_text_img_block:
+        enabled: true
+        weight: 24
+      gc_three_image_block:
+        enabled: true
+        weight: 25
+      gc_two_image_block:
+        enabled: true
+        weight: 26
+      link_abstract_link_list:
+        weight: 27
+        enabled: false
+      link_list_link:
+        weight: 28
+        enabled: false
+      sc_basic_card:
+        weight: 29
+        enabled: false
+      sc_basic_cards_block:
+        weight: 30
+        enabled: false
+field_type: entity_reference_revisions

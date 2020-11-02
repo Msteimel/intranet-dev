@@ -1,0 +1,22 @@
+uuid: 6a90cca8-6482-4ac6-b3af-ad96e32ed000
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - iastate_theme
+_core:
+  default_config_hash: uTGe1A95EPKGQhEeZ9cwJYUSSkpzWvM8ateiIx47LrE
+id: iastate_theme_content
+theme: iastate_theme
+region: content
+weight: -2
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

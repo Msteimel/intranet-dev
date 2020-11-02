@@ -1,0 +1,24 @@
+uuid: 0615cc63-50b0-4f7d-bae6-3a2152cca72d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.staff_news.field_staff_news_category
+    - field.field.node.staff_news.field_staff_news_content
+    - node.type.staff_news
+  module:
+    - user
+id: node.staff_news.teaser
+targetEntityType: node
+bundle: staff_news
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_staff_news_category: true
+  field_staff_news_content: true

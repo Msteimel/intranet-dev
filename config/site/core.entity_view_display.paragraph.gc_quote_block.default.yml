@@ -1,0 +1,39 @@
+uuid: e9977788-4a17-4db6-adef-821f9655b34e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.gc_quote_block.field_gc_quote_cite
+    - field.field.paragraph.gc_quote_block.field_gc_quote_quote
+    - field.field.paragraph.gc_quote_block.field_gc_quote_type
+    - paragraphs.paragraphs_type.gc_quote_block
+  module:
+    - options
+    - text
+id: paragraph.gc_quote_block.default
+targetEntityType: paragraph
+bundle: gc_quote_block
+mode: default
+content:
+  field_gc_quote_cite:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_gc_quote_quote:
+    weight: 7
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_gc_quote_type:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }
